@@ -1,0 +1,229 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "en",
+					"strict" : false
+				},
+				{
+					"name" : "rw",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[8]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[9]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[10]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[11]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[12]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[13]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[14]",
+					"strict" : false
+				},
+				{
+					"name" : "aBus[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dBus[15]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "pause",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "regSelect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regSelect[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
