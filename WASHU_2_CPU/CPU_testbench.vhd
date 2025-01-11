@@ -31,9 +31,9 @@ architecture behav of CPU_testbench is
 	
 	type regarray is array(31 downto 0) of std_logic_vector(15 downto 0);
 	signal Memory: regarray:=(
-		0 => "0001000000001010",
-		1 => "1000001000000001", 
-		2 =>  "0000000001010000",
+		0 =>  "0001000000000010", -- CLOAD to Set ACC as 000000000010
+		1 =>  "1000000000000010", -- ADD M[2] (Which is 000000000010) to ACC and Store in ACC
+		2 =>  "0000000000000010",
 		3 =>  "1011010011000110",
 		4 =>  "0000000000010000", 
 		5 =>  "0000000000000001", 

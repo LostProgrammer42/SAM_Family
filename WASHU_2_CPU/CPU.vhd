@@ -118,8 +118,8 @@ begin
 						tick <= x"0";
 					end if;
 				elsif state = fetch then
-					PC_En <= '1';
 					if tick = 1 then
+						PC_En <= '1';
 						IReg_En <= '1';
 					elsif tick = 3 then
 						state <= decode(IReg_Data_Out);
@@ -174,11 +174,12 @@ begin
 								wrapup;
 							end if;
 						when iload =>
-							if tick = 1 then
+							if tick = 0 then
 								IAR_En <= '1';
 							elsif tick = 3 then
 								Mux_Acc_In_Sel <= "10";
 								Acc_En <= '1';
+							elsif tick = 4 then
 								wrapup;
 							end if;
 						when dstore => 
@@ -196,6 +197,7 @@ begin
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "11"; 
 								Acc_En <= '1';
+							elsif tick = 2 then
 								wrapup;
 							end if;
 						when andd =>
