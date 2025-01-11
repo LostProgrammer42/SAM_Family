@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity d_ff is
 	port (clk, rst, d : in std_logic; 
-			q : out std_logic);
+			q : out std_logic := '0');
 end entity;
 
 architecture beh of d_ff is

@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity mux_4x1_16bit is
 	port (I3,I2,I1,I0 : in std_logic_vector(15 downto 0); 
 			S : in std_logic_vector(1 downto 0); 
-			Y : out std_logic_vector(15 downto 0));
+			Y : out std_logic_vector(15 downto 0):="0000000000000000");
 end entity;
 
 architecture beh of mux_4x1_16bit is

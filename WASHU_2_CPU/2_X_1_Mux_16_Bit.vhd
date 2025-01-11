@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity mux_2x1_16bit is
 	port (I1, I0 : in std_logic_vector(15 downto 0); 
 			S : in std_logic; 
-			Y : out std_logic_vector(15 downto 0));
+			Y : out std_logic_vector(15 downto 0):="0000000000000000");
 end entity;
 
 architecture beh of mux_2x1_16bit is

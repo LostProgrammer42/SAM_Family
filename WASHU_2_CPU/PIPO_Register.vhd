@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity pipo_register is
-	port (din : in std_logic_vector(15 downto 0);
+	port (din : in std_logic_vector(15 downto 0):="0000000000000000";
 			en, rst, clk : in std_logic;
-			dout : out std_logic_vector(15 downto 0));
+			dout : out std_logic_vector(15 downto 0):="0000000000000000");
 end entity;
 
 architecture ha of pipo_register is

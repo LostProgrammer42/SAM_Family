@@ -4,13 +4,13 @@ use ieee.numeric_std.all;
 
 entity cpu is port (
 			IReg_En, Mux_PC_Add_Sel, Mux_PC_In_Sel, PC_En, IAR_En, Acc_En : out std_logic;
-			IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel: out std_logic;
+			IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel: out std_logic:='0';
 			clk, rst: in std_logic; 
 			Addr_Sel: out std_logic;
 			Mux_Acc_In_Sel, ALU_Sel: out std_logic_vector(1 downto 0);
 			En,Rw: out std_logic;
-			IReg_Data_Out, PC_Data_Out: in std_logic_vector(15 downto 0);
-			Acc_Data_Out: in std_logic_vector(15 downto 0);
+			IReg_Data_Out, PC_Data_Out: in std_logic_vector(15 downto 0):="0000000000000000";
+			Acc_Data_Out: in std_logic_vector(15 downto 0):="0000000000000000";
 			regSelect: in std_logic_vector(1 downto 0);
 			dispReg: out std_logic_vector(15 downto 0);
 			pause: in std_logic);
@@ -34,7 +34,7 @@ begin
 	
 	with regSelect select
 		dispReg <= 	IReg_Data_Out when "00",
-						this when "01",
+						PC_Data_Out when "01",
 						Acc_Data_Out when "10",
 						"ZZZZZZZZZZZZZZZZ" when others ;
 	
@@ -90,6 +90,13 @@ begin
 	begin
 		if rising_edge(clk) then
 			if rst = '1' then
+				Acc_En <= '0';
+				IAR_En <= '0';
+				PC_En <= '0';
+				IReg_En <= '0';
+				Mux_PC_Add_Sel <= '0';
+				Mux_PC_In_Sel <= '0';
+				Mux_Acc_In_Sel <= "00";
 				state <= rstState;
 				tick <= x"0";
 				this <= (others => '0');
@@ -111,9 +118,10 @@ begin
 						tick <= x"0";
 					end if;
 				elsif state = fetch then
+					PC_En <= '1';
 					if tick = 1 then
 						IReg_En <= '1';
-					elsif tick = 2 then
+					elsif tick = 3 then
 						state <= decode(IReg_Data_Out);
 						tick <= x"0";
 						this <= PC_Data_Out;
@@ -261,7 +269,8 @@ begin
 					IAR_Buffer_Sel <= '1'; 
 					Acc_BUffer_Sel <= '1';
 				end if;
-			when others =>
+				
+			when others => null;
 		end case;
 	end process;
 end cpuArch;
