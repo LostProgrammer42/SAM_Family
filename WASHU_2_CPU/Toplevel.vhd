@@ -5,8 +5,9 @@ use ieee.numeric_std.all;
 entity Toplevel is port (
 	clk, rst: in std_logic;
 	-- memory signals
-	en, rw: out std_logic;
-	aBus: out std_logic_vector(15 downto 0); dBus: inout std_logic_vector(15 downto 0);
+	en, rw: buffer std_logic;
+	aBus: out std_logic_vector(15 downto 0); 
+	dBus: inout std_logic_vector(15 downto 0);
 	-- console interface signals
 	pause: in std_logic;
 	regSelect: in std_logic_vector(1 downto 0);
@@ -35,7 +36,8 @@ architecture str of Toplevel is
 				IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel: in std_logic;
 				clk, rst, Addr_Sel: in std_logic;
 				Mux_Acc_In_Sel, ALU_Sel: in std_logic_vector(1 downto 0);
-				Data_Bus: inout std_logic_vector(15 downto 0);
+				Data_Bus_out: out std_logic_vector(15 downto 0);
+				Data_Bus_in: in std_logic_vector(15 downto 0);
 				Address_Bus : out std_logic_vector(15 downto 0);
 				IReg_Data_Out, PC_Data_Out: buffer std_logic_vector(15 downto 0);
 				Acc_Data_Out: buffer std_logic_vector(15 downto 0));
@@ -45,6 +47,10 @@ architecture str of Toplevel is
 	signal IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel, Addr_Sel: std_logic;
 	signal Mux_Acc_In_Sel, ALU_Sel: std_logic_vector(1 downto 0);
 	signal IReg_Data_Out, PC_Data_Out, Acc_Data_Out: std_logic_vector(15 downto 0);
+	signal data_bus_out, data_bus_in: std_logic_vector(15 downto 0);
+	
+	signal write_enable: std_logic;
+	
 	begin
 		CP_Unit: CPU port map (IReg_En=>IReg_En, Mux_PC_Add_Sel=>Mux_PC_Add_Sel, Mux_PC_In_Sel=>Mux_PC_In_Sel, 
 		PC_En=>PC_En, IAR_En=>IAR_En, Acc_En=>Acc_En, IReg_Buffer_Sel=>IReg_Buffer_Sel,
@@ -56,6 +62,16 @@ architecture str of Toplevel is
 		DPath: Datapath port map (IReg_En=>IReg_En, Mux_PC_Add_Sel=>Mux_PC_Add_Sel, Mux_PC_In_Sel=>Mux_PC_In_Sel,
 		PC_En=>PC_En, IAR_En=>IAR_En, Acc_En=>Acc_En, IReg_Buffer_Sel=>IReg_Buffer_Sel, PC_Buffer_Sel=>Pc_Buffer_Sel,
 		IAR_Buffer_Sel=>IAR_Buffer_Sel, ACC_Buffer_Sel=>ACC_Buffer_Sel, clk=>clk, rst=>rst, Addr_Sel=>Addr_Sel,
-		Mux_Acc_In_Sel=>Mux_Acc_In_Sel, ALU_Sel=>ALU_Sel, Data_Bus=>dBus, Address_Bus=>aBus, IReg_Data_Out=>IReg_Data_Out,
-		PC_Data_Out=>PC_Data_Out, Acc_Data_Out=>ACC_Data_Out);
+		Mux_Acc_In_Sel=>Mux_Acc_In_Sel, ALU_Sel=>ALU_Sel, Data_Bus_in=>data_bus_in, Data_Bus_out => data_bus_out, 
+		Address_Bus=>aBus, IReg_Data_Out=>IReg_Data_Out,PC_Data_Out=>PC_Data_Out, Acc_Data_Out=>ACC_Data_Out);
+		
+		write_enable <= Acc_Buffer_Sel or (not rw);
+		
+		 -- Assign dout to data_bus_in when output_enable = '0' (input mode)
+		 data_bus_in <= dbus;
+
+		 -- Drive dout with data_bus_out when output_enable = '1' (output mode)
+		 dbus <= data_bus_out when write_enable = '1' else (others => 'Z');
+		
+		
 end architecture;

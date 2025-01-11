@@ -23,13 +23,13 @@ architecture behav of CPU_testbench is
 	signal aBus, dBus: std_logic_vector(15 downto 0);
 	signal pause: std_logic := '0';
 	
-	signal regSelect: std_logic_vector(1 downto 0) := "00";
+	signal regSelect: std_logic_vector(1 downto 0) := "10";
 	signal dispReg: std_logic_vector(15 downto 0);
 	
 	
 	type regarray is array(31 downto 0) of std_logic_vector(15 downto 0);
 	signal Memory: regarray:=(
-		0 => "1001000000010000",
+		0 => "0001000000000010",
 		1 => "1000001000000001", 
 		2 =>  "0000000001010000",
 		3 =>  "1011010011000110",
@@ -64,6 +64,14 @@ architecture behav of CPU_testbench is
 				elsif rw = '1' and en='1' and rising_edge(clk) then
 					dBus <= Memory(to_integer(unsigned(aBus)));
 				end if;
+		end process;
+		
+		rst_proc : process
+		begin
+			rst <= '1';
+			wait for 50ns;
+			rst <= '0';
+			wait;
 		end process;
 	
 end architecture;

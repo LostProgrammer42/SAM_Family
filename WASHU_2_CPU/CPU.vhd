@@ -93,6 +93,13 @@ begin
 				state <= rstState;
 				tick <= x"0";
 				this <= (others => '0');
+				Acc_En <= '0';
+				IAR_En <= '0';
+				PC_En <= '0';
+				IReg_En <= '0';
+				Mux_PC_Add_Sel <= '0';
+				Mux_PC_In_Sel <= '0';
+				Mux_Acc_In_Sel <= "00";
 			else 
 				tick <= tick + 1;
 				Acc_En <= '0';
@@ -113,7 +120,8 @@ begin
 				elsif state = fetch then
 					if tick = 1 then
 						IReg_En <= '1';
-					elsif tick = 2 then
+						PC_En <= '1';
+					elsif tick = 3 then
 						state <= decode(IReg_Data_Out);
 						tick <= x"0";
 						this <= PC_Data_Out;

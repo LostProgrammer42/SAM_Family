@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Sat Jan 11 16:35:34 2025
+Sat Jan 11 19:17:59 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,17 +14,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Toplevel|cpu:CP_Unit|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder"
- 13. Port Connectivity Checks: "datapath:DPath|ALU:AL_Unit|mux_2x1_16bit:Mux1"
- 14. Port Connectivity Checks: "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8"
- 15. Port Connectivity Checks: "datapath:DPath|kogge_stone_adder_subtractor:Adder"
- 16. Port Connectivity Checks: "datapath:DPath|mux_2x1_16bit:Mux_PC_Add"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder"
+ 12. Port Connectivity Checks: "datapath:DPath|ALU:AL_Unit|mux_2x1_16bit:Mux1"
+ 13. Port Connectivity Checks: "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8"
+ 14. Port Connectivity Checks: "datapath:DPath|kogge_stone_adder_subtractor:Adder"
+ 15. Port Connectivity Checks: "datapath:DPath|mux_2x1_16bit:Mux_PC_Add"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +49,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 11 16:35:34 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 11 19:17:59 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 419                                         ;
-;     Total combinational functions  ; 387                                         ;
-;     Dedicated logic registers      ; 108                                         ;
-; Total registers                    ; 108                                         ;
+; Total logic elements               ; 529                                         ;
+;     Total combinational functions  ; 497                                         ;
+;     Dedicated logic registers      ; 109                                         ;
+; Total registers                    ; 109                                         ;
 ; Total pins                         ; 55                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -160,39 +159,39 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 10          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; CPU.vhd                          ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd                          ;         ;
-; And_16.vhd                       ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd                       ;         ;
-; 4_X_1_Mux_16_bit.vhd             ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd             ;         ;
-; 2_X_1_Mux_16_Bit.vhd             ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd             ;         ;
-; preprocessing.vhd                ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/preprocessing.vhd                ;         ;
-; postprocessing.vhd               ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/postprocessing.vhd               ;         ;
-; kogge_stone_node.vhd             ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone_node.vhd             ;         ;
-; Kogge_stone_adder_subtractor.vhd ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd ;         ;
-; kogge_stone.vhd                  ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd                  ;         ;
-; 2_X_1_Mux.vhd                    ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux.vhd                    ;         ;
-; PIPO_Register.vhd                ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd                ;         ;
-; D_Flip_Flop.vhd                  ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/D_Flip_Flop.vhd                  ;         ;
-; Datapath.vhdl                    ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl                    ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd                          ;         ;
-; Toplevel.vhd                     ; yes             ; User VHDL File  ; E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd                     ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU.vhd                          ;         ;
+; And_16.vhd                       ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd                       ;         ;
+; 4_X_1_Mux_16_bit.vhd             ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd             ;         ;
+; 2_X_1_Mux_16_Bit.vhd             ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd             ;         ;
+; preprocessing.vhd                ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/preprocessing.vhd                ;         ;
+; postprocessing.vhd               ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/postprocessing.vhd               ;         ;
+; kogge_stone_node.vhd             ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone_node.vhd             ;         ;
+; Kogge_stone_adder_subtractor.vhd ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd ;         ;
+; kogge_stone.vhd                  ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd                  ;         ;
+; 2_X_1_Mux.vhd                    ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux.vhd                    ;         ;
+; PIPO_Register.vhd                ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd                ;         ;
+; D_Flip_Flop.vhd                  ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd                  ;         ;
+; Datapath.vhdl                    ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl                    ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd                          ;         ;
+; Toplevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd                     ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -200,20 +199,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 419       ;
+; Estimated Total logic elements              ; 529       ;
 ;                                             ;           ;
-; Total combinational functions               ; 387       ;
+; Total combinational functions               ; 497       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 261       ;
-;     -- 3 input functions                    ; 77        ;
-;     -- <=2 input functions                  ; 49        ;
+;     -- 4 input functions                    ; 317       ;
+;     -- 3 input functions                    ; 109       ;
+;     -- <=2 input functions                  ; 71        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 387       ;
+;     -- normal mode                          ; 497       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 108       ;
-;     -- Dedicated logic registers            ; 108       ;
+; Total registers                             ; 109       ;
+;     -- Dedicated logic registers            ; 109       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 55        ;
@@ -221,8 +220,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 108       ;
-; Total fan-out                               ; 1955      ;
+; Maximum fan-out                             ; 109       ;
+; Total fan-out                               ; 2309      ;
 ; Average fan-out                             ; 3.15      ;
 +---------------------------------------------+-----------+
 
@@ -232,30 +231,42 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                         ; Entity Name                  ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |Toplevel                                          ; 387 (1)             ; 108 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 55   ; 0            ; 0          ; |Toplevel                                                                                                                   ; Toplevel                     ; work         ;
-;    |cpu:CP_Unit|                                   ; 159 (159)           ; 44 (44)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:CP_Unit                                                                                                       ; cpu                          ; work         ;
-;    |datapath:DPath|                                ; 227 (20)            ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath                                                                                                    ; datapath                     ; work         ;
-;       |ALU:AL_Unit|                                ; 61 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit                                                                                        ; ALU                          ; work         ;
-;          |kogge_stone_adder_subtractor:Adder|      ; 61 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder                                                     ; kogge_stone_adder_subtractor ; work         ;
-;             |kogge_stone:kogge|                    ; 61 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                   ; kogge_stone                  ; work         ;
-;                |kogge_stone_node:\inst4:10:inst4a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a ; kogge_stone_node             ; work         ;
+; |Toplevel                                          ; 497 (2)             ; 109 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 55   ; 0            ; 0          ; |Toplevel                                                                                                                   ; Toplevel                     ; work         ;
+;    |cpu:CP_Unit|                                   ; 161 (161)           ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:CP_Unit                                                                                                       ; cpu                          ; work         ;
+;    |datapath:DPath|                                ; 334 (38)            ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath                                                                                                    ; datapath                     ; work         ;
+;       |ALU:AL_Unit|                                ; 133 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit                                                                                        ; ALU                          ; work         ;
+;          |AND_16:Ander|                            ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|AND_16:Ander                                                                           ; AND_16                       ; work         ;
+;          |kogge_stone_adder_subtractor:Adder|      ; 119 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder                                                     ; kogge_stone_adder_subtractor ; work         ;
+;             |kogge_stone:kogge|                    ; 119 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                   ; kogge_stone                  ; work         ;
+;                |kogge_stone_node:\inst4:10:inst4a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:11:inst4a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:11:inst4a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:12:inst4a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:12:inst4a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:13:inst4a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:13:inst4a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:1:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:1:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:2:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:2:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:3:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:3:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:4:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:4:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:5:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:5:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:6:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:6:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:7:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:7:inst4a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst5:10:inst5a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst5:4:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:4:inst5a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst5:6:inst5a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:6:inst5a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst5:7:inst5a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:7:inst5a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:8:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:8:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:9:inst4a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:9:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:10:inst5a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:2:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:2:inst5a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:3:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:3:inst5a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:4:inst5a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:4:inst5a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:6:inst5a|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:6:inst5a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst5:7:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:7:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:8:inst5a|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:8:inst5a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst5:9:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:9:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst6:13:inst6a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:13:inst6a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst6:14:inst6a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:14:inst6a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst6:4:inst6a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:4:inst6a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst6:6:inst6a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:6:inst6a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst7:13:inst7a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a ; kogge_stone_node             ; work         ;
-;                |postprocessing:inst8|              ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8              ; postprocessing               ; work         ;
-;                |preprocessing:inst1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1               ; preprocessing                ; work         ;
-;       |kogge_stone_adder_subtractor:Adder|         ; 106 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder                                                                 ; kogge_stone_adder_subtractor ; work         ;
-;          |kogge_stone:kogge|                       ; 106 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                               ; kogge_stone                  ; work         ;
+;                |postprocessing:inst8|              ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8              ; postprocessing               ; work         ;
+;                |preprocessing:inst1|               ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1               ; preprocessing                ; work         ;
+;       |kogge_stone_adder_subtractor:Adder|         ; 111 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder                                                                 ; kogge_stone_adder_subtractor ; work         ;
+;          |kogge_stone:kogge|                       ; 111 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                               ; kogge_stone                  ; work         ;
 ;             |kogge_stone_node:\inst4:10:inst4a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:11:inst4a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:11:inst4a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:12:inst4a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:12:inst4a             ; kogge_stone_node             ; work         ;
@@ -268,27 +279,29 @@ refer to the applicable agreement for further details.
 ;             |kogge_stone_node:\inst4:7:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:7:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:8:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:8:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:9:inst4a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:9:inst4a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:10:inst5a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:2:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:2:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:10:inst5a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:2:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:2:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst5:4:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:4:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:6:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:6:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:7:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:7:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst5:8:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:8:inst5a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:9:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:9:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:9:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:9:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst6:13:inst6a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:13:inst6a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst6:14:inst6a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:14:inst6a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst6:4:inst6a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:4:inst6a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst6:4:inst6a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:4:inst6a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst6:7:inst6a|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:7:inst6a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst7:13:inst7a|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst7:14:inst7a|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:14:inst7a             ; kogge_stone_node             ; work         ;
-;             |postprocessing:inst8|                 ; 62 (62)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8                          ; postprocessing               ; work         ;
-;             |preprocessing:inst1|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1                           ; preprocessing                ; work         ;
+;             |kogge_stone_node:\inst7:13:inst7a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst7:14:inst7a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:14:inst7a             ; kogge_stone_node             ; work         ;
+;             |postprocessing:inst8|                 ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8                          ; postprocessing               ; work         ;
+;             |preprocessing:inst1|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1                           ; preprocessing                ; work         ;
 ;       |mux_2x1_16bit:Mux_PC_Add|                   ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_2x1_16bit:Mux_PC_Add                                                                           ; mux_2x1_16bit                ; work         ;
 ;       |mux_2x1_16bit:Mux_PC_Input_Sel|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_2x1_16bit:Mux_PC_Input_Sel                                                                     ; mux_2x1_16bit                ; work         ;
-;       |mux_4x1_16bit:Mux_ACC|                      ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_4x1_16bit:Mux_ACC                                                                              ; mux_4x1_16bit                ; work         ;
-;       |pipo_register:ACC|                          ; 0 (0)               ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC                                                                                  ; pipo_register                ; work         ;
+;       |mux_4x1_16bit:Mux_ACC|                      ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_4x1_16bit:Mux_ACC                                                                              ; mux_4x1_16bit                ; work         ;
+;       |pipo_register:ACC|                          ; 2 (0)               ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC                                                                                  ; pipo_register                ; work         ;
 ;          |d_ff:\gen_dff:0:dffi|                    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:0:dffi                                                             ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:10:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:10:dffi                                                            ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:11:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:11:dffi                                                            ; d_ff                         ; work         ;
-;          |d_ff:\gen_dff:12:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:12:dffi                                                            ; d_ff                         ; work         ;
+;          |d_ff:\gen_dff:12:dffi|                   ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:12:dffi                                                            ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:13:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:13:dffi                                                            ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:14:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:14:dffi                                                            ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:15:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:15:dffi                                                            ; d_ff                         ; work         ;
@@ -382,48 +395,37 @@ Encoding Type:  One-Hot
 +------------------+------------+-----------+--------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+------------+-------------+------------------+----------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; cpu:CP_Unit|Mux_Acc_In_Sel[1]         ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 108   ;
-; Number of registers using Synchronous Clear  ; 7     ;
-; Number of registers using Synchronous Load   ; 37    ;
+; Total registers                              ; 109   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 19    ;
 ; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 87    ;
+; Number of registers using Clock Enable       ; 80    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|this[15]                                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Toplevel|cpu:CP_Unit|Mux_Acc_In_Sel[0]                           ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:0:dffi|q ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|tick[1]                                     ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:IReg_Tristate_Buffer|Y[0]  ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:PC_Tristate_Buffer|Y[7]    ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:IAR_Tristate_Buffer|Y[7]   ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:ACC_Tristate_Buffer|Y[11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:CP_Unit|Mux24                                       ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 14 LEs               ; 70 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
-; 20:1               ; 5 bits    ; 65 LEs        ; 10 LEs               ; 55 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|this[12]                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Toplevel|cpu:CP_Unit|Mux_PC_Add_Sel                               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Toplevel|cpu:CP_Unit|Mux_Acc_In_Sel[0]                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:12:dffi|q ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|tick[2]                                      ;
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:ACC_Tristate_Buffer|Y[15]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:CP_Unit|Mux33                                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|Address_Bus[14]                           ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 14 LEs               ; 70 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                        ;
+; 20:1               ; 5 bits    ; 65 LEs        ; 10 LEs               ; 55 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -479,25 +481,24 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 55                          ;
-; cycloneiii_ff         ; 108                         ;
-;     ENA               ; 18                          ;
-;     ENA CLR           ; 33                          ;
-;     ENA CLR SLD       ; 31                          ;
-;     ENA SCLR SLD      ; 5                           ;
-;     SCLR              ; 1                           ;
-;     SCLR SLD          ; 1                           ;
-;     plain             ; 19                          ;
-; cycloneiii_io_obuf    ; 32                          ;
-; cycloneiii_lcell_comb ; 387                         ;
-;     normal            ; 387                         ;
+; cycloneiii_ff         ; 109                         ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 49                          ;
+;     ENA CLR SLD       ; 15                          ;
+;     SCLR              ; 2                           ;
+;     SCLR SLD          ; 4                           ;
+;     plain             ; 23                          ;
+; cycloneiii_io_obuf    ; 48                          ;
+; cycloneiii_lcell_comb ; 497                         ;
+;     normal            ; 497                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 47                          ;
-;         3 data inputs ; 77                          ;
-;         4 data inputs ; 261                         ;
+;         2 data inputs ; 69                          ;
+;         3 data inputs ; 109                         ;
+;         4 data inputs ; 317                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 17.00                       ;
-; Average LUT depth     ; 8.34                        ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 8.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -516,74 +517,73 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Jan 11 16:35:26 2025
+    Info: Processing started: Sat Jan 11 19:17:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file cpu_testbench.vhd
-    Info (12022): Found design unit 1: CPU_testbench-behav File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd Line: 8
-    Info (12023): Found entity 1: CPU_testbench File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd Line: 5
+    Info (12022): Found design unit 1: CPU_testbench-behav File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd Line: 8
+    Info (12023): Found entity 1: CPU_testbench File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-cpuArch File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd Line: 19
-    Info (12023): Found entity 1: cpu File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd Line: 5
+    Info (12022): Found design unit 1: cpu-cpuArch File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU.vhd Line: 19
+    Info (12023): Found entity 1: cpu File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file and_16.vhd
-    Info (12022): Found design unit 1: AND_16-str File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd Line: 10
-    Info (12023): Found entity 1: AND_16 File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd Line: 4
+    Info (12022): Found design unit 1: AND_16-str File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd Line: 10
+    Info (12023): Found entity 1: AND_16 File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file 4_x_1_mux_16_bit.vhd
-    Info (12022): Found design unit 1: mux_4x1_16bit-beh File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd Line: 11
-    Info (12023): Found entity 1: mux_4x1_16bit File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd Line: 5
+    Info (12022): Found design unit 1: mux_4x1_16bit-beh File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd Line: 11
+    Info (12023): Found entity 1: mux_4x1_16bit File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file 2_x_1_mux_16_bit.vhd
-    Info (12022): Found design unit 1: mux_2x1_16bit-beh File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd Line: 10
-    Info (12023): Found entity 1: mux_2x1_16bit File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd Line: 4
+    Info (12022): Found design unit 1: mux_2x1_16bit-beh File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd Line: 10
+    Info (12023): Found entity 1: mux_2x1_16bit File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file preprocessing.vhd
-    Info (12022): Found design unit 1: preprocessing-behav File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/preprocessing.vhd Line: 12
-    Info (12023): Found entity 1: preprocessing File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/preprocessing.vhd Line: 5
+    Info (12022): Found design unit 1: preprocessing-behav File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/preprocessing.vhd Line: 12
+    Info (12023): Found entity 1: preprocessing File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/preprocessing.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file postprocessing.vhd
-    Info (12022): Found design unit 1: postprocessing-behav File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/postprocessing.vhd Line: 14
-    Info (12023): Found entity 1: postprocessing File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/postprocessing.vhd Line: 5
+    Info (12022): Found design unit 1: postprocessing-behav File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/postprocessing.vhd Line: 14
+    Info (12023): Found entity 1: postprocessing File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/postprocessing.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file kogge_stone_node.vhd
-    Info (12022): Found design unit 1: kogge_stone_node-struct File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone_node.vhd Line: 12
-    Info (12023): Found entity 1: kogge_stone_node File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone_node.vhd Line: 5
+    Info (12022): Found design unit 1: kogge_stone_node-struct File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone_node.vhd Line: 12
+    Info (12023): Found entity 1: kogge_stone_node File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone_node.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file kogge_stone_adder_subtractor.vhd
-    Info (12022): Found design unit 1: kogge_stone_adder_subtractor-str File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 14
-    Info (12023): Found entity 1: kogge_stone_adder_subtractor File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 5
+    Info (12022): Found design unit 1: kogge_stone_adder_subtractor-str File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 14
+    Info (12023): Found entity 1: kogge_stone_adder_subtractor File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file kogge_stone.vhd
-    Info (12022): Found design unit 1: kogge_stone-behav File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd Line: 15
-    Info (12023): Found entity 1: kogge_stone File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd Line: 5
+    Info (12022): Found design unit 1: kogge_stone-behav File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd Line: 15
+    Info (12023): Found entity 1: kogge_stone File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file 2_x_1_mux.vhd
-    Info (12022): Found design unit 1: mux_2x1-beh File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux.vhd Line: 10
-    Info (12023): Found entity 1: mux_2x1 File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux.vhd Line: 4
+    Info (12022): Found design unit 1: mux_2x1-beh File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux.vhd Line: 10
+    Info (12023): Found entity 1: mux_2x1 File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file pipo_register.vhd
-    Info (12022): Found design unit 1: pipo_register-ha File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd Line: 10
-    Info (12023): Found entity 1: pipo_register File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd Line: 4
+    Info (12022): Found design unit 1: pipo_register-ha File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd Line: 10
+    Info (12023): Found entity 1: pipo_register File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file d_flip_flop.vhd
-    Info (12022): Found design unit 1: d_ff-beh File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/D_Flip_Flop.vhd Line: 9
-    Info (12023): Found entity 1: d_ff File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/D_Flip_Flop.vhd Line: 4
+    Info (12022): Found design unit 1: d_ff-beh File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd Line: 9
+    Info (12023): Found entity 1: d_ff File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
-    Info (12022): Found design unit 1: datapath-beh File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 16
-    Info (12023): Found entity 1: datapath File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 5
+    Info (12022): Found design unit 1: datapath-beh File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 17
+    Info (12023): Found entity 1: datapath File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-str File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd Line: 10
-    Info (12023): Found entity 1: ALU File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd Line: 4
+    Info (12022): Found design unit 1: ALU-str File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd Line: 10
+    Info (12023): Found entity 1: ALU File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
-    Info (12022): Found design unit 1: Toplevel-str File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 16
-    Info (12023): Found entity 1: Toplevel File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 5
+    Info (12022): Found design unit 1: Toplevel-str File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd Line: 17
+    Info (12023): Found entity 1: Toplevel File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd Line: 5
 Info (12127): Elaborating entity "Toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CP_Unit" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 49
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DPath" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 56
-Warning (10541): VHDL Signal Declaration warning at Datapath.vhdl(61): used implicit default value for signal "IReg_Acc_Signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 61
-Info (12128): Elaborating entity "pipo_register" for hierarchy "datapath:DPath|pipo_register:IReg" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 69
-Info (12128): Elaborating entity "d_ff" for hierarchy "datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:15:dffi" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd Line: 25
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:15:muxi" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd Line: 29
-Info (12128): Elaborating entity "mux_2x1_16bit" for hierarchy "datapath:DPath|mux_2x1_16bit:IReg_Tristate_Buffer" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 70
-Info (12128): Elaborating entity "kogge_stone_adder_subtractor" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 77
-Info (12128): Elaborating entity "kogge_stone" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 30
-Info (12128): Elaborating entity "preprocessing" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd Line: 40
-Info (12128): Elaborating entity "kogge_stone_node" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:1:inst4a" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd Line: 44
-Info (12128): Elaborating entity "postprocessing" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd Line: 63
-Info (12128): Elaborating entity "mux_4x1_16bit" for hierarchy "datapath:DPath|mux_4x1_16bit:Mux_ACC" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 85
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:DPath|ALU:AL_Unit" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl Line: 89
-Info (12128): Elaborating entity "AND_16" for hierarchy "datapath:DPath|ALU:AL_Unit|AND_16:Ander" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd Line: 43
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CP_Unit" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd Line: 55
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DPath" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd Line: 62
+Info (12128): Elaborating entity "pipo_register" for hierarchy "datapath:DPath|pipo_register:IReg" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 81
+Info (12128): Elaborating entity "d_ff" for hierarchy "datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:15:dffi" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd Line: 25
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:15:muxi" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd Line: 29
+Info (12128): Elaborating entity "mux_2x1_16bit" for hierarchy "datapath:DPath|mux_2x1_16bit:IReg_Tristate_Buffer" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 82
+Info (12128): Elaborating entity "kogge_stone_adder_subtractor" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 91
+Info (12128): Elaborating entity "kogge_stone" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd Line: 30
+Info (12128): Elaborating entity "preprocessing" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd Line: 40
+Info (12128): Elaborating entity "kogge_stone_node" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:1:inst4a" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd Line: 44
+Info (12128): Elaborating entity "postprocessing" for hierarchy "datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd Line: 63
+Info (12128): Elaborating entity "mux_4x1_16bit" for hierarchy "datapath:DPath|mux_4x1_16bit:Mux_ACC" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 99
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:DPath|ALU:AL_Unit" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl Line: 103
+Info (12128): Elaborating entity "AND_16" for hierarchy "datapath:DPath|ALU:AL_Unit|AND_16:Ander" File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd Line: 43
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
@@ -633,38 +633,6 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "datapath:DPath|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
@@ -681,70 +649,18 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "datapath:DPath|ALU:AL_Unit|comb~synth" feeding internal logic into a wire
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[0]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[1]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[2]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[3]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[4]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[5]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[6]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[7]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[8]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[9]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[10]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[11]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[12]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[13]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[14]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13035): Inserted always-enabled tri-state buffer between "dBus[15]" and its non-tri-state driver. File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[0]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[1]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[2]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[3]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[4]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[5]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[6]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[7]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[8]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[9]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[10]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[11]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[12]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[13]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[14]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "dBus[15]" is moved to its source File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "dBus[0]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[1]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[2]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[3]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[4]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[5]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[6]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[7]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[8]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[9]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[10]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[11]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[12]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[13]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[14]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
-    Warning (13010): Node "dBus[15]~synth" File: E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 475 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 585 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 34 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 420 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 133 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Sat Jan 11 16:35:34 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (21061): Implemented 530 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Sat Jan 11 19:17:59 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 
