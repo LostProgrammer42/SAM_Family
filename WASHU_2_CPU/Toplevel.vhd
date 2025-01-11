@@ -11,7 +11,8 @@ entity Toplevel is port (
 	-- console interface signals
 	pause: in std_logic;
 	regSelect: in std_logic_vector(1 downto 0);
-	dispReg: out std_logic_vector(15 downto 0));
+	dispReg: out std_logic_vector(15 downto 0);
+	write_enable: buffer std_logic);
 end entity;
 
 architecture str of Toplevel is
@@ -49,7 +50,6 @@ architecture str of Toplevel is
 	signal IReg_Data_Out, PC_Data_Out, Acc_Data_Out: std_logic_vector(15 downto 0);
 	signal data_bus_out, data_bus_in: std_logic_vector(15 downto 0);
 	
-	signal write_enable: std_logic;
 	
 	begin
 		CP_Unit: CPU port map (IReg_En=>IReg_En, Mux_PC_Add_Sel=>Mux_PC_Add_Sel, Mux_PC_In_Sel=>Mux_PC_In_Sel, 

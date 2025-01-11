@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,22 +20,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity cpu
 # -- Compiling architecture cpuArch of cpu
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity AND_16
 # -- Compiling architecture str of AND_16
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,22 +43,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux_4x1_16bit
 # -- Compiling architecture beh of mux_4x1_16bit
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux_2x1_16bit
 # -- Compiling architecture beh of mux_2x1_16bit
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/preprocessing.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/preprocessing.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -66,11 +66,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity preprocessing
 # -- Compiling architecture behav of preprocessing
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/postprocessing.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/postprocessing.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -78,11 +78,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity postprocessing
 # -- Compiling architecture behav of postprocessing
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone_node.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone_node.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -90,11 +90,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity kogge_stone_node
 # -- Compiling architecture struct of kogge_stone_node
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -102,11 +102,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity kogge_stone_adder_subtractor
 # -- Compiling architecture str of kogge_stone_adder_subtractor
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/kogge_stone.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -114,44 +114,44 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity kogge_stone
 # -- Compiling architecture behav of kogge_stone
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/2_X_1_Mux.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux_2x1
 # -- Compiling architecture beh of mux_2x1
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:12 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/PIPO_Register.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity pipo_register
 # -- Compiling architecture ha of pipo_register
-# End time: 19:18:17 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:12 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:17 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity d_ff
 # -- Compiling architecture beh of d_ff
-# End time: 19:18:18 on Jan 11,2025, Elapsed time: 0:00:01
+# End time: 20:04:13 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:18 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -161,22 +161,22 @@
 # ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl(81): Cannot associate port "dout" of mode OUT with port "IReg_Data_Out" of mode BUFFER.
 # ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl(92): Cannot associate port "dout" of mode OUT with port "PC_Data_Out" of mode BUFFER.
 # ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Datapath.vhdl(100): Cannot associate port "dout" of mode OUT with port "Acc_Data_Out" of mode BUFFER.
-# End time: 19:18:18 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:13 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:18 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ALU
 # -- Compiling architecture str of ALU
-# End time: 19:18:18 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:13 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:18 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -186,12 +186,12 @@
 # -- Compiling architecture str of Toplevel
 # ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd(60): Cannot associate port "En" of mode OUT with port "en" of mode BUFFER.
 # ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd(60): Cannot associate port "Rw" of mode OUT with port "rw" of mode BUFFER.
-# End time: 19:18:18 on Jan 11,2025, Elapsed time: 0:00:00
+# End time: 20:04:13 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # 
 # vcom -93 -work work {C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:18:18 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -199,15 +199,15 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity CPU_testbench
 # -- Compiling architecture behav of CPU_testbench
-# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(55): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(56): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(72): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 19:18:18 on Jan 11,2025, Elapsed time: 0:00:00
+# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(58): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd(79): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:04:13 on Jan 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  CPU_Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" CPU_Testbench 
-# Start time: 19:18:18 on Jan 11,2025
+# Start time: 20:04:13 on Jan 11,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -234,13 +234,6 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1 us
-# ** Fatal: (vsim-3734) Index value 513 is out of range 31 downto 0.
-#    Time: 270 ns  Iteration: 0  Process: /cpu_testbench/Mem_process File: C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd
-# Fatal error in Process Mem_process at C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd line 65
-# 
-# HDL call sequence:
-# Stopped at C:/Users/manan/Documents/EE721/WASHU_2_CPU/CPU_testbench.vhd 65 Process Mem_process
-# 
-# End time: 19:21:48 on Jan 11,2025, Elapsed time: 0:03:30
-# Errors: 2, Warnings: 0
+# run 5 us
+# End time: 20:08:23 on Jan 11,2025, Elapsed time: 0:04:10
+# Errors: 0, Warnings: 0

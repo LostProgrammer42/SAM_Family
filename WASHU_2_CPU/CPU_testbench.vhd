@@ -15,7 +15,8 @@ architecture behav of CPU_testbench is
 		-- console interface signals
 		pause: in std_logic;
 		regSelect: in std_logic_vector(1 downto 0);
-		dispReg: out std_logic_vector(15 downto 0));
+		dispReg: out std_logic_vector(15 downto 0);
+		write_enable: buffer std_logic);
 	end component;
 
 	signal clk,rst: std_logic := '0';
@@ -26,11 +27,13 @@ architecture behav of CPU_testbench is
 	signal regSelect: std_logic_vector(1 downto 0) := "10";
 	signal dispReg: std_logic_vector(15 downto 0);
 	
+	signal databus_o, databus_i: std_logic_vector(15 downto 0);
+	signal write_enable: std_logic;
 	
 	type regarray is array(31 downto 0) of std_logic_vector(15 downto 0);
 	signal Memory: regarray:=(
-		0 => "0001000000000010",
-		1 => "1000001000000001", 
+		0 => "0001000000001001",
+		1 => "0101000000000100", 
 		2 =>  "0000000001010000",
 		3 =>  "1011010011000110",
 		4 =>  "0000000000010000", 
@@ -38,7 +41,7 @@ architecture behav of CPU_testbench is
 		6 =>  "0110000001010000",
 		7 =>  "1000000000000111",
 		8 =>  "1001000000000100",
-		9 =>  "1010000110001110",
+		9 =>  "0000000000000011",
 		14=>  "0000000000000000",
 		15 => "1100100110000010",
 		18 => "1111000001000000",
@@ -48,7 +51,7 @@ architecture behav of CPU_testbench is
 
 	begin
 		CPU: toplevel port map(clk=>clk,rst=>rst,en=>en,rw=>rw,aBus=>aBus,dBus=>dBus,pause=>pause,regSelect=>regSelect,
-		dispreg=>dispreg);
+		dispreg=>dispreg, write_enable => write_enable);
 		
 		clk_process: process
 		begin
@@ -56,15 +59,19 @@ architecture behav of CPU_testbench is
 			wait for 10ns;
 		end process clk_process;
 		
-		Mem_process: process(en,rw,dBus,aBus,clk)
+		Mem_process: process(en,rw,databus_o, databus_i, aBus,clk)
 		begin
 				if rw = '0' and en='1' and rising_edge(clk) then
-					report "Writing value: " & integer'image(to_integer(unsigned(dBus))) &" to memory address: " & integer'image(to_integer(unsigned(aBus)));
-					Memory(to_integer(unsigned(aBus))) <= dBus ;
+					Memory(to_integer(unsigned(aBus))) <= databus_i ;
 				elsif rw = '1' and en='1' and rising_edge(clk) then
-					dBus <= Memory(to_integer(unsigned(aBus)));
+					databus_o <= Memory(to_integer(unsigned(aBus)));
 				end if;
 		end process;
+		
+		databus_i <= dbus;
+
+		 -- Drive dout with data_bus_out when output_enable = '1' (output mode)
+		 dbus <= databus_o when write_enable = '0' else (others => 'Z');
 		
 		rst_proc : process
 		begin

@@ -140,6 +140,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "write_enable",
+					"strict" : false
+				},
+				{
 					"name" : "dBus[0]",
 					"strict" : false
 				},

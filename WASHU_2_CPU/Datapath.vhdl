@@ -100,5 +100,5 @@ architecture beh of datapath is
 		ACC: pipo_register port map(din=>Acc_Data_In, dout=>Acc_Data_Out, en=>Acc_En, rst=>rst, clk=>clk);
 		ACC_Tristate_Buffer: mux_2x1_16bit port map(I0=>"ZZZZZZZZZZZZZZZZ", I1=>ACC_Data_out, S=>ACC_Buffer_Sel, Y=>Data_Bus_out);
 		
-		AL_Unit: ALU port map(a=>Data_bus_in, b=>ACC_Data_out, c=>ALU_Data_Out, ALU_Sel=>ALU_Sel);
+		AL_Unit: ALU port map(b=>Data_bus_in, a=>ACC_Data_out, c=>ALU_Data_Out, ALU_Sel=>ALU_Sel);
 end architecture;

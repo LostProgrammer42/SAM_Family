@@ -21,9 +21,9 @@ V5`mA;lST>>FLDlUhUJ<A[0
 !s100 Z`YnhGDP5C11mdl<>PClD3
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1736603298
+Z7 !s110 1736606053
 !i10b 1
-Z8 !s108 1736603298.000000
+Z8 !s108 1736606053.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd|
 Z10 !s107 C:/Users/manan/Documents/EE721/WASHU_2_CPU/ALU.vhd|
 !i113 1
@@ -60,9 +60,9 @@ VbH:U:Mg70AfjM9zgFBiYJ0
 !s100 gKcC3^=L[L]@AgREgKh4b0
 R6
 31
-Z16 !s110 1736603297
+Z16 !s110 1736606052
 !i10b 1
-Z17 !s108 1736603297.000000
+Z17 !s108 1736606052.000000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd|
 Z19 !s107 C:/Users/manan/Documents/EE721/WASHU_2_CPU/And_16.vhd|
 !i113 1
@@ -87,7 +87,7 @@ R19
 R11
 R12
 Ecpu
-Z20 w1736603265
+Z20 w1736604639
 Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
@@ -115,8 +115,8 @@ R3
 DEx4 work 3 cpu 0 22 ]YnH[UAQY`cJR444hSjL_0
 l33
 L19
-V`87;i@S?L=GEDo=`DC7@M0
-!s100 5``bF5U`5;<G9fdR_5dNK3
+V^fB:7]KLkBl[JJCW5ob@J1
+!s100 NZZWa1=9B^nR4dc34VS300
 R6
 31
 R16
@@ -128,7 +128,7 @@ R25
 R11
 R12
 Ecpu_testbench
-Z26 w1736602442
+Z26 w1736606005
 R21
 R2
 R3
@@ -154,10 +154,10 @@ R21
 R2
 R3
 DEx4 work 13 cpu_testbench 0 22 lZ4Zh0>7ace=>LA[z7b_e3
-l49
+l52
 L8
-Ve@iKW2@BmIlJ1UeKZ4d]91
-!s100 fg1bngk;VzQ]dm;UI_Y:c3
+V49SDGP2BkOz9RZX_QL^1^0
+!s100 EOeX8gQSTnWzze[F2bJH[2
 R6
 31
 R7
@@ -183,7 +183,7 @@ R6
 31
 R7
 !i10b 1
-R17
+R8
 Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd|
 Z34 !s107 C:/Users/manan/Documents/EE721/WASHU_2_CPU/D_Flip_Flop.vhd|
 !i113 1
@@ -201,7 +201,7 @@ R6
 31
 R7
 !i10b 1
-R17
+R8
 R33
 R34
 !i113 1
@@ -610,7 +610,7 @@ R75
 R11
 R12
 Etoplevel
-Z76 w1736596661
+Z76 w1736606014
 R21
 R2
 R3
@@ -619,8 +619,8 @@ Z77 8C:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd
 Z78 FC:/Users/manan/Documents/EE721/WASHU_2_CPU/Toplevel.vhd
 l0
 L5
-Vn=?fF=U[SmkeH`f0FN_IQ1
-!s100 S?:bF^k]f4Ho<bnHlBRkZ3
+V`jAXMTTNZinLFCffdiC>O1
+!s100 0^INm;64A7=PRMTi>@SPc0
 R6
 31
 R7
@@ -635,11 +635,11 @@ Astr
 R21
 R2
 R3
-DEx4 work 8 toplevel 0 22 n=?fF=U[SmkeH`f0FN_IQ1
+DEx4 work 8 toplevel 0 22 `jAXMTTNZinLFCffdiC>O1
 l54
-L17
-VnIW6A7`9oObFZMHTW1JEI0
-!s100 Dmf;[SYf2<IUPCj=3a1P<1
+L18
+V2WT>dH16m7ZQ9El2lD5Ug3
+!s100 ;D8B8]544dZGHj]Bh<NCm2
 R6
 31
 R7
