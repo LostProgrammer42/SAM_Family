@@ -187,12 +187,16 @@ begin
 						when istore => 
 							if tick = 1 then
 								IAR_En <= '1';
-							elsif tick = 2 then
+							elsif tick = 3 then
 								wrapup;
 							end if;
 						when negate =>
-							Mux_Acc_In_Sel <= "11";
-							wrapup;
+							if tick = 1 then
+								Mux_Acc_In_Sel <= "11";
+								Acc_En <= '1';
+							elsif tick = 2 then
+								wrapup;
+							end if;
 						when add =>
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "11"; 
@@ -204,6 +208,7 @@ begin
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "11"; 
 								Acc_En <= '1';
+							elsif tick = 2 then
 								wrapup;
 							end if;
 						when others =>
@@ -265,7 +270,7 @@ begin
 				if tick = 0 then
 					en <= '1'; 
 					IReg_Buffer_Sel <= '1';
-				elsif tick = 2 then
+				elsif tick = 3 then
 					en <= '1'; 
 					rw <= '0';
 					IAR_Buffer_Sel <= '1'; 
