@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Sat Jan 11 19:59:52 2025
+Sun Jan 12 10:30:34 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 11 19:59:52 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 12 10:30:34 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 469                                         ;
-;     Total combinational functions  ; 437                                         ;
+; Total logic elements               ; 470                                         ;
+;     Total combinational functions  ; 438                                         ;
 ;     Dedicated logic registers      ; 93                                          ;
 ; Total registers                    ; 93                                          ;
 ; Total pins                         ; 88                                          ;
@@ -199,16 +199,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 469       ;
+; Estimated Total logic elements              ; 470       ;
 ;                                             ;           ;
-; Total combinational functions               ; 437       ;
+; Total combinational functions               ; 438       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 311       ;
-;     -- 3 input functions                    ; 87        ;
-;     -- <=2 input functions                  ; 39        ;
+;     -- 4 input functions                    ; 317       ;
+;     -- 3 input functions                    ; 86        ;
+;     -- <=2 input functions                  ; 35        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 437       ;
+;     -- normal mode                          ; 438       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 93        ;
@@ -221,8 +221,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 93        ;
-; Total fan-out                               ; 2111      ;
-; Average fan-out                             ; 2.92      ;
+; Total fan-out                               ; 2129      ;
+; Average fan-out                             ; 2.94      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,36 +231,36 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                         ; Entity Name                  ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |Toplevel                                          ; 437 (1)             ; 93 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 88   ; 0            ; 0          ; |Toplevel                                                                                                                   ; Toplevel                     ; work         ;
-;    |cpu:CP_Unit|                                   ; 147 (147)           ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:CP_Unit                                                                                                       ; cpu                          ; work         ;
-;    |datapath:DPath|                                ; 289 (37)            ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath                                                                                                    ; datapath                     ; work         ;
-;       |ALU:AL_Unit|                                ; 65 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit                                                                                        ; ALU                          ; work         ;
-;          |kogge_stone_adder_subtractor:Adder|      ; 65 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder                                                     ; kogge_stone_adder_subtractor ; work         ;
-;             |kogge_stone:kogge|                    ; 65 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                   ; kogge_stone                  ; work         ;
-;                |kogge_stone_node:\inst4:10:inst4a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a ; kogge_stone_node             ; work         ;
+; |Toplevel                                          ; 438 (1)             ; 93 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 88   ; 0            ; 0          ; |Toplevel                                                                                                                   ; Toplevel                     ; work         ;
+;    |cpu:CP_Unit|                                   ; 149 (149)           ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:CP_Unit                                                                                                       ; cpu                          ; work         ;
+;    |datapath:DPath|                                ; 288 (34)            ; 64 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath                                                                                                    ; datapath                     ; work         ;
+;       |ALU:AL_Unit|                                ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit                                                                                        ; ALU                          ; work         ;
+;          |kogge_stone_adder_subtractor:Adder|      ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder                                                     ; kogge_stone_adder_subtractor ; work         ;
+;             |kogge_stone:kogge|                    ; 71 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                   ; kogge_stone                  ; work         ;
+;                |kogge_stone_node:\inst4:10:inst4a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:12:inst4a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:12:inst4a ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst4:2:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:2:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:3:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:3:inst4a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst4:4:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:4:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst4:5:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:5:inst4a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst4:6:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:6:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:7:inst4a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:7:inst4a  ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst4:9:inst4a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:9:inst4a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:10:inst5a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:4:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:4:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:6:inst5a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:6:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:7:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:7:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:8:inst5a|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:8:inst5a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst5:9:inst5a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:9:inst5a  ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst6:13:inst6a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:13:inst6a ; kogge_stone_node             ; work         ;
-;                |kogge_stone_node:\inst6:14:inst6a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:14:inst6a ; kogge_stone_node             ; work         ;
+;                |kogge_stone_node:\inst6:13:inst6a| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:13:inst6a ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst6:6:inst6a|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:6:inst6a  ; kogge_stone_node             ; work         ;
 ;                |kogge_stone_node:\inst7:13:inst7a| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a ; kogge_stone_node             ; work         ;
-;                |postprocessing:inst8|              ; 44 (44)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8              ; postprocessing               ; work         ;
-;                |preprocessing:inst1|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1               ; preprocessing                ; work         ;
-;       |kogge_stone_adder_subtractor:Adder|         ; 114 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder                                                                 ; kogge_stone_adder_subtractor ; work         ;
-;          |kogge_stone:kogge|                       ; 114 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                               ; kogge_stone                  ; work         ;
-;             |kogge_stone_node:\inst4:10:inst4a|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a             ; kogge_stone_node             ; work         ;
+;                |postprocessing:inst8|              ; 49 (49)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8              ; postprocessing               ; work         ;
+;                |preprocessing:inst1|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|ALU:AL_Unit|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1               ; preprocessing                ; work         ;
+;       |kogge_stone_adder_subtractor:Adder|         ; 113 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder                                                                 ; kogge_stone_adder_subtractor ; work         ;
+;          |kogge_stone:kogge|                       ; 113 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge                                               ; kogge_stone                  ; work         ;
+;             |kogge_stone_node:\inst4:10:inst4a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:10:inst4a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:11:inst4a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:11:inst4a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:12:inst4a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:12:inst4a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst4:13:inst4a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:13:inst4a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst4:14:inst4a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:14:inst4a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:1:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:1:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:2:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:2:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:3:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:3:inst4a              ; kogge_stone_node             ; work         ;
@@ -269,24 +269,26 @@ refer to the applicable agreement for further details.
 ;             |kogge_stone_node:\inst4:6:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:6:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:7:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:7:inst4a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst4:8:inst4a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:8:inst4a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst4:9:inst4a|     ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:9:inst4a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:10:inst5a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:2:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:2:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst4:9:inst4a|     ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst4:9:inst4a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:10:inst5a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:10:inst5a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:2:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:2:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:3:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:3:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst5:4:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:4:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:6:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:6:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst5:7:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:7:inst5a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst5:8:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:8:inst5a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst5:8:inst5a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:8:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst5:9:inst5a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst5:9:inst5a              ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst6:13:inst6a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:13:inst6a             ; kogge_stone_node             ; work         ;
 ;             |kogge_stone_node:\inst6:14:inst6a|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:14:inst6a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst6:4:inst6a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:4:inst6a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst6:7:inst6a|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:7:inst6a              ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst7:13:inst7a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a             ; kogge_stone_node             ; work         ;
-;             |kogge_stone_node:\inst7:14:inst7a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:14:inst7a             ; kogge_stone_node             ; work         ;
-;             |postprocessing:inst8|                 ; 55 (55)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8                          ; postprocessing               ; work         ;
-;             |preprocessing:inst1|                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1                           ; preprocessing                ; work         ;
+;             |kogge_stone_node:\inst6:4:inst6a|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:4:inst6a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst6:7:inst6a|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst6:7:inst6a              ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst7:13:inst7a|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:13:inst7a             ; kogge_stone_node             ; work         ;
+;             |kogge_stone_node:\inst7:14:inst7a|    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|kogge_stone_node:\inst7:14:inst7a             ; kogge_stone_node             ; work         ;
+;             |postprocessing:inst8|                 ; 57 (57)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|postprocessing:inst8                          ; postprocessing               ; work         ;
+;             |preprocessing:inst1|                  ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|kogge_stone_adder_subtractor:Adder|kogge_stone:kogge|preprocessing:inst1                           ; preprocessing                ; work         ;
 ;       |mux_2x1_16bit:Mux_PC_Add|                   ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_2x1_16bit:Mux_PC_Add                                                                           ; mux_2x1_16bit                ; work         ;
 ;       |mux_2x1_16bit:Mux_PC_Input_Sel|             ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_2x1_16bit:Mux_PC_Input_Sel                                                                     ; mux_2x1_16bit                ; work         ;
-;       |mux_4x1_16bit:Mux_ACC|                      ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_4x1_16bit:Mux_ACC                                                                              ; mux_4x1_16bit                ; work         ;
+;       |mux_4x1_16bit:Mux_ACC|                      ; 37 (37)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|mux_4x1_16bit:Mux_ACC                                                                              ; mux_4x1_16bit                ; work         ;
 ;       |pipo_register:ACC|                          ; 2 (0)               ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC                                                                                  ; pipo_register                ; work         ;
 ;          |d_ff:\gen_dff:0:dffi|                    ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:0:dffi                                                             ; d_ff                         ; work         ;
 ;          |d_ff:\gen_dff:10:dffi|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:10:dffi                                                            ; d_ff                         ; work         ;
@@ -391,8 +393,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 93    ;
-; Number of registers using Synchronous Clear  ; 6     ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Synchronous Clear  ; 7     ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 64    ;
@@ -406,15 +408,15 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Toplevel|cpu:CP_Unit|IReg_En                                     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Toplevel|cpu:CP_Unit|IAR_En                                      ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:0:dffi|q ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 4 LEs                ; 32 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|tick[2]                                     ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:PC_Tristate_Buffer|Y[2]    ;
-; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:ACC_Tristate_Buffer|Y[11]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:CP_Unit|Mux27                                       ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 4 LEs                ; 40 LEs                 ; Yes        ; |Toplevel|cpu:CP_Unit|tick[2]                                     ;
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:PC_Tristate_Buffer|Y[1]    ;
+; 1:1                ; 16 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|mux_2x1_16bit:ACC_Tristate_Buffer|Y[10]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:CP_Unit|Mux29                                       ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Toplevel|datapath:DPath|Address_Bus[8]                           ;
-; 21:1               ; 7 bits    ; 98 LEs        ; 14 LEs               ; 84 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
-; 22:1               ; 5 bits    ; 70 LEs        ; 10 LEs               ; 60 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
+; 24:1               ; 7 bits    ; 112 LEs       ; 14 LEs               ; 98 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
+; 25:1               ; 5 bits    ; 80 LEs        ; 10 LEs               ; 70 LEs                 ; No         ; |Toplevel|cpu:CP_Unit|state                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -473,20 +475,20 @@ Encoding Type:  One-Hot
 ; boundary_port         ; 88                          ;
 ; cycloneiii_ff         ; 93                          ;
 ;     ENA CLR           ; 64                          ;
-;     SCLR              ; 2                           ;
-;     SCLR SLD          ; 4                           ;
-;     plain             ; 23                          ;
+;     SCLR              ; 1                           ;
+;     SCLR SLD          ; 6                           ;
+;     plain             ; 22                          ;
 ; cycloneiii_io_obuf    ; 32                          ;
-; cycloneiii_lcell_comb ; 437                         ;
-;     normal            ; 437                         ;
+; cycloneiii_lcell_comb ; 438                         ;
+;     normal            ; 438                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 87                          ;
-;         4 data inputs ; 311                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 317                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 20.00                       ;
-; Average LUT depth     ; 9.72                        ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 8.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -505,7 +507,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Jan 11 19:59:43 2025
+    Info: Processing started: Sun Jan 12 10:30:22 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -708,15 +710,15 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 573 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 576 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 67 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 485 logic cells
+    Info (21061): Implemented 488 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Sat Jan 11 19:59:52 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Sun Jan 12 10:30:34 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 

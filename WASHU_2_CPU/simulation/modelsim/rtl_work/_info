@@ -21,9 +21,9 @@ V5`mA;lST>>FLDlUhUJ<A[0
 !s100 Z`YnhGDP5C11mdl<>PClD3
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1736605801
+Z7 !s110 1736658041
 !i10b 1
-Z8 !s108 1736605801.000000
+Z8 !s108 1736658041.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd|
 Z10 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/ALU.vhd|
 !i113 1
@@ -60,11 +60,11 @@ VbH:U:Mg70AfjM9zgFBiYJ0
 !s100 gKcC3^=L[L]@AgREgKh4b0
 R6
 31
-Z16 !s110 1736605800
+R7
 !i10b 1
-Z17 !s108 1736605800.000000
-Z18 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd|
-Z19 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd|
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd|
+Z17 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/And_16.vhd|
 !i113 1
 R11
 R12
@@ -78,70 +78,70 @@ VEUfefd5OH[klC:2:IJf:h0
 !s100 6z;EbVai__56D_g`;KXoX3
 R6
 31
-R16
+R7
 !i10b 1
+R8
+R16
 R17
-R18
-R19
 !i113 1
 R11
 R12
 Ecpu
-Z20 w1736605782
-Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z18 w1736657796
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
 R0
-Z22 8E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd
-Z23 FE:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd
+Z20 8E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd
+Z21 FE:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd
 l0
 L5
 VQ6j`e@33c6z^d@Zk88c9K1
 !s100 XL^@[cN^BFHMHW?iVI@L^0
 R6
 31
-R16
+R7
 !i10b 1
-R17
-Z24 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd|
-Z25 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd|
+Z22 !s108 1736658040.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd|
+Z24 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU.vhd|
 !i113 1
 R11
 R12
 Acpuarch
-R21
+R19
 R2
 R3
 DEx4 work 3 cpu 0 22 Q6j`e@33c6z^d@Zk88c9K1
 l33
 L19
-VobE6IV`bWBTbj@K@Kb>0e0
-!s100 W1N0QLA[P4B?IPbIL9nnD2
+VF7E20k2kAHZFbX2>7elEA3
+!s100 N?97]=>Lz<MlgaoKT3ILI3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R22
+R23
 R24
-R25
 !i113 1
 R11
 R12
 Ecpu_testbench
-Z26 w1736604013
-R21
+Z25 w1736658021
+R19
 R2
 R3
 R0
-Z27 8E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd
-Z28 FE:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd
+Z26 8E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd
+Z27 FE:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd
 l0
 L5
 VlZ4Zh0>7ace=>LA[z7b_e3
 !s100 dI[<=MI=i7j0EE2O5;OS@1
 R6
 31
-R7
+Z28 !s110 1736658042
 !i10b 1
 R8
 Z29 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench.vhd|
@@ -150,17 +150,17 @@ Z30 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/CPU_testbench
 R11
 R12
 Abehav
-R21
+R19
 R2
 R3
 DEx4 work 13 cpu_testbench 0 22 lZ4Zh0>7ace=>LA[z7b_e3
 l51
 L8
-VH17k<MRYaT7T?c9<iOgzP1
-!s100 iZZc9dhoI`WPakkk?2gfZ3
+VKnCV@L@UFED]Y]mzU;5c>1
+!s100 RSMW_3=_ZGSYS5OQB>:001
 R6
 31
-R7
+R28
 !i10b 1
 R8
 R29
@@ -181,9 +181,9 @@ VPSi15gJlUfa>HXkK=B@TA3
 !s100 HD3aXak1lXgzBg>QQ4i[:3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z34 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/D_Flip_Flop.vhd|
 Z35 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/D_Flip_Flop.vhd|
 !i113 1
@@ -199,16 +199,16 @@ Vg<5jOEIY]RcgELm2AhmED1
 !s100 aJUP;6m7L2jVg6me9e4I;1
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R34
 R35
 !i113 1
 R11
 R12
 Edatapath
-Z36 w1736602739
+Z36 w1736606157
 R2
 R3
 R0
@@ -220,9 +220,9 @@ V^fnf^cChNL<g>mTN4o8Nj0
 !s100 zR>7eTnOK3:bccklCk1bd1
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z39 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl|
 Z40 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Datapath.vhdl|
 !i113 1
@@ -234,13 +234,13 @@ R3
 DEx4 work 8 datapath 0 22 ^fnf^cChNL<g>mTN4o8Nj0
 l67
 L17
-Vj=Z19cB?E>k_4?ZMnOkDA0
-!s100 Ni;0T[;4i10[<2K3OVaI_0
+VN^IMJce[V]WTP9z_ekn3G1
+!s100 nbJ<^WD^:a0mlh8aD5OiT2
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R39
 R40
 !i113 1
@@ -248,7 +248,7 @@ R11
 R12
 Ekogge_stone
 Z41 w1733032349
-R21
+R19
 R2
 R3
 R0
@@ -260,16 +260,16 @@ Vc4TJQUloFk]=HOXF;FaJO3
 !s100 i5]G^T_7gK>kh7M?1l3NZ0
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z44 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd|
 Z45 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone.vhd|
 !i113 1
 R11
 R12
 Abehav
-R21
+R19
 R2
 R3
 DEx4 work 11 kogge_stone 0 22 c4TJQUloFk]=HOXF;FaJO3
@@ -279,9 +279,9 @@ VFM@i=md<;MG]nL33B5IEG1
 !s100 >JKHi9==Sj94?bFNa@5n81
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R44
 R45
 !i113 1
@@ -289,7 +289,7 @@ R11
 R12
 Ekogge_stone_adder_subtractor
 Z46 w1733033677
-R21
+R19
 R2
 R3
 R0
@@ -301,16 +301,16 @@ VfE_bVjG]6ackWfcohB`Oz0
 !s100 f[O9D6i[L6DVGO3Ddn_f;0
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z49 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd|
 Z50 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Kogge_stone_adder_subtractor.vhd|
 !i113 1
 R11
 R12
 Astr
-R21
+R19
 R2
 R3
 DEx4 work 28 kogge_stone_adder_subtractor 0 22 fE_bVjG]6ackWfcohB`Oz0
@@ -320,9 +320,9 @@ V2@h1eR@<OeZ9Be?lHOZN82
 !s100 kkMb>F]cH3XOB@Q6?IzK81
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R49
 R50
 !i113 1
@@ -330,7 +330,7 @@ R11
 R12
 Ekogge_stone_node
 Z51 w1732988661
-R21
+R19
 R2
 R3
 R0
@@ -342,16 +342,16 @@ VIC7I4`cm8Wz@zzgeFnQZO1
 !s100 NPPNW;S:PNHVkUB8TZnZ[3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z54 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone_node.vhd|
 Z55 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/kogge_stone_node.vhd|
 !i113 1
 R11
 R12
 Astruct
-R21
+R19
 R2
 R3
 DEx4 work 16 kogge_stone_node 0 22 IC7I4`cm8Wz@zzgeFnQZO1
@@ -361,9 +361,9 @@ VF<Q@67UI3Mj<bcY7C[:gC1
 !s100 LI6Nk9;CCTC5]K@30RGo]3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R54
 R55
 !i113 1
@@ -382,9 +382,9 @@ V[E_eOiTbONORXPV_09lQS0
 !s100 MD27KKaQo`el2`5Cdh>C@3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z59 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux.vhd|
 Z60 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux.vhd|
 !i113 1
@@ -400,9 +400,9 @@ V@dMHEGA0]oc]d2Wh@Zn^[1
 !s100 >hO[;k?W_Hh>eIRg<V4ZC2
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R59
 R60
 !i113 1
@@ -421,9 +421,9 @@ VaZlRfA<eA;cPfE]6eK9ab2
 !s100 :gaW0jlEdT_o2Oi4jFLih0
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z64 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd|
 Z65 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/2_X_1_Mux_16_Bit.vhd|
 !i113 1
@@ -439,9 +439,9 @@ VMCX7>R5NZ0lWB5Y8>gW5Q1
 !s100 7JYMIOoClYk?lmcOJnSJo2
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R64
 R65
 !i113 1
@@ -449,7 +449,7 @@ R11
 R12
 Emux_4x1_16bit
 Z66 w1736595242
-R21
+R19
 R2
 R3
 R0
@@ -461,16 +461,16 @@ VincLG8509J<X@eXQJVzI42
 !s100 j3LA6QlOAmkiLZH]`SQUf2
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z69 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd|
 Z70 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/4_X_1_Mux_16_bit.vhd|
 !i113 1
 R11
 R12
 Abeh
-R21
+R19
 R2
 R3
 DEx4 work 13 mux_4x1_16bit 0 22 incLG8509J<X@eXQJVzI42
@@ -480,9 +480,9 @@ VeaK@PCa]HOhPK5AE=ZP4:3
 !s100 eRUfcIRAk<S`PaTC8HEc?3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R69
 R70
 !i113 1
@@ -501,9 +501,9 @@ VgK2MQViARVD49?=UC@8o:1
 !s100 jgoUc4RUHH:k5G[dNaRF^3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z74 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd|
 Z75 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/PIPO_Register.vhd|
 !i113 1
@@ -519,9 +519,9 @@ Vo[3n2Sc]68PiEa5fFCgkY3
 !s100 zZQ<0Ca[gVH;KXd0MR6]c3
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R74
 R75
 !i113 1
@@ -529,7 +529,7 @@ R11
 R12
 Epostprocessing
 R51
-R21
+R19
 R2
 R3
 R0
@@ -541,16 +541,16 @@ VUm2?blATME0z4Xik56g]k2
 !s100 Kk?WdGeGeaND;g[l0Dl6K0
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z78 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/postprocessing.vhd|
 Z79 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/postprocessing.vhd|
 !i113 1
 R11
 R12
 Abehav
-R21
+R19
 R2
 R3
 DEx4 work 14 postprocessing 0 22 Um2?blATME0z4Xik56g]k2
@@ -560,9 +560,9 @@ VKHCNF9=HC4gQb7:=jF5?n1
 !s100 k`UBQ0CF`nV;V]32]6K^=2
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R78
 R79
 !i113 1
@@ -570,7 +570,7 @@ R11
 R12
 Epreprocessing
 R51
-R21
+R19
 R2
 R3
 R0
@@ -582,16 +582,16 @@ VP>fl;:oaSLgjlA]aVN_kW1
 !s100 ]?>WkYVUL]SdhCUW@gj_33
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 Z82 !s90 -reportprogress|300|-93|-work|work|E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/preprocessing.vhd|
 Z83 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/preprocessing.vhd|
 !i113 1
 R11
 R12
 Abehav
-R21
+R19
 R2
 R3
 DEx4 work 13 preprocessing 0 22 P>fl;:oaSLgjlA]aVN_kW1
@@ -601,9 +601,9 @@ VeMU1gEMIm99a1<bkVjof:3
 !s100 ]`PN2<@Ve5X2ROZ0f]FI53
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R82
 R83
 !i113 1
@@ -611,7 +611,7 @@ R11
 R12
 Etoplevel
 Z84 w1736599065
-R21
+R19
 R2
 R3
 R0
@@ -632,7 +632,7 @@ Z88 !s107 E:/Semester_4/Hardware_Description_Languages/WASHU_2_CPU/Toplevel.vhd|
 R11
 R12
 Astr
-R21
+R19
 R2
 R3
 DEx4 work 8 toplevel 0 22 0MSeLihBg5BZ9<];khHQe3

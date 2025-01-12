@@ -407,7 +407,7 @@ pause => state.DATAB
 pause => state.DATAB
 pause => state.DATAB
 pause => state.DATAB
-pause => Selector2.IN13
+pause => Selector2.IN14
 pause => state.OUTPUTSELECT
 pause => state.OUTPUTSELECT
 pause => state.OUTPUTSELECT
@@ -436,9 +436,7 @@ pause => state.DATAB
 pause => state.DATAB
 pause => Selector3.IN1
 pause => state.DATAB
-pause => Selector3.IN2
 pause => state.DATAB
-pause => Selector3.IN3
 
 
 |Toplevel|datapath:DPath

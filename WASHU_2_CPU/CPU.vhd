@@ -183,16 +183,22 @@ begin
 								wrapup;
 							end if;
 						when dstore => 
-							wrapup;
+							if tick = 2 then
+								wrapup;
+							end if;
 						when istore => 
-							if tick = 1 then
+							if tick = 0 then
 								IAR_En <= '1';
-							elsif tick = 2 then
+							elsif tick = 3 then
 								wrapup;
 							end if;
 						when negate =>
-							Mux_Acc_In_Sel <= "11";
-							wrapup;
+							if tick = 1 then
+								Mux_Acc_In_Sel <= "11";
+								Acc_En <= '1';
+							elsif tick = 2 then
+								wrapup;
+							end if;
 						when add =>
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "11"; 
@@ -255,8 +261,10 @@ begin
 					IAR_Buffer_Sel <= '1';
 				end if;
 			when dStore =>
-				if tick = 0 then
+				if tick = 0 then 
 					en <= '1'; 
+				elsif tick = 1 then
+					en <= '1';
 					rw <= '0';
 					IReg_Buffer_Sel <= '1';
 					Acc_BUffer_Sel <= '1';
@@ -265,6 +273,8 @@ begin
 				if tick = 0 then
 					en <= '1'; 
 					IReg_Buffer_Sel <= '1';
+				elsif tick = 1 then
+					en <= '1';
 				elsif tick = 2 then
 					en <= '1'; 
 					rw <= '0';

@@ -31,9 +31,9 @@ architecture behav of CPU_testbench is
 	
 	type regarray is array(31 downto 0) of std_logic_vector(15 downto 0);
 	signal Memory: regarray:=(
-		0 =>  "0001000000000010", -- CLOAD to Set ACC as 000000000010
-		1 =>  "1000000000000010", -- ADD M[2] (Which is 000000000010) to ACC and Store in ACC
-		2 =>  "0000000000000010",
+		0 =>  "0001000001101010", -- CLOAD to Set ACC as 0000000001101010
+		1 =>  "0110000000000010", -- ISTORE to store ACC in M[M[2]] = M[14]
+		2 =>  "0000000000001110",
 		3 =>  "1011010011000110",
 		4 =>  "0000000000010000", 
 		5 =>  "0000000000000001", 
@@ -66,14 +66,21 @@ architecture behav of CPU_testbench is
 			wait;
 		end process;
 		
-		Mem_process: process(en,rw,dBus,aBus,clk)
+	
+		Mem_process: process(clk)
 		begin
-				if rw = '0' and en='1' and rising_edge(clk) then
+			if rising_edge(clk) then
+				if rw = '0' and en='1' then
 					report "Writing value: " & integer'image(to_integer(unsigned(dBus))) &" to memory address: " & integer'image(to_integer(unsigned(aBus)));
 					Memory(to_integer(unsigned(aBus))) <= dBus ;
-				elsif rw = '1' and en='1' and rising_edge(clk) then
-					dBus <= Memory(to_integer(unsigned(aBus)));
+				elsif rw = '1' and en='1' then
+					if aBus /= "ZZZZZZZZZZZZZZZZ" then
+						dBus <= Memory(to_integer(unsigned(aBus)));
+					else
+						dBus <= "ZZZZZZZZZZZZZZZZ";
+					end if;
 				end if;
+			end if;
 		end process;
-	
+
 end architecture;
