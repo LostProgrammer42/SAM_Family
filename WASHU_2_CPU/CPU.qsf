@@ -75,6 +75,6 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH CPU_Testbench -
 set_global_assignment -name EDA_TEST_BENCH_NAME CPU_Testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CPU_Testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CPU_Testbench -section_id CPU_Testbench
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 us" -section_id CPU_Testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE CPU_testbench.vhd -section_id CPU_Testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2 s" -section_id CPU_Testbench
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE CPU_testbench.vhd -section_id CPU_Testbench

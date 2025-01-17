@@ -12,7 +12,7 @@ entity cpu is port (
 			IReg_Data_Out, PC_Data_Out: in std_logic_vector(15 downto 0):="0000000000000000";
 			Acc_Data_Out: in std_logic_vector(15 downto 0):="0000000000000000";
 			regSelect: in std_logic_vector(1 downto 0);
-			dispReg: out std_logic_vector(15 downto 0);
+			dispReg: out std_log	ic_vector(15 downto 0);
 			pause: in std_logic);
 end cpu;
 
@@ -118,55 +118,62 @@ begin
 						tick <= x"0";
 					end if;
 				elsif state = fetch then
-					if tick = 1 then
-						PC_En <= '1';
+					Mux_PC_Add_Sel <= '1';
+					if tick = 0 then
 						IReg_En <= '1';
-					elsif tick = 3 then
+						PC_En <= '1';
+					elsif tick = 2 then
 						state <= decode(IReg_Data_Out);
 						tick <= x"0";
-						this <= PC_Data_Out;
-						Mux_PC_Add_Sel <= '1';
 					end if;
 				else 
 					case state is
 						when branch =>
-							if tick = 1 then
+							if tick = 0 then
 								PC_en <= '1';
+							elsif tick = 1 then
 								wrapup;
 							end if;
 						when brZero =>
-							if tick = 1 then
+							if tick = 0 then
 								if Acc_Data_Out = x"0000" then
 									PC_en <= '1';
-									wrapup;
 								end if;
+							elsif tick = 1 then
+								wrapup;
 							end if;
 						when brPos =>
-							if tick = 1 then
+							if tick = 0 then
 								if Acc_Data_Out /= x"0000" and Acc_Data_Out(15) = '0' then
 									PC_en <= '1';
-									wrapup;
 								end if;
+							elsif tick = 1 then
+								wrapup;
 							end if;
 						when brNeg =>
-							if tick = 1 then
+							if tick = 0 then
 								if Acc_Data_Out(15) = '1' then
 									PC_en <= '1';
-									wrapup;
 								end if;
+							elsif tick = 1 then
+								wrapup;
 							end if;
 						when brInd =>
-							if tick = 1 then
+							if tick = 0 then
 								PC_en <= '1';
-							elsif tick = 3 then
+							elsif tick = 2 then
 								Mux_PC_In_Sel <= '1';
 								PC_en <= '1';
+							elsif tick = 3 then
 								wrapup;
 							end if;
 						when cload =>
-							Mux_Acc_In_Sel <= "01";
-							Acc_En <= '1';
-							wrapup;
+							if tick = 0 then
+								Mux_Acc_In_Sel <= "01";
+								Acc_En <= '1';
+							elsif tick = 1 then
+								wrapup;
+							end if;
 						when dload => 
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "10";
@@ -210,6 +217,7 @@ begin
 							if tick = 1 then
 								Mux_Acc_In_Sel <= "11"; 
 								Acc_En <= '1';
+							elsif tick = 2 then
 								wrapup;
 							end if;
 						when others =>
@@ -220,7 +228,7 @@ begin
 		end if;
 	end process;
 	
-	process (ireg_Data_Out,pc_Data_Out,acc_Data_Out,this,state,tick) 
+	process (state,tick) 
 	begin
 		en <= '0'; 
 		rw <= '1';
@@ -234,17 +242,15 @@ begin
 				if tick = 0 then
 					en <= '1'; 
 					PC_Buffer_Sel <= '1';
+				elsif tick = 2 then
+					en <= '1';
 				end if;
 			when branch | brZero | brPos | brNeg =>
-				if tick = 0 then
-					en <= '1'; 
-					Addr_Sel <= '1';
-				end if;
+				Addr_Sel <= '1';
 			when brInd =>
-				if tick = 0 then
-					en <= '1'; 
-					Addr_Sel <= '1'; -- to select target
-				elsif tick = 2 then
+				Addr_Sel <= '1'; -- to select target
+				if tick = 2 then
+					en <= '1'; 					
 					PC_Buffer_Sel <= '1';
 				end if;
 			when dLoad | add | andd =>

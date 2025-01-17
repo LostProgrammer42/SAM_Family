@@ -1,5 +1,5 @@
 Flow report for CPU
-Sun Jan 12 10:30:34 2025
+Fri Jan 17 09:59:43 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jan 12 10:30:34 2025       ;
+; Flow Status                        ; Successful - Fri Jan 17 09:59:43 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08DAF484C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 470                                         ;
-;     Total combinational functions  ; 438                                         ;
+; Total logic elements               ; 461                                         ;
+;     Total combinational functions  ; 428                                         ;
 ;     Dedicated logic registers      ; 93                                          ;
 ; Total registers                    ; 93                                          ;
 ; Total pins                         ; 88                                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/12/2025 10:30:23 ;
+; Start date & time ; 01/17/2025 09:59:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 1095260230269.173665802210780          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 1095260230269.173708817106608          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CPU_Testbench  ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CPU_Testbench                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -105,8 +105,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4834 MB             ; 00:00:11                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4839 MB             ; 00:00:10                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
