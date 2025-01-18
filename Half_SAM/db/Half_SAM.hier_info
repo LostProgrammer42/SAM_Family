@@ -1,0 +1,1723 @@
+|Toplevel
+clk => cpu:CP_Unit.clk
+clk => datapath:DPath.clk
+rst => cpu:CP_Unit.rst
+rst => datapath:DPath.rst
+en << cpu:CP_Unit.En
+rw << cpu:CP_Unit.Rw
+aBus[0] << datapath:DPath.Address_Bus[0]
+aBus[1] << datapath:DPath.Address_Bus[1]
+aBus[2] << datapath:DPath.Address_Bus[2]
+aBus[3] << datapath:DPath.Address_Bus[3]
+aBus[4] << datapath:DPath.Address_Bus[4]
+aBus[5] << datapath:DPath.Address_Bus[5]
+aBus[6] << datapath:DPath.Address_Bus[6]
+aBus[7] << datapath:DPath.Address_Bus[7]
+dBus[0] <> datapath:DPath.Data_Bus[0]
+dBus[1] <> datapath:DPath.Data_Bus[1]
+dBus[2] <> datapath:DPath.Data_Bus[2]
+dBus[3] <> datapath:DPath.Data_Bus[3]
+dBus[4] <> datapath:DPath.Data_Bus[4]
+dBus[5] <> datapath:DPath.Data_Bus[5]
+dBus[6] <> datapath:DPath.Data_Bus[6]
+dBus[7] <> datapath:DPath.Data_Bus[7]
+pause => cpu:CP_Unit.pause
+regSelect[0] => cpu:CP_Unit.regSelect[0]
+regSelect[1] => cpu:CP_Unit.regSelect[1]
+dispReg[0] << cpu:CP_Unit.dispReg[0]
+dispReg[1] << cpu:CP_Unit.dispReg[1]
+dispReg[2] << cpu:CP_Unit.dispReg[2]
+dispReg[3] << cpu:CP_Unit.dispReg[3]
+dispReg[4] << cpu:CP_Unit.dispReg[4]
+dispReg[5] << cpu:CP_Unit.dispReg[5]
+dispReg[6] << cpu:CP_Unit.dispReg[6]
+dispReg[7] << cpu:CP_Unit.dispReg[7]
+Abus2[0] << datapath:DPath.Abus2[0]
+Abus2[1] << datapath:DPath.Abus2[1]
+Abus2[2] << datapath:DPath.Abus2[2]
+Abus2[3] << datapath:DPath.Abus2[3]
+Abus2[4] << datapath:DPath.Abus2[4]
+Abus2[5] << datapath:DPath.Abus2[5]
+Abus2[6] << datapath:DPath.Abus2[6]
+Abus2[7] << datapath:DPath.Abus2[7]
+PC_Data_In[0] << datapath:DPath.PC_Data_In[0]
+PC_Data_In[1] << datapath:DPath.PC_Data_In[1]
+PC_Data_In[2] << datapath:DPath.PC_Data_In[2]
+PC_Data_In[3] << datapath:DPath.PC_Data_In[3]
+PC_Data_In[4] << datapath:DPath.PC_Data_In[4]
+PC_Data_In[5] << datapath:DPath.PC_Data_In[5]
+PC_Data_In[6] << datapath:DPath.PC_Data_In[6]
+PC_Data_In[7] << datapath:DPath.PC_Data_In[7]
+PC_Buff_Sel << cpu:CP_Unit.PC_Buffer_Sel
+
+
+|Toplevel|cpu:CP_Unit
+IReg_En <= IReg_En~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Mux_PC_Add_Sel <= Mux_PC_Add_Sel~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Mux_PC_In_Sel <= Mux_PC_In_Sel~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PC_En <= PC_En~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IAR_En <= IAR_En~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Acc_En <= Acc_En~reg0.DB_MAX_OUTPUT_PORT_TYPE
+IReg_Buffer_Sel <= Selector28.DB_MAX_OUTPUT_PORT_TYPE
+PC_Buffer_Sel <= Selector27.DB_MAX_OUTPUT_PORT_TYPE
+IAR_Buffer_Sel <= Selector29.DB_MAX_OUTPUT_PORT_TYPE
+Acc_Buffer_Sel <= Selector31.DB_MAX_OUTPUT_PORT_TYPE
+clk => tick[0].CLK
+clk => tick[1].CLK
+clk => tick[2].CLK
+clk => tick[3].CLK
+clk => Mux_Acc_In_Sel[0]~reg0.CLK
+clk => Mux_Acc_In_Sel[1]~reg0.CLK
+clk => Mux_PC_In_Sel~reg0.CLK
+clk => Mux_PC_Add_Sel~reg0.CLK
+clk => IReg_En~reg0.CLK
+clk => PC_En~reg0.CLK
+clk => IAR_En~reg0.CLK
+clk => Acc_En~reg0.CLK
+clk => state~15.DATAIN
+rst => Acc_En.OUTPUTSELECT
+rst => IAR_En.OUTPUTSELECT
+rst => PC_En.OUTPUTSELECT
+rst => IReg_En.OUTPUTSELECT
+rst => Mux_PC_Add_Sel.OUTPUTSELECT
+rst => Mux_PC_In_Sel.OUTPUTSELECT
+rst => Mux_Acc_In_Sel.OUTPUTSELECT
+rst => Mux_Acc_In_Sel.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => tick.OUTPUTSELECT
+rst => tick.OUTPUTSELECT
+rst => tick.OUTPUTSELECT
+rst => tick.OUTPUTSELECT
+Mux_Acc_In_Sel[0] <= Mux_Acc_In_Sel[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Mux_Acc_In_Sel[1] <= Mux_Acc_In_Sel[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Sel[0] <= ALU_Sel.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Sel[1] <= ALU_Sel.DB_MAX_OUTPUT_PORT_TYPE
+En <= Selector26.DB_MAX_OUTPUT_PORT_TYPE
+Rw <= Selector30.DB_MAX_OUTPUT_PORT_TYPE
+IReg_Data_Out[0] => Mux0.IN19
+IReg_Data_Out[0] => Mux1.IN19
+IReg_Data_Out[0] => Mux16.IN1
+IReg_Data_Out[1] => Mux0.IN18
+IReg_Data_Out[1] => Mux1.IN18
+IReg_Data_Out[1] => Mux17.IN1
+IReg_Data_Out[2] => Mux0.IN17
+IReg_Data_Out[2] => Mux1.IN17
+IReg_Data_Out[2] => Mux18.IN1
+IReg_Data_Out[3] => Mux0.IN16
+IReg_Data_Out[3] => Mux1.IN16
+IReg_Data_Out[3] => Mux19.IN1
+IReg_Data_Out[4] => Mux2.IN19
+IReg_Data_Out[4] => Mux3.IN19
+IReg_Data_Out[4] => Mux4.IN19
+IReg_Data_Out[4] => Mux5.IN19
+IReg_Data_Out[4] => Mux6.IN19
+IReg_Data_Out[4] => Mux7.IN19
+IReg_Data_Out[4] => Mux8.IN19
+IReg_Data_Out[4] => Mux9.IN19
+IReg_Data_Out[4] => Mux10.IN19
+IReg_Data_Out[4] => Mux11.IN19
+IReg_Data_Out[4] => Mux12.IN19
+IReg_Data_Out[4] => Mux13.IN19
+IReg_Data_Out[4] => Mux14.IN19
+IReg_Data_Out[4] => Mux15.IN19
+IReg_Data_Out[4] => Mux20.IN1
+IReg_Data_Out[5] => Mux2.IN18
+IReg_Data_Out[5] => Mux3.IN18
+IReg_Data_Out[5] => Mux4.IN18
+IReg_Data_Out[5] => Mux5.IN18
+IReg_Data_Out[5] => Mux6.IN18
+IReg_Data_Out[5] => Mux7.IN18
+IReg_Data_Out[5] => Mux8.IN18
+IReg_Data_Out[5] => Mux9.IN18
+IReg_Data_Out[5] => Mux10.IN18
+IReg_Data_Out[5] => Mux11.IN18
+IReg_Data_Out[5] => Mux12.IN18
+IReg_Data_Out[5] => Mux13.IN18
+IReg_Data_Out[5] => Mux14.IN18
+IReg_Data_Out[5] => Mux15.IN18
+IReg_Data_Out[5] => Mux21.IN1
+IReg_Data_Out[6] => Mux2.IN17
+IReg_Data_Out[6] => Mux3.IN17
+IReg_Data_Out[6] => Mux4.IN17
+IReg_Data_Out[6] => Mux5.IN17
+IReg_Data_Out[6] => Mux6.IN17
+IReg_Data_Out[6] => Mux7.IN17
+IReg_Data_Out[6] => Mux8.IN17
+IReg_Data_Out[6] => Mux9.IN17
+IReg_Data_Out[6] => Mux10.IN17
+IReg_Data_Out[6] => Mux11.IN17
+IReg_Data_Out[6] => Mux12.IN17
+IReg_Data_Out[6] => Mux13.IN17
+IReg_Data_Out[6] => Mux14.IN17
+IReg_Data_Out[6] => Mux15.IN17
+IReg_Data_Out[6] => Mux22.IN1
+IReg_Data_Out[7] => Mux2.IN16
+IReg_Data_Out[7] => Mux3.IN16
+IReg_Data_Out[7] => Mux4.IN16
+IReg_Data_Out[7] => Mux5.IN16
+IReg_Data_Out[7] => Mux6.IN16
+IReg_Data_Out[7] => Mux7.IN16
+IReg_Data_Out[7] => Mux8.IN16
+IReg_Data_Out[7] => Mux9.IN16
+IReg_Data_Out[7] => Mux10.IN16
+IReg_Data_Out[7] => Mux11.IN16
+IReg_Data_Out[7] => Mux12.IN16
+IReg_Data_Out[7] => Mux13.IN16
+IReg_Data_Out[7] => Mux14.IN16
+IReg_Data_Out[7] => Mux15.IN16
+IReg_Data_Out[7] => Mux23.IN1
+PC_Data_Out[0] => Mux16.IN2
+PC_Data_Out[1] => Mux17.IN2
+PC_Data_Out[2] => Mux18.IN2
+PC_Data_Out[3] => Mux19.IN2
+PC_Data_Out[4] => Mux20.IN2
+PC_Data_Out[5] => Mux21.IN2
+PC_Data_Out[6] => Mux22.IN2
+PC_Data_Out[7] => Mux23.IN2
+Acc_Data_Out[0] => Mux16.IN3
+Acc_Data_Out[0] => Equal1.IN7
+Acc_Data_Out[1] => Mux17.IN3
+Acc_Data_Out[1] => Equal1.IN6
+Acc_Data_Out[2] => Mux18.IN3
+Acc_Data_Out[2] => Equal1.IN5
+Acc_Data_Out[3] => Mux19.IN3
+Acc_Data_Out[3] => Equal1.IN4
+Acc_Data_Out[4] => Mux20.IN3
+Acc_Data_Out[4] => Equal1.IN3
+Acc_Data_Out[5] => Mux21.IN3
+Acc_Data_Out[5] => Equal1.IN2
+Acc_Data_Out[6] => Mux22.IN3
+Acc_Data_Out[6] => Equal1.IN1
+Acc_Data_Out[7] => PC_En.DATAB
+Acc_Data_Out[7] => Mux23.IN3
+Acc_Data_Out[7] => Equal1.IN0
+Acc_Data_Out[7] => process_0.IN1
+regSelect[0] => Mux16.IN5
+regSelect[0] => Mux17.IN5
+regSelect[0] => Mux18.IN5
+regSelect[0] => Mux19.IN5
+regSelect[0] => Mux20.IN5
+regSelect[0] => Mux21.IN5
+regSelect[0] => Mux22.IN5
+regSelect[0] => Mux23.IN5
+regSelect[0] => Mux24.IN5
+regSelect[1] => Mux16.IN4
+regSelect[1] => Mux17.IN4
+regSelect[1] => Mux18.IN4
+regSelect[1] => Mux19.IN4
+regSelect[1] => Mux20.IN4
+regSelect[1] => Mux21.IN4
+regSelect[1] => Mux22.IN4
+regSelect[1] => Mux23.IN4
+regSelect[1] => Mux24.IN4
+dispReg[0] <= dispReg[0].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[1] <= dispReg[1].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[2] <= dispReg[2].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[3] <= dispReg[3].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[4] <= dispReg[4].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[5] <= dispReg[5].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[6] <= dispReg[6].DB_MAX_OUTPUT_PORT_TYPE
+dispReg[7] <= dispReg[7].DB_MAX_OUTPUT_PORT_TYPE
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => state.DATAB
+pause => state.DATAB
+pause => state.DATAB
+pause => state.DATAB
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => state.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => tick.OUTPUTSELECT
+pause => state.DATAB
+pause => state.DATAB
+pause => state.DATAB
+pause => state.DATAB
+
+
+|Toplevel|datapath:DPath
+IReg_En => pipo_register:IReg.en
+Mux_PC_Add_Sel => mux_2x1_8bit:Mux_PC_Add.S
+PC_En => pipo_register:PC.en
+IAR_En => pipo_register:IAR.en
+Acc_En => pipo_register:ACC.en
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => Address_Bus.OUTPUTSELECT
+IReg_Buffer_Sel => mux_2x1_8bit:IReg_Tristate_Buffer.S
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => Address_Bus.OUTPUTSELECT
+PC_Buffer_Sel => mux_2x1_8bit:PC_Tristate_Buffer.S
+IAR_Buffer_Sel => mux_2x1_8bit:IAR_Tristate_Buffer.S
+Acc_Buffer_Sel => mux_2x1_8bit:ACC_Tristate_Buffer.S
+Mux_PC_In_Sel => mux_2x1_8bit:Mux_PC_Input_Sel.S
+clk => pipo_register:IReg.clk
+clk => pipo_register:PC.clk
+clk => pipo_register:IAR.clk
+clk => pipo_register:ACC.clk
+rst => pipo_register:IReg.rst
+rst => pipo_register:PC.rst
+rst => pipo_register:IAR.rst
+rst => pipo_register:ACC.rst
+Mux_Acc_In_Sel[0] => mux_4x1_8bit:Mux_ACC.S[0]
+Mux_Acc_In_Sel[1] => mux_4x1_8bit:Mux_ACC.S[1]
+ALU_Sel[0] => ALU:AL_Unit.ALU_Sel[0]
+ALU_Sel[1] => ALU:AL_Unit.ALU_Sel[1]
+Data_Bus[0] <> Data_Bus[0]
+Data_Bus[1] <> Data_Bus[1]
+Data_Bus[2] <> Data_Bus[2]
+Data_Bus[3] <> Data_Bus[3]
+Data_Bus[4] <> Data_Bus[4]
+Data_Bus[5] <> Data_Bus[5]
+Data_Bus[6] <> Data_Bus[6]
+Data_Bus[7] <> Data_Bus[7]
+Address_Bus[0] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[1] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[2] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[3] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[4] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[5] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[6] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+Address_Bus[7] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
+IReg_Data_Out[0] <= pipo_register:IReg.dout[0]
+IReg_Data_Out[1] <= pipo_register:IReg.dout[1]
+IReg_Data_Out[2] <= pipo_register:IReg.dout[2]
+IReg_Data_Out[3] <= pipo_register:IReg.dout[3]
+IReg_Data_Out[4] <= pipo_register:IReg.dout[4]
+IReg_Data_Out[5] <= pipo_register:IReg.dout[5]
+IReg_Data_Out[6] <= pipo_register:IReg.dout[6]
+IReg_Data_Out[7] <= pipo_register:IReg.dout[7]
+PC_Data_Out[0] <= pipo_register:PC.dout[0]
+PC_Data_Out[1] <= pipo_register:PC.dout[1]
+PC_Data_Out[2] <= pipo_register:PC.dout[2]
+PC_Data_Out[3] <= pipo_register:PC.dout[3]
+PC_Data_Out[4] <= pipo_register:PC.dout[4]
+PC_Data_Out[5] <= pipo_register:PC.dout[5]
+PC_Data_Out[6] <= pipo_register:PC.dout[6]
+PC_Data_Out[7] <= pipo_register:PC.dout[7]
+Acc_Data_Out[0] <= pipo_register:ACC.dout[0]
+Acc_Data_Out[1] <= pipo_register:ACC.dout[1]
+Acc_Data_Out[2] <= pipo_register:ACC.dout[2]
+Acc_Data_Out[3] <= pipo_register:ACC.dout[3]
+Acc_Data_Out[4] <= pipo_register:ACC.dout[4]
+Acc_Data_Out[5] <= pipo_register:ACC.dout[5]
+Acc_Data_Out[6] <= pipo_register:ACC.dout[6]
+Acc_Data_Out[7] <= pipo_register:ACC.dout[7]
+Abus2[0] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[0]
+Abus2[1] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[1]
+Abus2[2] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[2]
+Abus2[3] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[3]
+Abus2[4] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[4]
+Abus2[5] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[5]
+Abus2[6] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[6]
+Abus2[7] <= mux_2x1_8bit:PC_Tristate_Buffer.Y[7]
+PC_Data_In[0] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[0]
+PC_Data_In[1] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[1]
+PC_Data_In[2] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[2]
+PC_Data_In[3] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[3]
+PC_Data_In[4] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[4]
+PC_Data_In[5] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[5]
+PC_Data_In[6] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[6]
+PC_Data_In[7] <= mux_2x1_8bit:Mux_PC_Input_Sel.Y[7]
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg
+din[0] => mux_2x1:gen_mux:0:muxi.I1
+din[1] => mux_2x1:gen_mux:1:muxi.I1
+din[2] => mux_2x1:gen_mux:2:muxi.I1
+din[3] => mux_2x1:gen_mux:3:muxi.I1
+din[4] => mux_2x1:gen_mux:4:muxi.I1
+din[5] => mux_2x1:gen_mux:5:muxi.I1
+din[6] => mux_2x1:gen_mux:6:muxi.I1
+din[7] => mux_2x1:gen_mux:7:muxi.I1
+en => mux_2x1:gen_mux:7:muxi.S
+en => mux_2x1:gen_mux:6:muxi.S
+en => mux_2x1:gen_mux:5:muxi.S
+en => mux_2x1:gen_mux:4:muxi.S
+en => mux_2x1:gen_mux:3:muxi.S
+en => mux_2x1:gen_mux:2:muxi.S
+en => mux_2x1:gen_mux:1:muxi.S
+en => mux_2x1:gen_mux:0:muxi.S
+rst => d_ff:gen_dff:7:dffi.rst
+rst => d_ff:gen_dff:6:dffi.rst
+rst => d_ff:gen_dff:5:dffi.rst
+rst => d_ff:gen_dff:4:dffi.rst
+rst => d_ff:gen_dff:3:dffi.rst
+rst => d_ff:gen_dff:2:dffi.rst
+rst => d_ff:gen_dff:1:dffi.rst
+rst => d_ff:gen_dff:0:dffi.rst
+clk => d_ff:gen_dff:7:dffi.clk
+clk => d_ff:gen_dff:6:dffi.clk
+clk => d_ff:gen_dff:5:dffi.clk
+clk => d_ff:gen_dff:4:dffi.clk
+clk => d_ff:gen_dff:3:dffi.clk
+clk => d_ff:gen_dff:2:dffi.clk
+clk => d_ff:gen_dff:1:dffi.clk
+clk => d_ff:gen_dff:0:dffi.clk
+dout[0] <= d_ff:gen_dff:0:dffi.q
+dout[1] <= d_ff:gen_dff:1:dffi.q
+dout[2] <= d_ff:gen_dff:2:dffi.q
+dout[3] <= d_ff:gen_dff:3:dffi.q
+dout[4] <= d_ff:gen_dff:4:dffi.q
+dout[5] <= d_ff:gen_dff:5:dffi.q
+dout[6] <= d_ff:gen_dff:6:dffi.q
+dout[7] <= d_ff:gen_dff:7:dffi.q
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:7:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:6:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:5:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:4:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:3:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:2:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:1:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|d_ff:\gen_dff:0:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:7:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:6:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:5:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:4:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:3:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:2:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:1:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IReg|mux_2x1:\gen_mux:0:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:IReg_Tristate_Buffer
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:Mux_PC_Add
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:Mux_PC_Input_Sel
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder
+A[0] => full_adder_nand:FA1.A
+A[1] => full_adder_nand:FA2.A
+A[2] => full_adder_nand:FA3.A
+A[3] => full_adder_nand:FA4.A
+A[4] => full_adder_nand:FA5.A
+A[5] => full_adder_nand:FA6.A
+A[6] => full_adder_nand:FA7.A
+A[7] => full_adder_nand:FA8.A
+B[0] => b_temp[0].IN0
+B[1] => b_temp[1].IN0
+B[2] => b_temp[2].IN0
+B[3] => b_temp[3].IN0
+B[4] => b_temp[4].IN0
+B[5] => b_temp[5].IN0
+B[6] => b_temp[6].IN0
+B[7] => b_temp[7].IN0
+M => b_temp[0].IN1
+M => b_temp[1].IN1
+M => b_temp[2].IN1
+M => b_temp[3].IN1
+M => b_temp[4].IN1
+M => b_temp[5].IN1
+M => b_temp[6].IN1
+M => b_temp[7].IN1
+M => full_adder_nand:FA1.C_in
+S[0] <= full_adder_nand:FA1.S
+S[1] <= full_adder_nand:FA2.S
+S[2] <= full_adder_nand:FA3.S
+S[3] <= full_adder_nand:FA4.S
+S[4] <= full_adder_nand:FA5.S
+S[5] <= full_adder_nand:FA6.S
+S[6] <= full_adder_nand:FA7.S
+S[7] <= full_adder_nand:FA8.S
+Cout <= full_adder_nand:FA8.C_out
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA1
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA2
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA3
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA4
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA5
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA6
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA7
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|RCAS:Adder|full_adder_nand:FA8
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC
+din[0] => mux_2x1:gen_mux:0:muxi.I1
+din[1] => mux_2x1:gen_mux:1:muxi.I1
+din[2] => mux_2x1:gen_mux:2:muxi.I1
+din[3] => mux_2x1:gen_mux:3:muxi.I1
+din[4] => mux_2x1:gen_mux:4:muxi.I1
+din[5] => mux_2x1:gen_mux:5:muxi.I1
+din[6] => mux_2x1:gen_mux:6:muxi.I1
+din[7] => mux_2x1:gen_mux:7:muxi.I1
+en => mux_2x1:gen_mux:7:muxi.S
+en => mux_2x1:gen_mux:6:muxi.S
+en => mux_2x1:gen_mux:5:muxi.S
+en => mux_2x1:gen_mux:4:muxi.S
+en => mux_2x1:gen_mux:3:muxi.S
+en => mux_2x1:gen_mux:2:muxi.S
+en => mux_2x1:gen_mux:1:muxi.S
+en => mux_2x1:gen_mux:0:muxi.S
+rst => d_ff:gen_dff:7:dffi.rst
+rst => d_ff:gen_dff:6:dffi.rst
+rst => d_ff:gen_dff:5:dffi.rst
+rst => d_ff:gen_dff:4:dffi.rst
+rst => d_ff:gen_dff:3:dffi.rst
+rst => d_ff:gen_dff:2:dffi.rst
+rst => d_ff:gen_dff:1:dffi.rst
+rst => d_ff:gen_dff:0:dffi.rst
+clk => d_ff:gen_dff:7:dffi.clk
+clk => d_ff:gen_dff:6:dffi.clk
+clk => d_ff:gen_dff:5:dffi.clk
+clk => d_ff:gen_dff:4:dffi.clk
+clk => d_ff:gen_dff:3:dffi.clk
+clk => d_ff:gen_dff:2:dffi.clk
+clk => d_ff:gen_dff:1:dffi.clk
+clk => d_ff:gen_dff:0:dffi.clk
+dout[0] <= d_ff:gen_dff:0:dffi.q
+dout[1] <= d_ff:gen_dff:1:dffi.q
+dout[2] <= d_ff:gen_dff:2:dffi.q
+dout[3] <= d_ff:gen_dff:3:dffi.q
+dout[4] <= d_ff:gen_dff:4:dffi.q
+dout[5] <= d_ff:gen_dff:5:dffi.q
+dout[6] <= d_ff:gen_dff:6:dffi.q
+dout[7] <= d_ff:gen_dff:7:dffi.q
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:7:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:6:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:5:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:4:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:3:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:2:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:1:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|d_ff:\gen_dff:0:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:7:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:6:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:5:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:4:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:3:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:2:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:1:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:PC|mux_2x1:\gen_mux:0:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:PC_Tristate_Buffer
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR
+din[0] => mux_2x1:gen_mux:0:muxi.I1
+din[1] => mux_2x1:gen_mux:1:muxi.I1
+din[2] => mux_2x1:gen_mux:2:muxi.I1
+din[3] => mux_2x1:gen_mux:3:muxi.I1
+din[4] => mux_2x1:gen_mux:4:muxi.I1
+din[5] => mux_2x1:gen_mux:5:muxi.I1
+din[6] => mux_2x1:gen_mux:6:muxi.I1
+din[7] => mux_2x1:gen_mux:7:muxi.I1
+en => mux_2x1:gen_mux:7:muxi.S
+en => mux_2x1:gen_mux:6:muxi.S
+en => mux_2x1:gen_mux:5:muxi.S
+en => mux_2x1:gen_mux:4:muxi.S
+en => mux_2x1:gen_mux:3:muxi.S
+en => mux_2x1:gen_mux:2:muxi.S
+en => mux_2x1:gen_mux:1:muxi.S
+en => mux_2x1:gen_mux:0:muxi.S
+rst => d_ff:gen_dff:7:dffi.rst
+rst => d_ff:gen_dff:6:dffi.rst
+rst => d_ff:gen_dff:5:dffi.rst
+rst => d_ff:gen_dff:4:dffi.rst
+rst => d_ff:gen_dff:3:dffi.rst
+rst => d_ff:gen_dff:2:dffi.rst
+rst => d_ff:gen_dff:1:dffi.rst
+rst => d_ff:gen_dff:0:dffi.rst
+clk => d_ff:gen_dff:7:dffi.clk
+clk => d_ff:gen_dff:6:dffi.clk
+clk => d_ff:gen_dff:5:dffi.clk
+clk => d_ff:gen_dff:4:dffi.clk
+clk => d_ff:gen_dff:3:dffi.clk
+clk => d_ff:gen_dff:2:dffi.clk
+clk => d_ff:gen_dff:1:dffi.clk
+clk => d_ff:gen_dff:0:dffi.clk
+dout[0] <= d_ff:gen_dff:0:dffi.q
+dout[1] <= d_ff:gen_dff:1:dffi.q
+dout[2] <= d_ff:gen_dff:2:dffi.q
+dout[3] <= d_ff:gen_dff:3:dffi.q
+dout[4] <= d_ff:gen_dff:4:dffi.q
+dout[5] <= d_ff:gen_dff:5:dffi.q
+dout[6] <= d_ff:gen_dff:6:dffi.q
+dout[7] <= d_ff:gen_dff:7:dffi.q
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:7:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:6:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:5:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:4:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:3:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:2:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:1:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|d_ff:\gen_dff:0:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:7:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:6:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:5:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:4:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:3:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:2:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:1:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:IAR|mux_2x1:\gen_mux:0:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:IAR_Tristate_Buffer
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_4x1_8bit:Mux_ACC
+I3[0] => Mux7.IN0
+I3[1] => Mux6.IN0
+I3[2] => Mux5.IN0
+I3[3] => Mux4.IN0
+I3[4] => Mux3.IN0
+I3[5] => Mux2.IN0
+I3[6] => Mux1.IN0
+I3[7] => Mux0.IN0
+I2[0] => Mux7.IN1
+I2[1] => Mux6.IN1
+I2[2] => Mux5.IN1
+I2[3] => Mux4.IN1
+I2[4] => Mux3.IN1
+I2[5] => Mux2.IN1
+I2[6] => Mux1.IN1
+I2[7] => Mux0.IN1
+I1[0] => Mux7.IN2
+I1[1] => Mux6.IN2
+I1[2] => Mux5.IN2
+I1[3] => Mux4.IN2
+I1[4] => Mux3.IN2
+I1[5] => Mux2.IN2
+I1[6] => Mux1.IN2
+I1[7] => Mux0.IN2
+I0[0] => Mux7.IN3
+I0[1] => Mux6.IN3
+I0[2] => Mux5.IN3
+I0[3] => Mux4.IN3
+I0[4] => Mux3.IN3
+I0[5] => Mux2.IN3
+I0[6] => Mux1.IN3
+I0[7] => Mux0.IN3
+S[0] => Mux0.IN5
+S[0] => Mux1.IN5
+S[0] => Mux2.IN5
+S[0] => Mux3.IN5
+S[0] => Mux4.IN5
+S[0] => Mux5.IN5
+S[0] => Mux6.IN5
+S[0] => Mux7.IN5
+S[1] => Mux0.IN4
+S[1] => Mux1.IN4
+S[1] => Mux2.IN4
+S[1] => Mux3.IN4
+S[1] => Mux4.IN4
+S[1] => Mux5.IN4
+S[1] => Mux6.IN4
+S[1] => Mux7.IN4
+Y[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC
+din[0] => mux_2x1:gen_mux:0:muxi.I1
+din[1] => mux_2x1:gen_mux:1:muxi.I1
+din[2] => mux_2x1:gen_mux:2:muxi.I1
+din[3] => mux_2x1:gen_mux:3:muxi.I1
+din[4] => mux_2x1:gen_mux:4:muxi.I1
+din[5] => mux_2x1:gen_mux:5:muxi.I1
+din[6] => mux_2x1:gen_mux:6:muxi.I1
+din[7] => mux_2x1:gen_mux:7:muxi.I1
+en => mux_2x1:gen_mux:7:muxi.S
+en => mux_2x1:gen_mux:6:muxi.S
+en => mux_2x1:gen_mux:5:muxi.S
+en => mux_2x1:gen_mux:4:muxi.S
+en => mux_2x1:gen_mux:3:muxi.S
+en => mux_2x1:gen_mux:2:muxi.S
+en => mux_2x1:gen_mux:1:muxi.S
+en => mux_2x1:gen_mux:0:muxi.S
+rst => d_ff:gen_dff:7:dffi.rst
+rst => d_ff:gen_dff:6:dffi.rst
+rst => d_ff:gen_dff:5:dffi.rst
+rst => d_ff:gen_dff:4:dffi.rst
+rst => d_ff:gen_dff:3:dffi.rst
+rst => d_ff:gen_dff:2:dffi.rst
+rst => d_ff:gen_dff:1:dffi.rst
+rst => d_ff:gen_dff:0:dffi.rst
+clk => d_ff:gen_dff:7:dffi.clk
+clk => d_ff:gen_dff:6:dffi.clk
+clk => d_ff:gen_dff:5:dffi.clk
+clk => d_ff:gen_dff:4:dffi.clk
+clk => d_ff:gen_dff:3:dffi.clk
+clk => d_ff:gen_dff:2:dffi.clk
+clk => d_ff:gen_dff:1:dffi.clk
+clk => d_ff:gen_dff:0:dffi.clk
+dout[0] <= d_ff:gen_dff:0:dffi.q
+dout[1] <= d_ff:gen_dff:1:dffi.q
+dout[2] <= d_ff:gen_dff:2:dffi.q
+dout[3] <= d_ff:gen_dff:3:dffi.q
+dout[4] <= d_ff:gen_dff:4:dffi.q
+dout[5] <= d_ff:gen_dff:5:dffi.q
+dout[6] <= d_ff:gen_dff:6:dffi.q
+dout[7] <= d_ff:gen_dff:7:dffi.q
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:7:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:6:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:5:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:4:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:3:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:2:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:1:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|d_ff:\gen_dff:0:dffi
+clk => q~reg0.CLK
+rst => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:7:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:6:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:5:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:4:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:3:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:2:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:1:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|pipo_register:ACC|mux_2x1:\gen_mux:0:muxi
+I1 => Y.DATAA
+I0 => Y.DATAB
+S => Y.OUTPUTSELECT
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|mux_2x1_8bit:ACC_Tristate_Buffer
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit
+a[0] => RCAS:Adder.B[0]
+a[0] => AND_8:Ander.a[0]
+a[1] => RCAS:Adder.B[1]
+a[1] => AND_8:Ander.a[1]
+a[2] => RCAS:Adder.B[2]
+a[2] => AND_8:Ander.a[2]
+a[3] => RCAS:Adder.B[3]
+a[3] => AND_8:Ander.a[3]
+a[4] => RCAS:Adder.B[4]
+a[4] => AND_8:Ander.a[4]
+a[5] => RCAS:Adder.B[5]
+a[5] => AND_8:Ander.a[5]
+a[6] => RCAS:Adder.B[6]
+a[6] => AND_8:Ander.a[6]
+a[7] => RCAS:Adder.B[7]
+a[7] => AND_8:Ander.a[7]
+b[0] => mux_2x1_8bit:Mux1.I1[0]
+b[0] => AND_8:Ander.b[0]
+b[1] => mux_2x1_8bit:Mux1.I1[1]
+b[1] => AND_8:Ander.b[1]
+b[2] => mux_2x1_8bit:Mux1.I1[2]
+b[2] => AND_8:Ander.b[2]
+b[3] => mux_2x1_8bit:Mux1.I1[3]
+b[3] => AND_8:Ander.b[3]
+b[4] => mux_2x1_8bit:Mux1.I1[4]
+b[4] => AND_8:Ander.b[4]
+b[5] => mux_2x1_8bit:Mux1.I1[5]
+b[5] => AND_8:Ander.b[5]
+b[6] => mux_2x1_8bit:Mux1.I1[6]
+b[6] => AND_8:Ander.b[6]
+b[7] => mux_2x1_8bit:Mux1.I1[7]
+b[7] => AND_8:Ander.b[7]
+ALU_Sel[0] => mux_2x1_8bit:Mux1.S
+ALU_Sel[0] => mux_4x1_8bit:Mux2.S[0]
+ALU_Sel[0] => RCAS:Adder.M
+ALU_Sel[1] => mux_4x1_8bit:Mux2.S[1]
+c[0] <= mux_4x1_8bit:Mux2.Y[0]
+c[1] <= mux_4x1_8bit:Mux2.Y[1]
+c[2] <= mux_4x1_8bit:Mux2.Y[2]
+c[3] <= mux_4x1_8bit:Mux2.Y[3]
+c[4] <= mux_4x1_8bit:Mux2.Y[4]
+c[5] <= mux_4x1_8bit:Mux2.Y[5]
+c[6] <= mux_4x1_8bit:Mux2.Y[6]
+c[7] <= mux_4x1_8bit:Mux2.Y[7]
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|mux_2x1_8bit:Mux1
+I1[0] => Y.DATAA
+I1[1] => Y.DATAA
+I1[2] => Y.DATAA
+I1[3] => Y.DATAA
+I1[4] => Y.DATAA
+I1[5] => Y.DATAA
+I1[6] => Y.DATAA
+I1[7] => Y.DATAA
+I0[0] => Y.DATAB
+I0[1] => Y.DATAB
+I0[2] => Y.DATAB
+I0[3] => Y.DATAB
+I0[4] => Y.DATAB
+I0[5] => Y.DATAB
+I0[6] => Y.DATAB
+I0[7] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder
+A[0] => full_adder_nand:FA1.A
+A[1] => full_adder_nand:FA2.A
+A[2] => full_adder_nand:FA3.A
+A[3] => full_adder_nand:FA4.A
+A[4] => full_adder_nand:FA5.A
+A[5] => full_adder_nand:FA6.A
+A[6] => full_adder_nand:FA7.A
+A[7] => full_adder_nand:FA8.A
+B[0] => b_temp[0].IN0
+B[1] => b_temp[1].IN0
+B[2] => b_temp[2].IN0
+B[3] => b_temp[3].IN0
+B[4] => b_temp[4].IN0
+B[5] => b_temp[5].IN0
+B[6] => b_temp[6].IN0
+B[7] => b_temp[7].IN0
+M => b_temp[0].IN1
+M => b_temp[1].IN1
+M => b_temp[2].IN1
+M => b_temp[3].IN1
+M => b_temp[4].IN1
+M => b_temp[5].IN1
+M => b_temp[6].IN1
+M => b_temp[7].IN1
+M => full_adder_nand:FA1.C_in
+S[0] <= full_adder_nand:FA1.S
+S[1] <= full_adder_nand:FA2.S
+S[2] <= full_adder_nand:FA3.S
+S[3] <= full_adder_nand:FA4.S
+S[4] <= full_adder_nand:FA5.S
+S[5] <= full_adder_nand:FA6.S
+S[6] <= full_adder_nand:FA7.S
+S[7] <= full_adder_nand:FA8.S
+Cout <= full_adder_nand:FA8.C_out
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA1
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA2
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA3
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA4
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA5
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA6
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA7
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|RCAS:Adder|full_adder_nand:FA8
+A => S.IN0
+A => C_out.IN0
+A => C_out.IN0
+B => S.IN1
+B => C_out.IN1
+B => C_out.IN0
+C_in => S.IN1
+C_in => C_out.IN1
+C_in => C_out.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C_out <= C_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|AND_8:Ander
+a[0] => c.IN0
+a[1] => c.IN0
+a[2] => c.IN0
+a[3] => c.IN0
+a[4] => c.IN0
+a[5] => c.IN0
+a[6] => c.IN0
+a[7] => c.IN0
+b[0] => c.IN1
+b[1] => c.IN1
+b[2] => c.IN1
+b[3] => c.IN1
+b[4] => c.IN1
+b[5] => c.IN1
+b[6] => c.IN1
+b[7] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[3] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[5] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[6] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[7] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Toplevel|datapath:DPath|ALU:AL_Unit|mux_4x1_8bit:Mux2
+I3[0] => Mux7.IN0
+I3[1] => Mux6.IN0
+I3[2] => Mux5.IN0
+I3[3] => Mux4.IN0
+I3[4] => Mux3.IN0
+I3[5] => Mux2.IN0
+I3[6] => Mux1.IN0
+I3[7] => Mux0.IN0
+I2[0] => Mux7.IN1
+I2[1] => Mux6.IN1
+I2[2] => Mux5.IN1
+I2[3] => Mux4.IN1
+I2[4] => Mux3.IN1
+I2[5] => Mux2.IN1
+I2[6] => Mux1.IN1
+I2[7] => Mux0.IN1
+I1[0] => Mux7.IN2
+I1[1] => Mux6.IN2
+I1[2] => Mux5.IN2
+I1[3] => Mux4.IN2
+I1[4] => Mux3.IN2
+I1[5] => Mux2.IN2
+I1[6] => Mux1.IN2
+I1[7] => Mux0.IN2
+I0[0] => Mux7.IN3
+I0[1] => Mux6.IN3
+I0[2] => Mux5.IN3
+I0[3] => Mux4.IN3
+I0[4] => Mux3.IN3
+I0[5] => Mux2.IN3
+I0[6] => Mux1.IN3
+I0[7] => Mux0.IN3
+S[0] => Mux0.IN5
+S[0] => Mux1.IN5
+S[0] => Mux2.IN5
+S[0] => Mux3.IN5
+S[0] => Mux4.IN5
+S[0] => Mux5.IN5
+S[0] => Mux6.IN5
+S[0] => Mux7.IN5
+S[1] => Mux0.IN4
+S[1] => Mux1.IN4
+S[1] => Mux2.IN4
+S[1] => Mux3.IN4
+S[1] => Mux4.IN4
+S[1] => Mux5.IN4
+S[1] => Mux6.IN4
+S[1] => Mux7.IN4
+Y[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

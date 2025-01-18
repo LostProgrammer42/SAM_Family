@@ -1,0 +1,236 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Half_SAM_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:56 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RCAS
+# -- Compiling architecture struct of RCAS
+# End time: 16:20:56 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:56 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder_nand
+# -- Compiling architecture struct of full_adder_nand
+# End time: 16:20:56 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:56 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Toplevel
+# -- Compiling architecture str of Toplevel
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd(64): Cannot associate port "Abus2" of mode BUFFER with port "Abus2" of mode OUT.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd(64): Cannot associate port "PC_Data_In" of mode BUFFER with port "PC_Data_In" of mode OUT.
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pipo_register
+# -- Compiling architecture ha of pipo_register
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# -- Compiling architecture beh of datapath
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd(68): Cannot associate port "dout" of mode OUT with port "IReg_Data_Out" of mode BUFFER.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd(72): Cannot associate port "Y" of mode OUT with port "PC_Data_In" of mode BUFFER.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd(74): Cannot associate port "dout" of mode OUT with port "PC_Data_Out" of mode BUFFER.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd(75): Cannot associate port "Y" of mode OUT with port "Abus2" of mode BUFFER.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd(82): Cannot associate port "dout" of mode OUT with port "Acc_Data_Out" of mode BUFFER.
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity d_ff
+# -- Compiling architecture beh of d_ff
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpu
+# -- Compiling architecture cpuArch of cpu
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity AND_8
+# -- Compiling architecture str of AND_8
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ALU
+# -- Compiling architecture str of ALU
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_4x1_8bit
+# -- Compiling architecture beh of mux_4x1_8bit
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2x1_8bit
+# -- Compiling architecture beh of mux_2x1_8bit
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2x1
+# -- Compiling architecture beh of mux_2x1
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:20:57 on Jan 18,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CPU_testbench
+# -- Compiling architecture behav of CPU_testbench
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd(111): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd(112): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd(118): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 16:20:57 on Jan 18,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  CPU_testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" CPU_testbench 
+# Start time: 16:20:57 on Jan 18,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cpu_testbench(behav)
+# Loading work.toplevel(str)
+# Loading work.cpu(cpuarch)
+# Loading work.datapath(beh)
+# Loading work.pipo_register(ha)
+# Loading work.d_ff(beh)
+# Loading work.mux_2x1(beh)
+# Loading work.mux_2x1_8bit(beh)
+# Loading work.rcas(struct)
+# Loading work.full_adder_nand(struct)
+# Loading work.mux_4x1_8bit(beh)
+# Loading work.alu(str)
+# Loading work.and_8(str)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: Writing value: 1 to memory address: 4
+#    Time: 650 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 2 to memory address: 6
+#    Time: 1190 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 1 to memory address: 5
+#    Time: 1430 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 3 to memory address: 7
+#    Time: 1770 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 3 to memory address: 13
+#    Time: 2050 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 5 to memory address: 13
+#    Time: 2450 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 7 to memory address: 15
+#    Time: 2790 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 8 to memory address: 12
+#    Time: 3130 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 5 to memory address: 8
+#    Time: 3370 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 8 to memory address: 13
+#    Time: 4230 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 8 to memory address: 15
+#    Time: 4570 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 9 to memory address: 12
+#    Time: 4910 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 8 to memory address: 9
+#    Time: 5150 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 13 to memory address: 13
+#    Time: 6010 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 9 to memory address: 15
+#    Time: 6350 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 10 to memory address: 12
+#    Time: 6690 ns  Iteration: 0  Instance: /cpu_testbench
+# ** Note: Writing value: 13 to memory address: 10
+#    Time: 6930 ns  Iteration: 0  Instance: /cpu_testbench
+# Break key hit
+# Break in Process line__11 at C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd line 11
+# End time: 16:21:22 on Jan 18,2025, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0

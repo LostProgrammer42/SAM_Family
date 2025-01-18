@@ -1,0 +1,525 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/manan/Documents/EE721/Half_SAM/simulation/modelsim
+Ealu
+Z1 w1737188951
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd
+Z5 FC:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd
+l0
+L4
+V49dT;LXO<L9[gHjkWP6X`2
+!s100 bZ_<oIX4z38MYa;==;GaC3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1737197457
+!i10b 1
+Z8 !s108 1737197457.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd|
+Z10 !s107 C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astr
+R2
+R3
+DEx4 work 3 alu 0 22 49dT;LXO<L9[gHjkWP6X`2
+l37
+L10
+V1G:YTdMaXIhe75Do6ZVKU3
+!s100 Qj5D6W@Hfmlg<8IcT[`f60
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eand_8
+Z13 w1737183360
+R2
+R3
+R0
+Z14 8C:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd
+Z15 FC:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd
+l0
+L4
+VHL5kW<k7K?e]T5@E4MioU2
+!s100 VO55jjjmm2F>Y=Z9A@Afd2
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd|
+Z17 !s107 C:/Users/manan/Documents/EE721/Half_SAM/And_8.vhd|
+!i113 1
+R11
+R12
+Astr
+R2
+R3
+DEx4 work 5 and_8 0 22 HL5kW<k7K?e]T5@E4MioU2
+l11
+L10
+VLTJM?HIeGhhTF:LW8H9>U1
+!s100 UP4k85eo2J^=;8zUDf`5a0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ecpu
+Z18 w1737189486
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z20 8C:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd
+Z21 FC:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd
+l0
+L5
+VNMf^NWQg44T]<0l=_T;M@0
+!s100 ;7fAhdj:Umo_AKJ2f^:e^3
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd|
+Z23 !s107 C:/Users/manan/Documents/EE721/Half_SAM/CPU.vhd|
+!i113 1
+R11
+R12
+Acpuarch
+R19
+R2
+R3
+DEx4 work 3 cpu 0 22 NMf^NWQg44T]<0l=_T;M@0
+l30
+L18
+VTI9NV@6o0cE4_6O@dTMGY0
+!s100 XXmTN;R2MgGfcP_Je^Pd31
+R6
+31
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Ecpu_testbench
+Z24 w1737197438
+R19
+R2
+R3
+R0
+Z25 8C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd
+Z26 FC:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd
+l0
+L5
+VlZ4Zh0>7ace=>LA[z7b_e3
+!s100 dI[<=MI=i7j0EE2O5;OS@1
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd|
+Z28 !s107 C:/Users/manan/Documents/EE721/Half_SAM/CPU_testbench.vhd|
+!i113 1
+R11
+R12
+Abehav
+R19
+R2
+R3
+DEx4 work 13 cpu_testbench 0 22 lZ4Zh0>7ace=>LA[z7b_e3
+l105
+L8
+VjAh_1BhCXF;1b:WmKY;hO2
+!s100 k>z83nNVOaz0W64dcmGNZ0
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Ed_ff
+R13
+R2
+R3
+R0
+Z29 8C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd
+Z30 FC:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd
+l0
+L4
+VPSi15gJlUfa>HXkK=B@TA3
+!s100 HD3aXak1lXgzBg>QQ4i[:3
+R6
+31
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd|
+Z32 !s107 C:/Users/manan/Documents/EE721/Half_SAM/D_Flip_Flop.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 4 d_ff 0 22 PSi15gJlUfa>HXkK=B@TA3
+l10
+L9
+Vg<5jOEIY]RcgELm2AhmED1
+!s100 aJUP;6m7L2jVg6me9e4I;1
+R6
+31
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Edatapath
+Z33 w1737196114
+R2
+R3
+R0
+Z34 8C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd
+Z35 FC:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd
+l0
+L5
+V_zBi:C9R5lbS^jg[kV^VI0
+!s100 o3;AC;]^WK<aKOVSo=6Je2
+R6
+31
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd|
+Z37 !s107 C:/Users/manan/Documents/EE721/Half_SAM/Datapath.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 8 datapath 0 22 _zBi:C9R5lbS^jg[kV^VI0
+l64
+L17
+V?lAhcV:Aa_R84e@eU7GdJ2
+!s100 ^o8^TT=VND;ZmJA`dCW9M3
+R6
+31
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12
+Efull_adder_nand
+Z38 w1737188886
+R2
+R3
+R0
+Z39 8C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd
+Z40 FC:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd
+l0
+L4
+V`Ykia<7CdV_QB<B1mz:GW2
+!s100 Jc`Wm9eWYjN;:2BCJ]SHG1
+R6
+31
+Z41 !s110 1737197456
+!i10b 1
+Z42 !s108 1737197456.000000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
+Z44 !s107 C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 15 full_adder_nand 0 22 `Ykia<7CdV_QB<B1mz:GW2
+l11
+L8
+VAF`zHVoAN9dC>QRF4W7>f2
+!s100 JNNGk1oOUm2PLU^]^XHhJ1
+R6
+31
+R41
+!i10b 1
+R42
+R43
+R44
+!i113 1
+R11
+R12
+Emux_2x1
+R13
+R2
+R3
+R0
+Z45 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
+Z46 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
+l0
+L4
+V[E_eOiTbONORXPV_09lQS0
+!s100 MD27KKaQo`el2`5Cdh>C@3
+R6
+31
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
+Z48 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 7 mux_2x1 0 22 [E_eOiTbONORXPV_09lQS0
+l11
+L10
+V@dMHEGA0]oc]d2Wh@Zn^[1
+!s100 >hO[;k?W_Hh>eIRg<V4ZC2
+R6
+31
+R7
+!i10b 1
+R8
+R47
+R48
+!i113 1
+R11
+R12
+Emux_2x1_8bit
+R13
+R2
+R3
+R0
+Z49 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
+Z50 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
+l0
+L4
+VgmOkISLY8h<U6Q1Q9z[fF3
+!s100 dd]`Z3LkWB4dzgMC::U^a0
+R6
+31
+R7
+!i10b 1
+R8
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
+Z52 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R2
+R3
+DEx4 work 12 mux_2x1_8bit 0 22 gmOkISLY8h<U6Q1Q9z[fF3
+l11
+L10
+VS5TA<?PQR8_QA29KBHR7J0
+!s100 FPjnW:I<^MDZOAGW_cV>_3
+R6
+31
+R7
+!i10b 1
+R8
+R51
+R52
+!i113 1
+R11
+R12
+Emux_4x1_8bit
+R13
+R19
+R2
+R3
+R0
+Z53 8C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
+Z54 FC:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
+l0
+L5
+V]Zza;9gT0V9c:lMXTiYJ12
+!s100 4;<YlkQjfmQ@@1VoQ[Qj`0
+R6
+31
+R7
+!i10b 1
+R8
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
+Z56 !s107 C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
+!i113 1
+R11
+R12
+Abeh
+R19
+R2
+R3
+DEx4 work 12 mux_4x1_8bit 0 22 ]Zza;9gT0V9c:lMXTiYJ12
+l12
+L11
+VXNX6K8ZVfd^Xdl4;KRoL33
+!s100 SO_HSZgkF`zfUogbX0;KI1
+R6
+31
+R7
+!i10b 1
+R8
+R55
+R56
+!i113 1
+R11
+R12
+Epipo_register
+R13
+R2
+R3
+R0
+Z57 8C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
+Z58 FC:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
+l0
+L4
+VHJL0;Z6ORV6Cje_Qo63[41
+!s100 `oLRC9bi;6Uhg6jNm_hSN2
+R6
+31
+R7
+!i10b 1
+R8
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
+Z60 !s107 C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
+!i113 1
+R11
+R12
+Aha
+R2
+R3
+DEx4 work 13 pipo_register 0 22 HJL0;Z6ORV6Cje_Qo63[41
+l22
+L10
+V@8h@BCRk>j57US`^cVg:Y0
+!s100 ]Pf]Znf3Y0go[<Jd<4YlG1
+R6
+31
+R7
+!i10b 1
+R8
+R59
+R60
+!i113 1
+R11
+R12
+Ercas
+Z61 w1737188893
+R2
+R3
+R0
+Z62 8C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
+Z63 FC:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
+l0
+L4
+VRMabnchB0JCz:7I]0_jI`0
+!s100 k5zXR8PgP0BToSmZe>Ef`1
+R6
+31
+R41
+!i10b 1
+R42
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd|
+Z65 !s107 C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 4 rcas 0 22 RMabnchB0JCz:7I]0_jI`0
+l18
+L11
+VnD:JF:<Jzk;U@62ZdUIeI2
+!s100 a<oeG<fji=<`@cho>@kBZ3
+R6
+31
+R41
+!i10b 1
+R42
+R64
+R65
+!i113 1
+R11
+R12
+Etoplevel
+Z66 w1737188986
+R19
+R2
+R3
+R0
+Z67 8C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd
+Z68 FC:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd
+l0
+L5
+V7b3LMdUdCGNm<^^K?VFai3
+!s100 fMAJ>SeZcTTdED3Zic^Nj0
+R6
+31
+R7
+!i10b 1
+R42
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd|
+Z70 !s107 C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd|
+!i113 1
+R11
+R12
+Astr
+R19
+R2
+R3
+DEx4 work 8 toplevel 0 22 7b3LMdUdCGNm<^^K?VFai3
+l50
+L18
+VoN5<Vnm6<>JWJ`eQGRD=n0
+!s100 Szgg?P9TbRU@z012Uo8H81
+R6
+31
+R7
+!i10b 1
+R42
+R69
+R70
+!i113 1
+R11
+R12
