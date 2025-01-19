@@ -21,9 +21,9 @@ V49dT;LXO<L9[gHjkWP6X`2
 !s100 bZ_<oIX4z38MYa;==;GaC3
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1737197457
+Z7 !s110 1737201432
 !i10b 1
-Z8 !s108 1737197457.000000
+Z8 !s108 1737201432.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd|
 Z10 !s107 C:/Users/manan/Documents/EE721/Half_SAM/ALU.vhd|
 !i113 1
@@ -259,11 +259,11 @@ V`Ykia<7CdV_QB<B1mz:GW2
 !s100 Jc`Wm9eWYjN;:2BCJ]SHG1
 R6
 31
-Z41 !s110 1737197456
+R7
 !i10b 1
-Z42 !s108 1737197456.000000
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
-Z44 !s107 C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
+R8
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
+Z42 !s107 C:/Users/manan/Documents/EE721/Half_SAM/full_adder_nand.vhd|
 !i113 1
 R11
 R12
@@ -277,11 +277,11 @@ VAF`zHVoAN9dC>QRF4W7>f2
 !s100 JNNGk1oOUm2PLU^]^XHhJ1
 R6
 31
-R41
+R7
 !i10b 1
+R8
+R41
 R42
-R43
-R44
 !i113 1
 R11
 R12
@@ -290,8 +290,8 @@ R13
 R2
 R3
 R0
-Z45 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
-Z46 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
+Z43 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
+Z44 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd
 l0
 L4
 V[E_eOiTbONORXPV_09lQS0
@@ -301,8 +301,8 @@ R6
 R7
 !i10b 1
 R8
-Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
-Z48 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
+Z46 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux.vhd|
 !i113 1
 R11
 R12
@@ -319,8 +319,8 @@ R6
 R7
 !i10b 1
 R8
-R47
-R48
+R45
+R46
 !i113 1
 R11
 R12
@@ -329,8 +329,8 @@ R13
 R2
 R3
 R0
-Z49 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
-Z50 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
+Z47 8C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
+Z48 FC:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd
 l0
 L4
 VgmOkISLY8h<U6Q1Q9z[fF3
@@ -340,8 +340,8 @@ R6
 R7
 !i10b 1
 R8
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
-Z52 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
+Z50 !s107 C:/Users/manan/Documents/EE721/Half_SAM/2_X_1_Mux_8_Bit.vhd|
 !i113 1
 R11
 R12
@@ -358,8 +358,8 @@ R6
 R7
 !i10b 1
 R8
-R51
-R52
+R49
+R50
 !i113 1
 R11
 R12
@@ -369,8 +369,8 @@ R19
 R2
 R3
 R0
-Z53 8C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
-Z54 FC:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
+Z51 8C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
+Z52 FC:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd
 l0
 L5
 V]Zza;9gT0V9c:lMXTiYJ12
@@ -380,8 +380,8 @@ R6
 R7
 !i10b 1
 R8
-Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
-Z56 !s107 C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
+Z54 !s107 C:/Users/manan/Documents/EE721/Half_SAM/4_X_1_Mux_8_bit.vhd|
 !i113 1
 R11
 R12
@@ -399,8 +399,8 @@ R6
 R7
 !i10b 1
 R8
-R55
-R56
+R53
+R54
 !i113 1
 R11
 R12
@@ -409,8 +409,8 @@ R13
 R2
 R3
 R0
-Z57 8C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
-Z58 FC:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
+Z55 8C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
+Z56 FC:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd
 l0
 L4
 VHJL0;Z6ORV6Cje_Qo63[41
@@ -420,8 +420,8 @@ R6
 R7
 !i10b 1
 R8
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
-Z60 !s107 C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
+Z58 !s107 C:/Users/manan/Documents/EE721/Half_SAM/PIPO_Register.vhd|
 !i113 1
 R11
 R12
@@ -438,27 +438,27 @@ R6
 R7
 !i10b 1
 R8
-R59
-R60
+R57
+R58
 !i113 1
 R11
 R12
 Ercas
-Z61 w1737188893
+Z59 w1737188893
 R2
 R3
 R0
-Z62 8C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
-Z63 FC:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
+Z60 8C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
+Z61 FC:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd
 l0
 L4
 VRMabnchB0JCz:7I]0_jI`0
 !s100 k5zXR8PgP0BToSmZe>Ef`1
 R6
 31
-R41
+Z62 !s110 1737201431
 !i10b 1
-R42
+Z63 !s108 1737201431.000000
 Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd|
 Z65 !s107 C:/Users/manan/Documents/EE721/Half_SAM/RCAS.vhd|
 !i113 1
@@ -474,9 +474,9 @@ VnD:JF:<Jzk;U@62ZdUIeI2
 !s100 a<oeG<fji=<`@cho>@kBZ3
 R6
 31
-R41
+R62
 !i10b 1
-R42
+R63
 R64
 R65
 !i113 1
@@ -498,7 +498,7 @@ R6
 31
 R7
 !i10b 1
-R42
+R8
 Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd|
 Z70 !s107 C:/Users/manan/Documents/EE721/Half_SAM/Toplevel.vhd|
 !i113 1
@@ -517,7 +517,7 @@ R6
 31
 R7
 !i10b 1
-R42
+R8
 R69
 R70
 !i113 1
