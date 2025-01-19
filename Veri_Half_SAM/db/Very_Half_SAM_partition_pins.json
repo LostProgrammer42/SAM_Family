@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "IReg_En",
+					"strict" : false
+				},
+				{
+					"name" : "Mux_PC_Add_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Mux_PC_In_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "PC_En",
+					"strict" : false
+				},
+				{
+					"name" : "IAR_En",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_En",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Buffer_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Buffer_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "IAR_Buffer_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Buffer_Sel",
+					"strict" : false
+				},
+				{
+					"name" : "Mux_Acc_In_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Mux_Acc_In_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "En",
+					"strict" : false
+				},
+				{
+					"name" : "Rw",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dispReg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Acc_Data_Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pause",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IReg_Data_Out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regSelect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regSelect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Data_Out[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
