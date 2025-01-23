@@ -20,8 +20,16 @@ rst => rst.IN2
 Rw << cpu:very_half_sam.Rw
 En << cpu:very_half_sam.En
 pause => pause.IN1
-regSelect => regSelect.IN1
-dispReg << cpu:very_half_sam.dispReg
+regSelect[0] => regSelect[0].IN1
+regSelect[1] => regSelect[1].IN1
+dispReg[0] << cpu:very_half_sam.dispReg
+dispReg[1] << cpu:very_half_sam.dispReg
+dispReg[2] << cpu:very_half_sam.dispReg
+dispReg[3] << cpu:very_half_sam.dispReg
+dispReg[4] << cpu:very_half_sam.dispReg
+dispReg[5] << cpu:very_half_sam.dispReg
+dispReg[6] << cpu:very_half_sam.dispReg
+dispReg[7] << cpu:very_half_sam.dispReg
 
 
 |Toplevel|cpu:very_half_sam
@@ -181,11 +189,11 @@ IReg_En => IReg_En.IN1
 Mux_PC_Add_Sel => Mux_PC_Add_Sel.IN1
 PC_En => PC_En.IN1
 IAR_En => IAR_En.IN1
-Acc_En => ~NO_FANOUT~
+Acc_En => Acc_En.IN1
 IReg_Buffer_Sel => IReg_Buffer_Sel.IN1
 PC_Buffer_Sel => PC_Buffer_Sel.IN1
 IAR_Buffer_Sel => IAR_Buffer_Sel.IN1
-Acc_Buffer_Sel => ~NO_FANOUT~
+Acc_Buffer_Sel => Acc_Buffer_Sel.IN1
 Mux_PC_In_Sel => Mux_PC_In_Sel.IN1
 clk => clk.IN4
 rst => rst.IN4
@@ -196,27 +204,35 @@ ALU_Sel[1] => ALU_Sel[1].IN1
 Data_Bus[0] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[0] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[0] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[0] <> ALU:AL_Unit.b
 Data_Bus[1] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[1] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[1] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[1] <> ALU:AL_Unit.b
 Data_Bus[2] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[2] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[2] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[2] <> ALU:AL_Unit.b
 Data_Bus[3] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[3] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[3] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[3] <> ALU:AL_Unit.b
 Data_Bus[4] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[4] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[4] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[4] <> ALU:AL_Unit.b
 Data_Bus[5] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[5] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[5] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[5] <> ALU:AL_Unit.b
 Data_Bus[6] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[6] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[6] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[6] <> ALU:AL_Unit.b
 Data_Bus[7] <> Mux_2x1_8_bit:Mux_PC_Input_Sel.I0
 Data_Bus[7] <> Mux_4x1_8_bit:Mux_ACC.I2
 Data_Bus[7] <> Mux_2x1_8_bit:ACC_Tristate_Buffer.Y
+Data_Bus[7] <> ALU:AL_Unit.b
 Address_Bus[0] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
 Address_Bus[1] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
 Address_Bus[2] <= Address_Bus.DB_MAX_OUTPUT_PORT_TYPE
@@ -241,14 +257,14 @@ PC_Data_Out[4] <= PC_Data_Out_Buff[4].DB_MAX_OUTPUT_PORT_TYPE
 PC_Data_Out[5] <= PC_Data_Out_Buff[5].DB_MAX_OUTPUT_PORT_TYPE
 PC_Data_Out[6] <= PC_Data_Out_Buff[6].DB_MAX_OUTPUT_PORT_TYPE
 PC_Data_Out[7] <= PC_Data_Out_Buff[7].DB_MAX_OUTPUT_PORT_TYPE
-Acc_Data_Out[0] <= <GND>
-Acc_Data_Out[1] <= <GND>
-Acc_Data_Out[2] <= <GND>
-Acc_Data_Out[3] <= <GND>
-Acc_Data_Out[4] <= <GND>
-Acc_Data_Out[5] <= <GND>
-Acc_Data_Out[6] <= <GND>
-Acc_Data_Out[7] <= <GND>
+Acc_Data_Out[0] <= Acc_Data_Out_Buff[0].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[1] <= Acc_Data_Out_Buff[1].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[2] <= Acc_Data_Out_Buff[2].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[3] <= Acc_Data_Out_Buff[3].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[4] <= Acc_Data_Out_Buff[4].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[5] <= Acc_Data_Out_Buff[5].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[6] <= Acc_Data_Out_Buff[6].DB_MAX_OUTPUT_PORT_TYPE
+Acc_Data_Out[7] <= Acc_Data_Out_Buff[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Toplevel|Datapath:path_of_data|Pipo_Register:IReg

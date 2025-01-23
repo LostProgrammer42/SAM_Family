@@ -1,6 +1,6 @@
 `timescale 1ns/1ps // Specify time unit and time precision
 
-module CPU_testbench;
+module Testbench;
 
     // Clock and reset signals
     reg clk;
@@ -24,10 +24,10 @@ module CPU_testbench;
     Toplevel DUT (
         .clk(clk),
         .rst(rst),
-        .en(en),
-        .rw(rw),
-        .aBus(aBus),
-        .dBus(dBus),
+        .En(en),
+        .Rw(rw),
+        .Address_Bus(aBus),
+        .Data_Bus(dBus),
         .pause(pause),
         .regSelect(regSelect),
         .dispReg(dispReg)

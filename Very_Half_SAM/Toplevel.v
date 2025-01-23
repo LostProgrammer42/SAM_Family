@@ -8,7 +8,7 @@ module Toplevel(clk,Data_Bus,Address_Bus,rst,Rw,En, pause, regSelect, dispReg);
 	output [7:0] dispReg;
 	
 	wire IReg_En, Mux_PC_Add_Sel, Mux_PC_In_Sel, PC_En, IAR_En, Acc_En, IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, 
-	Acc_Buffer_Sel, regSelect, dispReg, pause;
+	Acc_Buffer_Sel;
 	
 	wire [1:0] Mux_Acc_In_Sel, ALU_Sel;
 	wire [7:0] IReg_Data_Out, PC_Data_Out, Acc_Data_Out;

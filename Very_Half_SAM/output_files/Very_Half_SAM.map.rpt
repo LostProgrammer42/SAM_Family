@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Very_Half_SAM
-Thu Jan 23 20:31:46 2025
+Fri Jan 24 00:47:07 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,29 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: cpu:very_half_sam
- 11. Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit|Mux_2x1_8_bit:u4"
- 12. Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2"
- 13. Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit"
- 14. Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:ACC_Tristate_Buffer"
- 15. Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:ACC"
- 16. Port Connectivity Checks: "Datapath:path_of_data|Mux_4x1_8_bit:Mux_ACC"
- 17. Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:IAR_Tristate_Buffer"
- 18. Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:IAR"
- 19. Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:PC_Tristate_Buffer"
- 20. Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:PC"
- 21. Port Connectivity Checks: "Datapath:path_of_data|Adder_8:Adder"
- 22. Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Input_Sel"
- 23. Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Add"
- 24. Port Connectivity Checks: "cpu:very_half_sam"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -58,22 +36,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 23 20:31:46 2025       ;
+; Analysis & Synthesis Status        ; Failed - Fri Jan 24 00:47:07 2025           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Very_Half_SAM                               ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 145                                         ;
-;     Total combinational functions  ; 145                                         ;
-;     Dedicated logic registers      ; 22                                          ;
-; Total registers                    ; 22                                          ;
-; Total pins                         ; 23                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -168,311 +146,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 10          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; AND_8.v                          ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v         ;         ;
-; Adder_8.v                        ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v       ;         ;
-; Mux_2x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v ;         ;
-; Mux_2x1_1_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v ;         ;
-; Mux_4x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v ;         ;
-; D_Flip_Flop.v                    ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v   ;         ;
-; Pipo_Register.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v           ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v      ;         ;
-; CPU.v                            ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v           ;         ;
-; Toplevel.v                       ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v      ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 145                        ;
-;                                             ;                            ;
-; Total combinational functions               ; 145                        ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 106                        ;
-;     -- 3 input functions                    ; 16                         ;
-;     -- <=2 input functions                  ; 23                         ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 145                        ;
-;     -- arithmetic mode                      ; 0                          ;
-;                                             ;                            ;
-; Total registers                             ; 22                         ;
-;     -- Dedicated logic registers            ; 22                         ;
-;     -- I/O registers                        ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 23                         ;
-;                                             ;                            ;
-; Embedded Multiplier 9-bit elements          ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; cpu:very_half_sam|state[0] ;
-; Maximum fan-out                             ; 44                         ;
-; Total fan-out                               ; 617                        ;
-; Average fan-out                             ; 2.79                       ;
-+---------------------------------------------+----------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                        ; Entity Name   ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+---------------+--------------+
-; |Toplevel                            ; 145 (0)             ; 22 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 23   ; 0            ; 0          ; |Toplevel                                                                  ; Toplevel      ; work         ;
-;    |Datapath:path_of_data|           ; 15 (4)              ; 9 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data                                            ; Datapath      ; work         ;
-;       |Pipo_Register:IReg|           ; 9 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg                         ; Pipo_Register ; work         ;
-;          |D_FF:loop[0].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df         ; D_FF          ; work         ;
-;          |D_FF:loop[1].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[1].df         ; D_FF          ; work         ;
-;          |D_FF:loop[2].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[2].df         ; D_FF          ; work         ;
-;          |D_FF:loop[3].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[3].df         ; D_FF          ; work         ;
-;          |D_FF:loop[4].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[4].df         ; D_FF          ; work         ;
-;          |D_FF:loop[5].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[5].df         ; D_FF          ; work         ;
-;          |D_FF:loop[6].df|           ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[6].df         ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[7].df         ; D_FF          ; work         ;
-;       |Pipo_Register:PC|             ; 2 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC                           ; Pipo_Register ; work         ;
-;          |D_FF:loop[0].df|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[0].df           ; D_FF          ; work         ;
-;          |Mux_2x1_1_bit:loop[0].mux| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|Mux_2x1_1_bit:loop[0].mux ; Mux_2x1_1_bit ; work         ;
-;    |cpu:very_half_sam|               ; 130 (130)           ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:very_half_sam                                                ; cpu           ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------+---------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 22    ;
-; Number of registers using Synchronous Clear  ; 9     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[6].df|q ;
-; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |Toplevel|cpu:very_half_sam|tick[0]                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Toplevel|Datapath:path_of_data|Address_Bus[3]                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:very_half_sam ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; rstState       ; 00000 ; Unsigned Binary                       ;
-; pauseState     ; 00001 ; Unsigned Binary                       ;
-; fetch          ; 00010 ; Unsigned Binary                       ;
-; halt           ; 00011 ; Unsigned Binary                       ;
-; negate         ; 00100 ; Unsigned Binary                       ;
-; branch         ; 00101 ; Unsigned Binary                       ;
-; brZero         ; 00110 ; Unsigned Binary                       ;
-; brPos          ; 00111 ; Unsigned Binary                       ;
-; brNeg          ; 01000 ; Unsigned Binary                       ;
-; brInd          ; 01001 ; Unsigned Binary                       ;
-; cLoad          ; 01010 ; Unsigned Binary                       ;
-; dLoad          ; 01011 ; Unsigned Binary                       ;
-; iLoad          ; 01100 ; Unsigned Binary                       ;
-; dStore         ; 01101 ; Unsigned Binary                       ;
-; iStore         ; 01110 ; Unsigned Binary                       ;
-; add            ; 01111 ; Unsigned Binary                       ;
-; andd           ; 10000 ; Unsigned Binary                       ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit|Mux_2x1_8_bit:u4" ;
-+----------+-------+----------+--------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                          ;
-+----------+-------+----------+--------------------------------------------------+
-; I0[7..1] ; Input ; Info     ; Stuck at GND                                     ;
-; I0[0]    ; Input ; Info     ; Stuck at VCC                                     ;
-+----------+-------+----------+--------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2"                                                            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|ALU:AL_Unit"                                                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; a    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "a[7..1]" will be connected to GND. ;
-; b    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b[7..1]" will be connected to GND. ;
-; y    ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "y[7..1]" have no fanouts                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:ACC_Tristate_Buffer"                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                    ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; I1   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I1[7..1]" will be connected to GND. ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:ACC"                                                                                                   ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                     ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; din  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "din[7..1]" will be connected to GND. ;
-; dout ; Bidir ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "dout[7..1]" have no fanouts                     ;
-; dout ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                         ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_4x1_8_bit:Mux_ACC"                                                                                               ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                    ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; I3   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I3[7..1]" will be connected to GND. ;
-; Y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                        ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:IAR_Tristate_Buffer"                                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                    ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; I1   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I1[7..1]" will be connected to GND. ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:IAR"                                           ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                             ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
-; dout ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+-------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:PC_Tristate_Buffer"                                                                                   ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                    ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-; I1   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "I1[7..1]" will be connected to GND. ;
-+------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Pipo_Register:PC"                                                                                                    ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                     ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; din  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "din[7..1]" will be connected to GND. ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Adder_8:Adder"                                                                     ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; cin  ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Input_Sel"                                                                ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Y    ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "Y[7..1]" have no fanouts ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Add" ;
-+----------+-------+----------+----------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                      ;
-+----------+-------+----------+----------------------------------------------+
-; I1[7..1] ; Input ; Info     ; Stuck at GND                                 ;
-; I1[0]    ; Input ; Info     ; Stuck at VCC                                 ;
-+----------+-------+----------+----------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:very_half_sam"                                                                                                                                     ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                           ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; regSelect ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "regSelect[1..1]" will be connected to GND. ;
-; dispReg   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "dispReg[7..1]" have no fanouts                        ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 23                          ;
-; cycloneiii_ff         ; 22                          ;
-;     ENA               ; 8                           ;
-;     SCLR              ; 9                           ;
-;     plain             ; 5                           ;
-; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 146                         ;
-;     normal            ; 146                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 106                         ;
-;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.47                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -481,98 +163,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 23 20:31:34 2025
+    Info: Processing started: Fri Jan 24 00:46:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Very_Half_SAM -c Very_Half_SAM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file and_8.v
-    Info (12023): Found entity 1: AND_8 File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v Line: 1
+    Info (12023): Found entity 1: AND_8 File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/AND_8.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
-    Info (12023): Found entity 1: CPU_testbench File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v Line: 3
+    Info (12023): Found entity 1: Testbench File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file adder_8.v
-    Info (12023): Found entity 1: Full_Adder File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 1
-    Info (12023): Found entity 2: Adder_8 File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 9
+    Info (12023): Found entity 1: Full_Adder File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v Line: 1
+    Info (12023): Found entity 2: Adder_8 File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_8_bit.v
-    Info (12023): Found entity 1: Mux_2x1_8_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_2x1_8_bit File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_8_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_1_bit.v
-    Info (12023): Found entity 1: Mux_2x1_1_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_2x1_1_bit File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_1_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1_8_bit.v
-    Info (12023): Found entity 1: Mux_4x1_8_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_4x1_8_bit File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_4x1_8_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_flip_flop.v
-    Info (12023): Found entity 1: D_FF File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v Line: 1
+    Info (12023): Found entity 1: D_FF File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/D_Flip_Flop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipo_register.v
-    Info (12023): Found entity 1: Pipo_Register File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 1
+    Info (12023): Found entity 1: Pipo_Register File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Pipo_Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
-    Info (12023): Found entity 1: cpu File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v Line: 1
+    Info (12023): Found entity 1: cpu File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/CPU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.v
-    Info (12023): Found entity 1: Toplevel File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(26): created implicit net for "PC_Data_In" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(29): created implicit net for "PC_Data_out_Buff" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(33): created implicit net for "IAR_Data_out_Buff" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(35): created implicit net for "ALU_Data_Out_Buff" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(36): created implicit net for "ACC_Data_In" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(36): created implicit net for "ACC_Data_Out_Buff" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(36): created implicit net for "ACC_En" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(37): created implicit net for "ACC_Data_out_Buff" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(37): created implicit net for "ACC_Buffer_Sel" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(39): created implicit net for "ACC_Data_out" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(39): created implicit net for "Data_bus" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(44): created implicit net for "ACC_Data_Out" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 44
-Critical Warning (10226): Verilog HDL Port Declaration warning at Toplevel.v(10): port declaration for "regSelect" declares packed dimensions but the data type declaration does not File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 10
-Info (10499): HDL info at Toplevel.v(7): see declaration for object "regSelect" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 7
-Critical Warning (10226): Verilog HDL Port Declaration warning at Toplevel.v(10): port declaration for "dispReg" declares packed dimensions but the data type declaration does not File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 10
-Info (10499): HDL info at Toplevel.v(8): see declaration for object "dispReg" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 8
-Info (12127): Elaborating entity "Toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:very_half_sam" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 21
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:path_of_data" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 26
-Warning (10036): Verilog HDL or VHDL warning at Datapath.v(44): object "ACC_Data_Out" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 44
-Warning (10036): Verilog HDL or VHDL warning at Datapath.v(10): object "IAR_Data_Out" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 10
-Warning (10235): Verilog HDL Always Construct warning at Datapath.v(16): variable "Abus2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 16
-Warning (10235): Verilog HDL Always Construct warning at Datapath.v(17): variable "Abus1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at Datapath.v(18): variable "Abus3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 18
-Warning (10034): Output port "Acc_Data_Out" at Datapath.v(7) has no driver File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 7
-Info (12128): Elaborating entity "Pipo_Register" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 21
-Info (12128): Elaborating entity "D_FF" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 11
-Info (12128): Elaborating entity "Mux_2x1_1_bit" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|Mux_2x1_1_bit:loop[0].mux" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 12
-Info (12128): Elaborating entity "Mux_2x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_2x1_8_bit:IReg_Tristate_Buffer" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 22
-Info (12128): Elaborating entity "Adder_8" for hierarchy "Datapath:path_of_data|Adder_8:Adder" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 27
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "Datapath:path_of_data|Adder_8:Adder|Full_Adder:F1" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 17
-Info (12128): Elaborating entity "Mux_4x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_4x1_8_bit:Mux_ACC" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 35
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:path_of_data|ALU:AL_Unit" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 39
-Info (12128): Elaborating entity "AND_8" for hierarchy "Datapath:path_of_data|ALU:AL_Unit|AND_8:u1" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v Line: 7
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
-Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13044): Always-enabled tri-state buffer(s) removed
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "cpu:very_half_sam|dispReg[0]" to the node "dispReg" into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v Line: 15
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Address_Bus[4]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 4
-    Warning (13410): Pin "Address_Bus[5]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 4
-    Warning (13410): Pin "Address_Bus[6]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 4
-    Warning (13410): Pin "Address_Bus[7]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 4
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 145 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Thu Jan 23 20:31:46 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+    Info (12023): Found entity 1: Toplevel File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Toplevel.v Line: 1
+Error (10137): Verilog HDL Procedural Assignment error at Testbench.v(123): object "dBus" on left-hand side of assignment must have a variable data type File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v Line: 123
+Error (10137): Verilog HDL Procedural Assignment error at Testbench.v(125): object "dBus" on left-hand side of assignment must have a variable data type File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v Line: 125
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4710 megabytes
+    Error: Processing ended: Fri Jan 24 00:47:07 2025
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:10
 
 
