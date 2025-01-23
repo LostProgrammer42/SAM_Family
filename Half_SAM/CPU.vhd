@@ -25,8 +25,7 @@ architecture cpuArch of cpu is
 		add, andd
 	);
 	signal state: state_type;
-	signal tick: unsigned(3 downto 0);
-	
+	signal tick: unsigned(3 downto 0);	
 begin
 	
 	with regSelect select
@@ -90,13 +89,14 @@ begin
 				Mux_Acc_In_Sel <= "00";
 				state <= rstState;
 				tick <= x"0";
+				this <= (others => '0');
 			else 
 				tick <= tick + 1;
 				Acc_En <= '0';
 				IAR_En <= '0';
 				PC_En <= '0';
 				IReg_En <= '0';
-				Mux_PC_Add_Sel <= '0';
+				Mux_PC_Add_Sel <= '1';
 				Mux_PC_In_Sel <= '0';
 				Mux_Acc_In_Sel <= "00";
 				if state = rstState then
@@ -108,20 +108,21 @@ begin
 						tick <= x"0";
 					end if;
 				elsif state = fetch then
-					Mux_PC_Add_Sel <= '1';
-					if tick = 0 then
-						IReg_En <= '1';
+					if tick = 1 then
 						PC_En <= '1';
-					elsif tick = 2 then
+						IReg_En <= '1';
+					elsif tick = 3 then
 						state <= decode(IReg_Data_Out);
 						tick <= x"0";
+						this <= PC_Data_Out;
+						Mux_PC_Add_Sel <= '1';
 					end if;
 				else 
 					case state is
 						when branch =>
 							if tick = 0 then
 								PC_en <= '1';
-							elsif tick = 1 then
+							elsif tick =1 then
 								wrapup;
 							end if;
 						when brZero =>
@@ -158,10 +159,10 @@ begin
 								wrapup;
 							end if;
 						when cload =>
-							if tick = 0 then
+							if tick = 1 then
 								Mux_Acc_In_Sel <= "01";
 								Acc_En <= '1';
-							elsif tick = 1 then
+							elsif tick =1 then
 								wrapup;
 							end if;
 						when dload => 
@@ -231,14 +232,11 @@ begin
 				if tick = 0 then
 					en <= '1'; 
 					PC_Buffer_Sel <= '1';
-				elsif tick = 2 then
-					en <= '1';
 				end if;
-			when branch | brZero | brPos | brNeg =>
-				null;
+			when branch | brZero | brPos | brNeg => null
 			when brInd =>
 				if tick = 2 then
-					en <= '1'; 					
+					en <= '1'; 
 					PC_Buffer_Sel <= '1';
 				end if;
 			when dLoad | add | andd =>

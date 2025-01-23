@@ -1,0 +1,19 @@
+module Datapath(IReg_En, Mux_PC_Add_Sel, PC_En, IAR_En, Acc_En, IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel, Mux_PC_In_Sel,
+			clk, rst, Mux_Acc_In_Sel, ALU_Sel, Data_Bus, Address_Bus, IReg_Data_Out, PC_Data_Out, Acc_Data_Out);
+	input IReg_En, Mux_PC_Add_Sel, PC_En, IAR_En, Acc_En, IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, Acc_Buffer_Sel, Mux_PC_In_Sel, clk, rst;
+	input [1:0] Mux_Acc_In_Sel, ALU_Sel;
+	inout [7:0] Data_Bus;
+	output [7:0] Address Bus, IReg_Data_Out, PC_Data_Out, Acc_Data_Out;
+	
+	reg [7:0] IReg_Data_Out_Buff, PC_Data_Out_Buff, Acc_Data_Out_Buff;
+	reg [7:0] IReg_Data_In, IAR_Data_In, Acc_Data_In, ALU_Data_Out, IAR_Data_Out;
+	reg [7:0] IReg_Acc_Signal, PC_Incremented_Signal, PC_Adding_Signal, target, Abus1, Abus2, Abus3;
+	
+	assign IReg_Data_In = Data_Bus
+	always @({PC_Buffer_Sel, IReg_Buffer_Sel})
+	begin
+		if (PC_Buffer_Sel == 1'b1) Address_Bus = Abus2;
+		else if (IReg_Buffer_Sel == 1'b1) Address_Bus = Abus1;
+		else Address_Bus = Abus3;
+	end 
+endmodule 

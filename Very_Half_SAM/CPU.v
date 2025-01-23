@@ -74,7 +74,7 @@ module cpu
 				4'hB : decode = add;
 				4'hC : decode = andd;
 				default : decode = halt;
-			endcase;
+			endcase
 		end
 	endfunction
 	
@@ -207,7 +207,7 @@ module cpu
 					end else if (tick == 4'h2) wrapup(pause, state, tick);
 				end
 				default : state <= halt;
-			endcase;
+			endcase
 		end
 	end
 	
