@@ -10,13 +10,16 @@ module Testbench;
     wire en;
     wire rw;
     wire [7:0] aBus;
-    reg [7:0] dBus;
+    wire [7:0] dBus;
+	 reg [7:0] dBus_reg;
+	 
+	 assign dBus = dBus_reg;
 
     // Console interface signals
     reg pause;
     reg [1:0] regSelect;
     wire [7:0] dispReg;
-
+	
     // Memory array
     reg [7:0] Memory [0:63];
 
@@ -47,6 +50,7 @@ module Testbench;
 
     // Initialize memory
     initial begin
+		  regSelect = 2'b10;
         Memory[0]  = 8'b00010111; // branch 8
         Memory[1]  = 8'b01100001; // data
         Memory[2]  = 8'b00000001; // data
@@ -116,13 +120,13 @@ module Testbench;
     // Memory process
     always @(posedge clk) begin
         if (rw == 0 && en == 1) begin
-            $display("Writing value: %0d to memory address: %0d", dBus, aBus);
-            Memory[aBus] <= dBus;
+            $display("Writing value: %0d to memory address: %0d", dBus_reg, aBus);
+            Memory[aBus] <= dBus_reg;
         end else if (rw == 1 && en == 1) begin
             if (aBus !== 8'hZZ) begin
-                dBus <= Memory[aBus];
+                dBus_reg = Memory[aBus];
             end else begin
-                dBus <= 8'hZZ;
+                dBus_reg = 8'hZZ;
             end
         end
 	end
