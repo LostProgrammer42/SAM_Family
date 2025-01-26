@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Very_Half_SAM
-Sun Jan 26 16:29:32 2025
+Sun Jan 26 17:33:02 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 26 16:29:32 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 26 17:33:02 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Very_Half_SAM                               ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 272                                         ;
-;     Total combinational functions  ; 264                                         ;
+; Total logic elements               ; 269                                         ;
+;     Total combinational functions  ; 261                                         ;
 ;     Dedicated logic registers      ; 49                                          ;
 ; Total registers                    ; 49                                          ;
 ; Total pins                         ; 31                                          ;
@@ -195,16 +195,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 272                        ;
+; Estimated Total logic elements              ; 269                        ;
 ;                                             ;                            ;
-; Total combinational functions               ; 264                        ;
+; Total combinational functions               ; 261                        ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 178                        ;
-;     -- 3 input functions                    ; 51                         ;
-;     -- <=2 input functions                  ; 35                         ;
+;     -- 4 input functions                    ; 184                        ;
+;     -- 3 input functions                    ; 43                         ;
+;     -- <=2 input functions                  ; 34                         ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 264                        ;
+;     -- normal mode                          ; 261                        ;
 ;     -- arithmetic mode                      ; 0                          ;
 ;                                             ;                            ;
 ; Total registers                             ; 49                         ;
@@ -215,10 +215,10 @@ refer to the applicable agreement for further details.
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
-; Maximum fan-out node                        ; cpu:very_half_sam|state[3] ;
-; Maximum fan-out                             ; 52                         ;
-; Total fan-out                               ; 1168                       ;
-; Average fan-out                             ; 3.05                       ;
+; Maximum fan-out node                        ; cpu:very_half_sam|state[0] ;
+; Maximum fan-out                             ; 55                         ;
+; Total fan-out                               ; 1166                       ;
+; Average fan-out                             ; 3.07                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -227,18 +227,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                  ; Entity Name   ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
-; |Toplevel                                 ; 264 (0)             ; 49 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0          ; |Toplevel                                                            ; Toplevel      ; work         ;
-;    |Datapath:path_of_data|                ; 90 (13)             ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data                                      ; Datapath      ; work         ;
-;       |ALU:AL_Unit|                       ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit                          ; ALU           ; work         ;
+; |Toplevel                                 ; 261 (0)             ; 49 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 31   ; 0            ; 0          ; |Toplevel                                                            ; Toplevel      ; work         ;
+;    |Datapath:path_of_data|                ; 89 (14)             ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data                                      ; Datapath      ; work         ;
+;       |ALU:AL_Unit|                       ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit                          ; ALU           ; work         ;
 ;          |AND_8:u1|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|AND_8:u1                 ; AND_8         ; work         ;
-;          |Adder_8:u2|                     ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2               ; Adder_8       ; work         ;
+;          |Adder_8:u2|                     ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2               ; Adder_8       ; work         ;
 ;             |Full_Adder:F2|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F2 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F3|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F3 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F4|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F4 ; Full_Adder    ; work         ;
-;             |Full_Adder:F5|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F5 ; Full_Adder    ; work         ;
-;             |Full_Adder:F6|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F6 ; Full_Adder    ; work         ;
-;             |Full_Adder:F7|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F7 ; Full_Adder    ; work         ;
-;             |Full_Adder:F8|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F8 ; Full_Adder    ; work         ;
+;             |Full_Adder:F5|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F5 ; Full_Adder    ; work         ;
+;             |Full_Adder:F6|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F6 ; Full_Adder    ; work         ;
+;             |Full_Adder:F7|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F7 ; Full_Adder    ; work         ;
 ;       |Adder_8:Adder|                     ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder                        ; Adder_8       ; work         ;
 ;          |Full_Adder:F2|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F2          ; Full_Adder    ; work         ;
 ;          |Full_Adder:F3|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F3          ; Full_Adder    ; work         ;
@@ -246,31 +245,31 @@ refer to the applicable agreement for further details.
 ;          |Full_Adder:F7|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F7          ; Full_Adder    ; work         ;
 ;       |Mux_2x1_8_bit:ACC_Tristate_Buffer| ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Mux_2x1_8_bit:ACC_Tristate_Buffer    ; Mux_2x1_8_bit ; work         ;
 ;       |Mux_2x1_8_bit:Mux_PC_Add|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Add             ; Mux_2x1_8_bit ; work         ;
-;       |Pipo_Register:ACC|                 ; 24 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC                    ; Pipo_Register ; work         ;
+;       |Pipo_Register:ACC|                 ; 26 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC                    ; Pipo_Register ; work         ;
 ;          |D_FF:loop[0].df|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[0].df    ; D_FF          ; work         ;
-;          |D_FF:loop[1].df|                ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df    ; D_FF          ; work         ;
+;          |D_FF:loop[1].df|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[2].df    ; D_FF          ; work         ;
-;          |D_FF:loop[3].df|                ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[3].df    ; D_FF          ; work         ;
+;          |D_FF:loop[3].df|                ; 9 (9)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[3].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[4].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[5].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[5].df    ; D_FF          ; work         ;
-;          |D_FF:loop[6].df|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[6].df    ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[7].df    ; D_FF          ; work         ;
+;          |D_FF:loop[6].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[6].df    ; D_FF          ; work         ;
+;          |D_FF:loop[7].df|                ; 5 (5)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[7].df    ; D_FF          ; work         ;
 ;       |Pipo_Register:IAR|                 ; 9 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR                    ; Pipo_Register ; work         ;
-;          |D_FF:loop[0].df|                ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[0].df    ; D_FF          ; work         ;
+;          |D_FF:loop[0].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[0].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[1].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[1].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[2].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[3].df    ; D_FF          ; work         ;
-;          |D_FF:loop[4].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[4].df    ; D_FF          ; work         ;
+;          |D_FF:loop[4].df|                ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[4].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[5].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[5].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[6].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[7].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[7].df    ; D_FF          ; work         ;
 ;       |Pipo_Register:IReg|                ; 1 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg                   ; Pipo_Register ; work         ;
-;          |D_FF:loop[0].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df   ; D_FF          ; work         ;
+;          |D_FF:loop[0].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[1].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[1].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[2].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[3].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[4].df   ; D_FF          ; work         ;
-;          |D_FF:loop[5].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[5].df   ; D_FF          ; work         ;
+;          |D_FF:loop[5].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[5].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[6].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[7].df|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[7].df   ; D_FF          ; work         ;
 ;       |Pipo_Register:PC|                  ; 10 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC                     ; Pipo_Register ; work         ;
@@ -279,10 +278,10 @@ refer to the applicable agreement for further details.
 ;          |D_FF:loop[2].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[2].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[3].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[4].df     ; D_FF          ; work         ;
-;          |D_FF:loop[5].df|                ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df     ; D_FF          ; work         ;
+;          |D_FF:loop[5].df|                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[6].df     ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|                ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df     ; D_FF          ; work         ;
-;    |cpu:very_half_sam|                    ; 174 (174)           ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:very_half_sam                                          ; cpu           ; work         ;
+;          |D_FF:loop[7].df|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df     ; D_FF          ; work         ;
+;    |cpu:very_half_sam|                    ; 172 (172)           ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:very_half_sam                                          ; cpu           ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -307,14 +306,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[0].df|q  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[5].df|q ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df|q   ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[6].df|q  ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df|q  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[4].df|q  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df|q ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df|q   ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[7].df|q  ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[3].df|q  ;
 ; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |Toplevel|cpu:very_half_sam|tick[3]                                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Toplevel|cpu:very_half_sam|Selector7                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:very_half_sam|Mux20                                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:very_half_sam|Mux19                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Toplevel|Datapath:path_of_data|Address_Bus[7]                       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Toplevel|Datapath:path_of_data|Address_Bus[0]                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
@@ -399,14 +398,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 10                          ;
 ;     plain             ; 7                           ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 264                         ;
-;     normal            ; 264                         ;
-;         2 data inputs ; 35                          ;
-;         3 data inputs ; 51                          ;
-;         4 data inputs ; 178                         ;
+; cycloneiii_lcell_comb ; 261                         ;
+;     normal            ; 261                         ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 184                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.88                        ;
+; Average LUT depth     ; 4.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -425,7 +424,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jan 26 16:29:19 2025
+    Info: Processing started: Sun Jan 26 17:32:48 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Very_Half_SAM -c Very_Half_SAM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -523,16 +522,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/output_files/Very_Half_SAM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 311 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 308 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 18 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 280 logic cells
+    Info (21061): Implemented 277 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Sun Jan 26 16:29:32 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Sun Jan 26 17:33:02 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+

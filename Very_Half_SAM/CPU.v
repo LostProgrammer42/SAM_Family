@@ -166,7 +166,7 @@ module cpu
 				end
 				dLoad : begin
 					if (tick == 4'h1) begin
-						Mux_Acc_In_Sel <= 2'b01;
+						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
 						wrapup;
 					end 

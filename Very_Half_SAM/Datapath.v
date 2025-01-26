@@ -23,7 +23,7 @@ module Datapath(IReg_En, Mux_PC_Add_Sel, PC_En, IAR_En, Acc_En, IReg_Buffer_Sel,
 	assign target = {4'b0000, IReg_Data_Out_Buff[3:0]};
 	
 	Mux_2x1_8_bit Mux_PC_Add (.I1(8'b00000001), .I0(target), .S(Mux_PC_Add_Sel), .Y(PC_Adding_Signal));
-	Mux_2x1_8_bit Mux_PC_Input_Sel (.I1(PC_Incremented_Signal), .I0(Data_Bus), .S(Mux_PC_In_Sel), .Y(PC_Data_In));
+	Mux_2x1_8_bit Mux_PC_Input_Sel (.I1(Data_Bus), .I0(PC_Incremented_Signal), .S(Mux_PC_In_Sel), .Y(PC_Data_In));
 	Adder_8 Adder (.a(PC_Adding_Signal), .b(PC_Data_Out_Buff), .cin(1'b0), .s(PC_Incremented_Signal), .cout());
 	Pipo_Register PC (.din(PC_Data_In), .dout(PC_Data_Out_Buff), .en(PC_En), .rst(rst), .clk(clk));
 	Mux_2x1_8_bit PC_Tristate_Buffer (.I0(8'bzzzzzzzz), .I1(PC_Data_Out_Buff), .S(PC_Buffer_Sel), .Y(Abus2));

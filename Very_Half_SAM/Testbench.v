@@ -122,7 +122,7 @@ module Testbench;
     always @(posedge clk) begin
         if (rw == 0 && en == 1) begin
             $display("Writing value: %0d to memory address: %0d", dBus_reg, aBus);
-            Memory[aBus] <= dBus_reg;
+            Memory[aBus] <= dBus;
         end else if (rw == 1 && en == 1) begin
             if (aBus !== 8'hZZ) begin
                 dBus_reg = Memory[aBus];
