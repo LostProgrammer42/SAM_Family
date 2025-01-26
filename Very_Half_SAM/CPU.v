@@ -79,9 +79,6 @@ module cpu
 	endfunction
 	
 	task wrapup;
-		input pause;
-		output [4:0] state;
-		output [3:0] tick;
 		
 		begin
 			if (pause == 1'b1) begin
@@ -133,45 +130,45 @@ module cpu
 				end
 				branch : begin
 					if (tick == 4'h0) PC_En <= 1'b1 ;
-					else if (tick == 4'h1) wrapup(pause, state, tick);
+					else if (tick == 4'h1) wrapup;
 				end
 				brZero : begin
 					if (tick == 4'h0) begin
 						if (Acc_Data_Out == 8'h00) PC_En <= 1'b1;
 					end 
-					else if (tick == 4'h1) wrapup(pause, state, tick);
+					else if (tick == 4'h1) wrapup;
 				end
 				brPos : begin
 					if (tick == 4'h0) begin
 						if ((Acc_Data_Out != 8'h00) && (Acc_Data_Out[7] == 1'b0)) PC_En <= 1'b1;
 					end 
-					else if (tick == 4'h1) wrapup(pause, state, tick);
+					else if (tick == 4'h1) wrapup;
 				end
 				brNeg : begin
 					if (tick == 4'h0) begin
 						if (Acc_Data_Out[7] == 1'b1) PC_En <= 1'b1;
 					end 
-					else if (tick == 4'h1) wrapup(pause, state, tick);
+					else if (tick == 4'h1) wrapup;
 				end
 				brInd : begin
 					if (tick == 4'h0) PC_En <= 1'b1;
 					else if (tick == 4'h2) begin
 						Mux_PC_In_Sel <= 1'b1;
 						PC_En <= 1'b1;
-					end else if (tick == 4'h3) wrapup(pause, state, tick);
+					end else if (tick == 4'h3) wrapup;
 				end
 				cLoad : begin
 					if (tick == 4'h0) begin
 						Mux_Acc_In_Sel <= 2'b01;
 						Acc_En <= 1'b1;
 					end 
-					else if (tick == 4'h1) wrapup(pause, state, tick);
+					else if (tick == 4'h1) wrapup;
 				end
 				dLoad : begin
 					if (tick == 4'h1) begin
 						Mux_Acc_In_Sel <= 2'b01;
 						Acc_En <= 1'b1;
-						wrapup(pause, state, tick);
+						wrapup;
 					end 
 				end
 				iLoad : begin
@@ -179,32 +176,32 @@ module cpu
 					else if (tick == 4'h3) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h4) wrapup(pause, state, tick);
+					end else if (tick == 4'h4) wrapup;
 				end
 				dStore : begin
-					if (tick == 4'h2) wrapup(pause, state, tick);
+					if (tick == 4'h2) wrapup;
 				end
 				iStore : begin
 					if (tick == 4'h0) IAR_En <= 1'b1;
-					else if (tick == 4'h3) wrapup(pause, state, tick);
+					else if (tick == 4'h3) wrapup;
 				end
 				negate : begin
 					if (tick == 4'h1) begin
 						Mux_Acc_In_Sel <= 2'b11;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h2) wrapup(pause, state, tick);
+					end else if (tick == 4'h2) wrapup;
 				end
 				add : begin
 					if (tick == 4'h1) begin
 						Mux_Acc_In_Sel <= 2'b11;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h2) wrapup(pause, state, tick);
+					end else if (tick == 4'h2) wrapup;
 				end
 				andd : begin
 					if (tick == 4'h1) begin
 						Mux_Acc_In_Sel <= 2'b11;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h2) wrapup(pause, state, tick);
+					end else if (tick == 4'h2) wrapup;
 				end
 				default : state <= halt;
 			endcase

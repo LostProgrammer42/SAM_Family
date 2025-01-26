@@ -51,6 +51,7 @@ module Testbench;
     // Initialize memory
     initial begin
 		  regSelect = 2'b10;
+		  pause = 1'b0;
         Memory[0]  = 8'b00010111; // branch 8
         Memory[1]  = 8'b01100001; // data
         Memory[2]  = 8'b00000001; // data

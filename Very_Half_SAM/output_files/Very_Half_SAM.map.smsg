@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Testbench.v(121): always construct contains both blocking and non-blocking assignments File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v Line: 121
+Warning (10268): Verilog HDL information at Testbench.v(122): always construct contains both blocking and non-blocking assignments File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v Line: 122
