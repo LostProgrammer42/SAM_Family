@@ -10,132 +10,132 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/AND_8.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/AND_8.v 
+# Start time: 23:55:07 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v 
 # -- Compiling module AND_8
 # 
 # Top level modules:
 # 	AND_8
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v 
 # -- Compiling module Full_Adder
 # -- Compiling module Adder_8
 # 
 # Top level modules:
 # 	Adder_8
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_8_bit.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_8_bit.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v 
 # -- Compiling module Mux_2x1_8_bit
 # 
 # Top level modules:
 # 	Mux_2x1_8_bit
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_1_bit.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_2x1_1_bit.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v 
 # -- Compiling module Mux_2x1_1_bit
 # 
 # Top level modules:
 # 	Mux_2x1_1_bit
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_4x1_8_bit.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Mux_4x1_8_bit.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v 
 # -- Compiling module Mux_4x1_8_bit
 # 
 # Top level modules:
 # 	Mux_4x1_8_bit
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/D_Flip_Flop.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/D_Flip_Flop.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Pipo_Register.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:17 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Pipo_Register.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v 
 # -- Compiling module Pipo_Register
 # 
 # Top level modules:
 # 	Pipo_Register
-# End time: 17:33:17 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:18 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 17:33:18 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Datapath.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:18 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Datapath.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v 
 # -- Compiling module Datapath
 # 
 # Top level modules:
 # 	Datapath
-# End time: 17:33:18 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/CPU.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:18 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/CPU.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v 
 # -- Compiling module cpu
 # 
 # Top level modules:
 # 	cpu
-# End time: 17:33:18 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Toplevel.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:18 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Toplevel.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v 
 # -- Compiling module Toplevel
 # 
 # Top level modules:
 # 	Toplevel
-# End time: 17:33:18 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM {C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v}
+# vlog -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM {E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:33:18 on Jan 26,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/manan/Documents/SAM_Family/Very_Half_SAM" C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Testbench.v 
+# Start time: 23:55:08 on Jan 30,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM" E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v 
 # -- Compiling module Testbench
 # 
 # Top level modules:
 # 	Testbench
-# End time: 17:33:18 on Jan 26,2025, Elapsed time: 0:00:00
+# End time: 23:55:08 on Jan 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 17:33:18 on Jan 26,2025
+# Start time: 23:55:08 on Jan 30,2025
 # Loading work.Testbench
 # Loading work.Toplevel
 # Loading work.cpu
@@ -149,9 +149,9 @@
 # Loading work.AND_8
 # Loading work.D_FF
 # Loading work.Mux_2x1_1_bit
-# ** Warning: (vsim-3017) C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v(8): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Testbench/DUT/path_of_data/AL_Unit/u2 File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v
-# ** Warning: (vsim-3722) C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v(8): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-3017) E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v(8): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /Testbench/DUT/path_of_data/AL_Unit/u2 File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v
+# ** Warning: (vsim-3722) E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v(8): [TFMPC] - Missing connection for port 'cout'.
 # 
 # add wave *
 # view structure
@@ -159,49 +159,10 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Writing value: z to memory address: 4
-# Writing value: z to memory address: 6
-# Writing value: z to memory address: 5
-# Writing value: z to memory address: 7
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 8
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 9
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 10
+# Idhar hu main ZZZZZZ karne ki koshish karra main
+# Idhar hu main ZZZZZZ karne ki koshish karra main
+# Writing value: 3 to memory address: 4
 # Break key hit
-# Break in Module D_FF at C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/D_Flip_Flop.v line 5
-add wave -position end  sim:/Testbench/Memory
-restart
-# ** Warning: (vsim-3017) C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v(8): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /Testbench/DUT/path_of_data/AL_Unit/u2 File: C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/Adder_8.v
-# ** Warning: (vsim-3722) C:/Users/manan/Documents/SAM_Family/Very_Half_SAM/ALU.v(8): [TFMPC] - Missing connection for port 'cout'.
-run -all
-# Writing value: z to memory address: 4
-# Writing value: z to memory address: 6
-# Writing value: z to memory address: 5
-# Writing value: z to memory address: 7
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 8
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 9
-# Writing value: z to memory address: 13
-# Writing value: z to memory address: 15
-# Writing value: z to memory address: 12
-# Writing value: z to memory address: 10
-# Break key hit
-# Simulation stop requested.
-# End time: 17:36:00 on Jan 26,2025, Elapsed time: 0:02:42
-# Errors: 0, Warnings: 4
+# Break in Module Testbench at E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v line 46
+# End time: 23:59:10 on Jan 30,2025, Elapsed time: 0:04:02
+# Errors: 0, Warnings: 2

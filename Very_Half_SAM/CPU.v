@@ -3,7 +3,7 @@ module cpu
 	Acc_En, IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, 
 	Acc_Buffer_Sel, clk, rst, Mux_Acc_In_Sel, ALU_Sel, En, Rw, 
 	IReg_Data_Out, PC_Data_Out, Acc_Data_Out, regSelect, dispReg, 
-	pause);
+	pause, ALE);
 	
 	input clk, rst, pause;
 	input [1:0] regSelect;
@@ -13,6 +13,7 @@ module cpu
 			En, Rw;
 	output reg [1:0] Mux_Acc_In_Sel, ALU_Sel;
 	output reg [7:0] dispReg;
+	output reg ALE;
 	
 	parameter rstState = 5'b00000, 
 				pauseState = 5'b00001, 
@@ -120,10 +121,10 @@ module cpu
 				end
 				fetch : begin
 					Mux_PC_Add_Sel <= 1'b1;
-					if (tick == 4'h0) begin
+					if (tick == 4'h1) begin
 						IReg_En <= 1'b1;
 						PC_En <= 1'b1;
-					end else if (tick == 4'h2) begin
+					end else if (tick == 4'h3) begin
 						state <= decode(IReg_Data_Out);
 						tick  <= 4'h0;
 					end
@@ -152,10 +153,10 @@ module cpu
 				end
 				brInd : begin
 					if (tick == 4'h0) PC_En <= 1'b1;
-					else if (tick == 4'h2) begin
+					else if (tick == 4'h3) begin
 						Mux_PC_In_Sel <= 1'b1;
 						PC_En <= 1'b1;
-					end else if (tick == 4'h3) wrapup;
+					end else if (tick == 4'h4) wrapup;
 				end
 				cLoad : begin
 					if (tick == 4'h0) begin
@@ -165,25 +166,25 @@ module cpu
 					else if (tick == 4'h1) wrapup;
 				end
 				dLoad : begin
-					if (tick == 4'h1) begin
+					if (tick == 4'h2) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
 						wrapup;
 					end 
 				end
 				iLoad : begin
-					if (tick == 4'h0) IAR_En <= 1'b1;
-					else if (tick == 4'h3) begin
+					if (tick == 4'h1) IAR_En <= 1'b1;
+					else if (tick == 4'h4) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h4) wrapup;
+					end else if (tick == 4'h5) wrapup;
 				end
 				dStore : begin
-					if (tick == 4'h2) wrapup;
+					if (tick == 4'h3) wrapup;
 				end
 				iStore : begin
-					if (tick == 4'h0) IAR_En <= 1'b1;
-					else if (tick == 4'h3) wrapup;
+					if (tick == 4'h1) IAR_En <= 1'b1;
+					else if (tick == 4'h4) wrapup;
 				end
 				negate : begin
 					if (tick == 4'h1) begin
@@ -216,67 +217,90 @@ module cpu
 		IReg_Buffer_Sel <= 1'b0;
 		IAR_Buffer_Sel <= 1'b0;
 		Acc_Buffer_Sel <= 1'b0;
+		ALE <= 1'b0;
 		
 		case (state)
 			fetch : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					PC_Buffer_Sel <= 1'b1;
-				end else if (tick == 4'h2) En <= 1'b1;
+					ALE <= 1'b1;
+				end 
+				else if (tick == 4'h3) begin
+					En <= 1'b1;
+				end 
+				else if (tick == 4'h2) begin
+					ALE <= 1'b1;
+				end
+				if (tick == 4'h1) begin 
+					En <= 1'b1;
+				end
 			end
 			brInd : begin
 				if (tick == 4'h2) begin
 					En <= 1'b1;
 					PC_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end
 			end
 			dLoad : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end
 			end
 			add : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end
 			end
 			andd : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end
 			end
 			iLoad : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end else if (tick == 4'h2) begin
 					En <= 1'b1;
 					IAR_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end
 			end
 			dStore : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
-				end else if (tick == 4'h1) begin
+				end else if (tick == 4'h2) begin
 					En <= 1'b1;
 					Rw <= 1'b0;
-					IReg_Buffer_Sel <= 1'b1;
 					Acc_Buffer_Sel <= 1'b1;
+				end else if (tick == 4'h1) begin
+					IReg_Buffer_Sel <= 1'b1;
+					Rw <= 1'b0;
+					ALE <= 1'b1;
 				end
 			end
 			iStore : begin
 				if (tick == 4'h0) begin
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
 				end else if (tick == 4'h1) begin
 					En <= 1'b1;
 				end else if (tick == 4'h2) begin
 					En <= 1'b1;
 					Rw <= 1'b0;
 					IAR_Buffer_Sel <= 1'b1;
+					ALE <= 1'b1;
+				end else if (tick == 4'h3) begin
 					Acc_Buffer_Sel <= 1'b1;
 				end
 			end

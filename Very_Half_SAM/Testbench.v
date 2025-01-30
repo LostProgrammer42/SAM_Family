@@ -10,11 +10,13 @@ module Testbench;
     wire en;
     wire rw;
     wire [7:0] aBus;
+	 reg [7:0] aBus_Store;
     wire [7:0] dBus;
 	 reg [7:0] dBus_reg;
 	 
 	 assign dBus = dBus_reg;
-
+	 wire ALE;
+	 
     // Console interface signals
     reg pause;
     reg [1:0] regSelect;
@@ -22,6 +24,7 @@ module Testbench;
 	
     // Memory array
     reg [7:0] Memory [0:63];
+	 reg ALE_counter; 
 
     // Instantiate the DUT
     Toplevel DUT (
@@ -33,7 +36,8 @@ module Testbench;
         .Data_Bus(dBus),
         .pause(pause),
         .regSelect(regSelect),
-        .dispReg(dispReg)
+        .dispReg(dispReg),
+		  .ALE(ALE)
     );
 
     // Clock generation
@@ -52,8 +56,8 @@ module Testbench;
     initial begin
 		  regSelect = 2'b10;
 		  pause = 1'b0;
-        Memory[0]  = 8'b00010111; // branch 8
-        Memory[1]  = 8'b01100001; // data
+        Memory[0]  = 8'b01100011; // cload #3H
+        Memory[1]  = 8'b10010100; // dstore 4H
         Memory[2]  = 8'b00000001; // data
         Memory[3]  = 8'b00000010; // data
         Memory[4]  = 8'b00000000; // data
@@ -118,17 +122,33 @@ module Testbench;
 		  Memory[63] = 8'b00000000;
         end
 
-    // Memory process
+//    // Memory process
     always @(posedge clk) begin
+		  if (ALE == 1'b1) begin
+				aBus_Store = aBus;
+		  end
+		  if (rw == 1'b0) begin
+				dBus_reg <= 8'hZZ;
+				$display("Idhar hu main ZZZZZZ karne ki koshish karra main");
+		  end
         if (rw == 0 && en == 1) begin
-            $display("Writing value: %0d to memory address: %0d", dBus_reg, aBus);
-            Memory[aBus] <= dBus;
+			
+				$display("Writing value: %0d to memory address: %0d", dBus, aBus_Store);
+				Memory[aBus_Store] <= dBus;
+				
         end else if (rw == 1 && en == 1) begin
-            if (aBus !== 8'hZZ) begin
-                dBus_reg = Memory[aBus];
-            end else begin
-                dBus_reg = 8'hZZ;
-            end
+				if (ALE == 1'b1) begin
+					ALE_counter <= 1'b1;
+					dBus_reg <= 8'hZZ;
+				end
+				if (ALE_counter == 1'b1) begin	
+					if (aBus_Store !== 8'hZZ) begin
+						 dBus_reg = Memory[aBus_Store];
+					end else begin
+						 dBus_reg = 8'hZZ;
+					end
+				ALE_counter <= 1'b0;
+				end
         end
 	end
  endmodule

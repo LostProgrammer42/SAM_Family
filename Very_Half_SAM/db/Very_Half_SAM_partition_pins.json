@@ -76,6 +76,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ALE",
+					"strict" : false
+				},
+				{
 					"name" : "Data_Bus[0]",
 					"strict" : false
 				},
