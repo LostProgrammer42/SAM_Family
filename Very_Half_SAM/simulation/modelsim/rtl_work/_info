@@ -7,48 +7,48 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/simulation/modelsim
+Z0 dC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/simulation/modelsim
 vAdder_8
-Z1 !s110 1738261508
+Z1 !s110 1738344896
 !i10b 1
 !s100 W5dolhf03kC_E6`DbDSOn2
-Il^LdEz?i5K23=mf6Xj<ih3
+IB<ebJ5eiW17QL6]Zf[4Tb2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1737893238
-Z4 8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v
-Z5 FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v
+Z3 w1738307929
+Z4 8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Adder_8.v
+Z5 FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Adder_8.v
 L0 9
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1738261508.000000
-Z8 !s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v|
+Z7 !s108 1738344896.000000
+Z8 !s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Adder_8.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Adder_8.v|
 !i113 1
 Z10 o-vlog01compat -work work
-Z11 !s92 -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM
 Z12 tCvgOpt 0
 n@adder_8
 vALU
-R1
+Z13 !s110 1738344897
 !i10b 1
 !s100 d1FGA01[m1WGaHWSbe96j1
-II]F7U>UX_Zndb[43Xf@mS3
+I>240LHA8Oa7Pam14RUYSL1
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/ALU.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/ALU.v
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v|
+Z14 !s108 1738344897.000000
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/ALU.v|
 !i113 1
 R10
 R11
@@ -58,43 +58,43 @@ vAND_8
 R1
 !i10b 1
 !s100 :ZiIF@GILFU^cG]9@?g?E3
-IkPbi`eH0_]b^3EmES]b7l1
+IcHZd<UCObOnVfO5IG>7]c2
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v
-L0 1
-R6
-r1
-!s85 0
-31
-!s108 1738261507.000000
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v|
-!i113 1
-R10
-R11
-R12
-n@a@n@d_8
-vcpu
-R1
-!i10b 1
-!s100 I:eE>2IDHd6]66b8I18R@2
-IOJ[l@fJ5fk:]Ce[az7AJV0
-R2
-R0
-w1738261408
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/AND_8.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/AND_8.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v|
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/AND_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/AND_8.v|
+!i113 1
+R10
+R11
+R12
+n@a@n@d_8
+vcpu
+R13
+!i10b 1
+!s100 4cJ23]eD4f6^95U]kRLm53
+I`8<n6c?FM_jnQF?:oCfVG1
+R2
+R0
+w1738344843
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/CPU.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/CPU.v
+L0 1
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/CPU.v|
 !i113 1
 R10
 R11
@@ -103,43 +103,43 @@ vD_FF
 R1
 !i10b 1
 !s100 1`J_D7BBW^9fK:D7;Ca^i2
-ITDnF9=BOJPJ=<mGafVm:21
+IM[[URYCiF;B5R2FDT?84F1
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/D_Flip_Flop.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/D_Flip_Flop.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v|
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/D_Flip_Flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/D_Flip_Flop.v|
 !i113 1
 R10
 R11
 R12
 n@d_@f@f
 vDatapath
-R1
+R13
 !i10b 1
 !s100 g;XgV^OofZQO;Z4hPGn8A2
-IoALnM>oO@zALkV:>=TV4?0
+I^aLfTQJ2Ba;=0@adYiPMS2
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Datapath.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Datapath.v
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v|
+R14
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Datapath.v|
 !i113 1
 R10
 R11
@@ -149,7 +149,7 @@ vFull_Adder
 R1
 !i10b 1
 !s100 c@FU7]Zk_G^;Ik9n;B[5g2
-I9<RLTddG>U8AmozNV^dLD1
+IJ;[OF3n^cg7FNkl=nKH?G3
 R2
 R0
 R3
@@ -172,20 +172,20 @@ vMux_2x1_1_bit
 R1
 !i10b 1
 !s100 8^[A@gZRHgTiM1Z2o9[_]0
-I=KfIl11Xn;IE6RU^PmWbG0
+IKR7_NF3NlDi9OS3>hdaEL2
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_1_bit.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_1_bit.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v|
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_1_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_1_bit.v|
 !i113 1
 R10
 R11
@@ -195,20 +195,20 @@ vMux_2x1_8_bit
 R1
 !i10b 1
 !s100 fQB@O_480cW7KT^hig0h:0
-I@gc[69;`Vn^1]MKoI>[7@2
+IUPlg]5ZWXlBIY0@?MKlkf0
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_8_bit.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_8_bit.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v|
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_8_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_2x1_8_bit.v|
 !i113 1
 R10
 R11
@@ -218,89 +218,89 @@ vMux_4x1_8_bit
 R1
 !i10b 1
 !s100 F=dIK`H[LP>6K:FOdQ3X91
-I0nR03RB0khU6Wz?M?BkMz0
+IcCfC<gULYHT^XNmFUj4dM1
 R2
 R0
 R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_4x1_8_bit.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_4x1_8_bit.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v|
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_4x1_8_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Mux_4x1_8_bit.v|
 !i113 1
 R10
 R11
 R12
 n@mux_4x1_8_bit
 vPipo_Register
-R1
+R13
 !i10b 1
 !s100 B:YRi42KPnPOS6[_2D[E01
-Io3boQV9IWkj4;A5J6l1MB2
+IilZBITiF8<M`2dmIL9=ef3
 R2
 R0
-R3
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v
+Z15 w1738307930
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Pipo_Register.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Pipo_Register.v
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v|
+R14
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Pipo_Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Pipo_Register.v|
 !i113 1
 R10
 R11
 R12
 n@pipo_@register
 vTestbench
-R1
+R13
 !i10b 1
-!s100 5`FBDcWohVUOS>K5dRBD91
-IFi?K155<@^RN>Wl:Clf0V2
+!s100 5bCf6mVj2Y;d6Zz9?iD]M0
+IZ>=O;9[YWFdg=2HS_<PoC0
 R2
 R0
-w1738260666
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v
+w1738344836
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Testbench.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Testbench.v
 L0 3
 R6
 r1
 !s85 0
 31
-R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v|
+R14
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Testbench.v|
 !i113 1
 R10
 R11
 R12
 n@testbench
 vToplevel
-R1
+R13
 !i10b 1
 !s100 <mRKlZ?d=QhNJ_akeE^Em1
-Ii8QCFTA2Elcke<2c4WAIP3
+IE8IVKhN2iWCLc^Lkc?B;b2
 R2
 R0
-w1738175939
-8E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v
-FE:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v
+R15
+8C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Toplevel.v
+FC:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Toplevel.v
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-!s107 E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM|E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v|
+R14
+!s107 C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Toplevel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM|C:/Users/affaa/Downloads/WashU2_CPU-master/WashU2_CPU-master/Very_Half_SAM/Toplevel.v|
 !i113 1
 R10
 R11

@@ -56,8 +56,8 @@ module Testbench;
     initial begin
 		  regSelect = 2'b10;
 		  pause = 1'b0;
-        Memory[0]  = 8'b01100011; // cload #3H
-        Memory[1]  = 8'b10010100; // dstore 4H
+         Memory[0]  = 8'b00010111; // branch 8
+        Memory[1]  = 8'b01100001; // data
         Memory[2]  = 8'b00000001; // data
         Memory[3]  = 8'b00000010; // data
         Memory[4]  = 8'b00000000; // data
@@ -130,24 +130,15 @@ module Testbench;
 		  if (rw == 1'b0) begin
 				dBus_reg <= 8'hZZ;
 				$display("Idhar hu main ZZZZZZ karne ki koshish karra main");
-		  end
-        if (rw == 0 && en == 1) begin
-			
-				$display("Writing value: %0d to memory address: %0d", dBus, aBus_Store);
-				Memory[aBus_Store] <= dBus;
-				
-        end else if (rw == 1 && en == 1) begin
-				if (ALE == 1'b1) begin
-					ALE_counter <= 1'b1;
-					dBus_reg <= 8'hZZ;
+			   if (en == 1'b1) begin
+					$display("Writing value: %0d to memory address: %0d", dBus, aBus_Store);
+					Memory[aBus_Store] <= dBus;
 				end
-				if (ALE_counter == 1'b1) begin	
-					if (aBus_Store !== 8'hZZ) begin
-						 dBus_reg = Memory[aBus_Store];
-					end else begin
-						 dBus_reg = 8'hZZ;
-					end
-				ALE_counter <= 1'b0;
+        end else if (rw == 1 && en == 1) begin				
+				if (aBus_Store !== 8'hZZ) begin
+					 dBus_reg = Memory[aBus_Store];
+				end else begin
+					 dBus_reg = 8'hZZ;
 				end
         end
 	end

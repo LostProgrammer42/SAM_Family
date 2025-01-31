@@ -173,18 +173,18 @@ module cpu
 					end 
 				end
 				iLoad : begin
-					if (tick == 4'h1) IAR_En <= 1'b1;
-					else if (tick == 4'h4) begin
+					if (tick == 4'h2) IAR_En <= 1'b1;
+					else if (tick == 4'h5) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h5) wrapup;
+					end else if (tick == 4'h6) wrapup;
 				end
 				dStore : begin
 					if (tick == 4'h3) wrapup;
 				end
 				iStore : begin
 					if (tick == 4'h1) IAR_En <= 1'b1;
-					else if (tick == 4'h4) wrapup;
+					else if (tick == 4'h6) wrapup;
 				end
 				negate : begin
 					if (tick == 4'h1) begin
@@ -222,7 +222,6 @@ module cpu
 		case (state)
 			fetch : begin
 				if (tick == 4'h0) begin
-					En <= 1'b1;
 					PC_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
 				end 
@@ -238,9 +237,11 @@ module cpu
 			end
 			brInd : begin
 				if (tick == 4'h2) begin
-					En <= 1'b1;
 					PC_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
+				end
+				else if (tick == 4'h3) begin
+					En <= 1'b1;
 				end
 			end
 			dLoad : begin
@@ -248,6 +249,9 @@ module cpu
 					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
+				end
+				else if (tick == 4'h1) begin
+					En <= 1'b1;
 				end
 			end
 			add : begin
@@ -266,19 +270,22 @@ module cpu
 			end
 			iLoad : begin
 				if (tick == 4'h0) begin
-					En <= 1'b1;
-					IReg_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
-				end else if (tick == 4'h2) begin
+					IReg_Buffer_Sel <= 1'b1;
+				end 
+				else if (tick == 4'h1) begin
 					En <= 1'b1;
+				end
+				else if (tick == 4'h4) begin
 					IAR_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
 				end
+				else if (tick == 4'h5) begin
+					En <= 1'b1;
+				end
 			end
 			dStore : begin
-				if (tick == 4'h0) begin
-					En <= 1'b1;
-				end else if (tick == 4'h2) begin
+				if (tick == 4'h2) begin
 					En <= 1'b1;
 					Rw <= 1'b0;
 					Acc_Buffer_Sel <= 1'b1;
@@ -290,17 +297,17 @@ module cpu
 			end
 			iStore : begin
 				if (tick == 4'h0) begin
-					En <= 1'b1;
 					IReg_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
 				end else if (tick == 4'h1) begin
 					En <= 1'b1;
-				end else if (tick == 4'h2) begin
-					En <= 1'b1;
+				end else if (tick == 4'h3) begin
 					Rw <= 1'b0;
 					IAR_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
-				end else if (tick == 4'h3) begin
+				end else if (tick == 4'h5) begin
+					En <= 1'b1;
+					Rw <= 1'b0;
 					Acc_Buffer_Sel <= 1'b1;
 				end
 			end
