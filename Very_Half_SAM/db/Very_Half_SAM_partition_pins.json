@@ -4,43 +4,43 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Address_Bus[0]",
+					"name" : "Bus_Out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[1]",
+					"name" : "Bus_Out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[2]",
+					"name" : "Bus_Out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[3]",
+					"name" : "Bus_Out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[4]",
+					"name" : "Bus_Out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[5]",
+					"name" : "Bus_Out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[6]",
+					"name" : "Bus_Out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Address_Bus[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Rw",
+					"name" : "Bus_Out[7]",
 					"strict" : false
 				},
 				{
 					"name" : "En",
+					"strict" : false
+				},
+				{
+					"name" : "Rw",
 					"strict" : false
 				},
 				{
@@ -80,35 +80,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[0]",
+					"name" : "TT_En[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[1]",
+					"name" : "TT_En[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[2]",
+					"name" : "TT_En[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[3]",
+					"name" : "TT_En[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[4]",
+					"name" : "TT_En[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[5]",
+					"name" : "TT_En[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[6]",
+					"name" : "TT_En[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Data_Bus[7]",
+					"name" : "TT_En[7]",
 					"strict" : false
 				},
 				{
@@ -129,6 +129,38 @@
 				},
 				{
 					"name" : "regSelect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Bus_In[7]",
 					"strict" : false
 				}
 			]

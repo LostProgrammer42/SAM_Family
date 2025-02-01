@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Jan 31 23:04:22 2025
+Analysis & Synthesis Status : Successful - Sat Feb 01 12:44:34 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Very_Half_SAM
 Top-level Entity Name : Toplevel
 Family : MAX 10
-Total logic elements : 278
-    Total combinational functions : 270
+Total logic elements : 268
+    Total combinational functions : 260
     Dedicated logic registers : 49
 Total registers : 49
-Total pins : 32
+Total pins : 40
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

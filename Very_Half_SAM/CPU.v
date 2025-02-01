@@ -166,9 +166,10 @@ module cpu
 					else if (tick == 4'h1) wrapup;
 				end
 				dLoad : begin
-					if (tick == 4'h2) begin
+					if (tick == 4'h1) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
+					end else if (tick == 4'h2) begin
 						wrapup;
 					end 
 				end
@@ -229,7 +230,7 @@ module cpu
 					En <= 1'b1;
 				end 
 				else if (tick == 4'h2) begin
-					ALE <= 1'b1;
+					ALE <= 1'b0;
 				end
 				if (tick == 4'h1) begin 
 					En <= 1'b1;

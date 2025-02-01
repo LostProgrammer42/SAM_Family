@@ -9,12 +9,12 @@ module Testbench;
     // Memory signals
     wire en;
     wire rw;
-    wire [7:0] aBus;
+    wire [7:0] Bus_Out;
 	 reg [7:0] aBus_Store;
-    wire [7:0] dBus;
+    wire [7:0] Bus_In;
 	 reg [7:0] dBus_reg;
 	 
-	 assign dBus = dBus_reg;
+	 assign Bus_In = dBus_reg;
 	 wire ALE;
 	 
     // Console interface signals
@@ -27,18 +27,7 @@ module Testbench;
 	 reg ALE_counter; 
 
     // Instantiate the DUT
-    Toplevel DUT (
-        .clk(clk),
-        .rst(rst),
-        .En(en),
-        .Rw(rw),
-        .Address_Bus(aBus),
-        .Data_Bus(dBus),
-        .pause(pause),
-        .regSelect(regSelect),
-        .dispReg(dispReg),
-		  .ALE(ALE)
-    );
+    Toplevel DUT (.clk(clk),.Bus_Out(Bus_Out) ,.Bus_In(Bus_In) ,.rst(rst),.En(en),.Rw(rw), .pause(pause), .regSelect(regSelect), .dispReg(dispReg) ,.ALE(ALE));
 
     // Clock generation
     initial begin
@@ -56,8 +45,8 @@ module Testbench;
     initial begin
 		  regSelect = 2'b10;
 		  pause = 1'b0;
-         Memory[0]  = 8'b00010111; // branch 8
-        Memory[1]  = 8'b01100001; // data
+         Memory[0]  = 8'b01110001; // branch 8
+        Memory[1]  = 8'b10010110; // data
         Memory[2]  = 8'b00000001; // data
         Memory[3]  = 8'b00000010; // data
         Memory[4]  = 8'b00000000; // data
@@ -125,14 +114,14 @@ module Testbench;
 //    // Memory process
     always @(posedge clk) begin
 		  if (ALE == 1'b1) begin
-				aBus_Store = aBus;
+				aBus_Store = Bus_Out;
 		  end
 		  if (rw == 1'b0) begin
 				dBus_reg <= 8'hZZ;
 				$display("Idhar hu main ZZZZZZ karne ki koshish karra main");
 			   if (en == 1'b1) begin
-					$display("Writing value: %0d to memory address: %0d", dBus, aBus_Store);
-					Memory[aBus_Store] <= dBus;
+					$display("Writing value: %0d to memory address: %0d", Bus_Out, aBus_Store);
+					Memory[aBus_Store] <= Bus_Out;
 				end
         end else if (rw == 1 && en == 1) begin				
 				if (aBus_Store !== 8'hZZ) begin
