@@ -45,8 +45,8 @@ module Testbench;
     initial begin
 		  regSelect = 2'b10;
 		  pause = 1'b0;
-         Memory[0]  = 8'b01110001; // branch 8
-        Memory[1]  = 8'b10010110; // data
+         Memory[0] = 8'b00010111; // branch 8
+        Memory[1]  = 8'b01100001; // data
         Memory[2]  = 8'b00000001; // data
         Memory[3]  = 8'b00000010; // data
         Memory[4]  = 8'b00000000; // data

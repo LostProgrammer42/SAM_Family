@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Very_Half_SAM
-Sat Feb 01 12:44:34 2025
+Mon Mar 10 23:56:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 01 12:44:34 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 10 23:56:17 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Very_Half_SAM                               ;
 ; Top-level Entity Name              ; Toplevel                                    ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 268                                         ;
-;     Total combinational functions  ; 260                                         ;
+; Total logic elements               ; 264                                         ;
+;     Total combinational functions  ; 256                                         ;
 ;     Dedicated logic registers      ; 49                                          ;
 ; Total registers                    ; 49                                          ;
 ; Total pins                         ; 40                                          ;
@@ -159,36 +159,36 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 10          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; Bus_Conductor.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v ;         ;
-; AND_8.v                          ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v         ;         ;
-; Adder_8.v                        ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v       ;         ;
-; Mux_2x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v ;         ;
-; Mux_2x1_1_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v ;         ;
-; Mux_4x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v ;         ;
-; D_Flip_Flop.v                    ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v   ;         ;
-; Pipo_Register.v                  ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v           ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v      ;         ;
-; CPU.v                            ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v           ;         ;
-; Toplevel.v                       ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v      ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; Bus_Conductor.v                  ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v ;         ;
+; AND_8.v                          ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/AND_8.v         ;         ;
+; Adder_8.v                        ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Adder_8.v       ;         ;
+; Mux_2x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_2x1_8_bit.v ;         ;
+; Mux_2x1_1_bit.v                  ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_2x1_1_bit.v ;         ;
+; Mux_4x1_8_bit.v                  ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_4x1_8_bit.v ;         ;
+; D_Flip_Flop.v                    ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/D_Flip_Flop.v   ;         ;
+; Pipo_Register.v                  ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Pipo_Register.v ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/ALU.v           ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v      ;         ;
+; CPU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/CPU.v           ;         ;
+; Toplevel.v                       ; yes             ; User Verilog HDL File  ; C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Toplevel.v      ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -196,16 +196,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 268                        ;
+; Estimated Total logic elements              ; 264                        ;
 ;                                             ;                            ;
-; Total combinational functions               ; 260                        ;
+; Total combinational functions               ; 256                        ;
 ; Logic element usage by number of LUT inputs ;                            ;
 ;     -- 4 input functions                    ; 179                        ;
-;     -- 3 input functions                    ; 42                         ;
+;     -- 3 input functions                    ; 38                         ;
 ;     -- <=2 input functions                  ; 39                         ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 260                        ;
+;     -- normal mode                          ; 256                        ;
 ;     -- arithmetic mode                      ; 0                          ;
 ;                                             ;                            ;
 ; Total registers                             ; 49                         ;
@@ -216,9 +216,9 @@ refer to the applicable agreement for further details.
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
-; Maximum fan-out node                        ; cpu:very_half_sam|state[0] ;
-; Maximum fan-out                             ; 50                         ;
-; Total fan-out                               ; 1164                       ;
+; Maximum fan-out node                        ; cpu:very_half_sam|state[1] ;
+; Maximum fan-out                             ; 49                         ;
+; Total fan-out                               ; 1152                       ;
 ; Average fan-out                             ; 2.99                       ;
 +---------------------------------------------+----------------------------+
 
@@ -228,18 +228,19 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                  ; Entity Name   ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
-; |Toplevel                        ; 260 (0)             ; 49 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |Toplevel                                                            ; Toplevel      ; work         ;
-;    |Bus_Conductor:bus|           ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Bus_Conductor:bus                                          ; Bus_Conductor ; work         ;
+; |Toplevel                        ; 256 (0)             ; 49 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |Toplevel                                                            ; Toplevel      ; work         ;
+;    |Bus_Conductor:bus|           ; 27 (27)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Bus_Conductor:bus                                          ; Bus_Conductor ; work         ;
 ;    |Datapath:path_of_data|       ; 76 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data                                      ; Datapath      ; work         ;
 ;       |ALU:AL_Unit|              ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit                          ; ALU           ; work         ;
 ;          |AND_8:u1|              ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|AND_8:u1                 ; AND_8         ; work         ;
 ;          |Adder_8:u2|            ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2               ; Adder_8       ; work         ;
-;             |Full_Adder:F1|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F1 ; Full_Adder    ; work         ;
-;             |Full_Adder:F2|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F2 ; Full_Adder    ; work         ;
+;             |Full_Adder:F2|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F2 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F3 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F4|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F4 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F5|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F5 ; Full_Adder    ; work         ;
 ;             |Full_Adder:F6|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F6 ; Full_Adder    ; work         ;
+;             |Full_Adder:F7|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F7 ; Full_Adder    ; work         ;
+;             |Full_Adder:F8|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|ALU:AL_Unit|Adder_8:u2|Full_Adder:F8 ; Full_Adder    ; work         ;
 ;       |Adder_8:Adder|            ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder                        ; Adder_8       ; work         ;
 ;          |Full_Adder:F2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F2          ; Full_Adder    ; work         ;
 ;          |Full_Adder:F3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F3          ; Full_Adder    ; work         ;
@@ -247,42 +248,42 @@ refer to the applicable agreement for further details.
 ;          |Full_Adder:F7|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Adder_8:Adder|Full_Adder:F7          ; Full_Adder    ; work         ;
 ;       |Mux_2x1_8_bit:Mux_PC_Add| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Mux_2x1_8_bit:Mux_PC_Add             ; Mux_2x1_8_bit ; work         ;
 ;       |Pipo_Register:ACC|        ; 28 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC                    ; Pipo_Register ; work         ;
-;          |D_FF:loop[0].df|       ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[0].df    ; D_FF          ; work         ;
-;          |D_FF:loop[1].df|       ; 8 (8)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df    ; D_FF          ; work         ;
+;          |D_FF:loop[0].df|       ; 9 (9)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[0].df    ; D_FF          ; work         ;
+;          |D_FF:loop[1].df|       ; 6 (6)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|       ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[2].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|       ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[3].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[4].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[5].df|       ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[5].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[6].df    ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|       ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[7].df    ; D_FF          ; work         ;
+;          |D_FF:loop[7].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[7].df    ; D_FF          ; work         ;
 ;       |Pipo_Register:IAR|        ; 9 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR                    ; Pipo_Register ; work         ;
 ;          |D_FF:loop[0].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[0].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[1].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[1].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[2].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[3].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[4].df    ; D_FF          ; work         ;
-;          |D_FF:loop[5].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[5].df    ; D_FF          ; work         ;
-;          |D_FF:loop[6].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[6].df    ; D_FF          ; work         ;
+;          |D_FF:loop[5].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[5].df    ; D_FF          ; work         ;
+;          |D_FF:loop[6].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[6].df    ; D_FF          ; work         ;
 ;          |D_FF:loop[7].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[7].df    ; D_FF          ; work         ;
 ;       |Pipo_Register:IReg|       ; 1 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg                   ; Pipo_Register ; work         ;
 ;          |D_FF:loop[0].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[1].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[1].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[2].df   ; D_FF          ; work         ;
-;          |D_FF:loop[3].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[3].df   ; D_FF          ; work         ;
+;          |D_FF:loop[3].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[3].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[4].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[5].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[5].df   ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[6].df   ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[7].df   ; D_FF          ; work         ;
+;          |D_FF:loop[7].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[7].df   ; D_FF          ; work         ;
 ;       |Pipo_Register:PC|         ; 10 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC                     ; Pipo_Register ; work         ;
 ;          |D_FF:loop[0].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[0].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[1].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[1].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[2].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[2].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[3].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[3].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[4].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[4].df     ; D_FF          ; work         ;
-;          |D_FF:loop[5].df|       ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df     ; D_FF          ; work         ;
+;          |D_FF:loop[5].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df     ; D_FF          ; work         ;
 ;          |D_FF:loop[6].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[6].df     ; D_FF          ; work         ;
-;          |D_FF:loop[7].df|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df     ; D_FF          ; work         ;
-;    |cpu:very_half_sam|           ; 158 (158)           ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:very_half_sam                                          ; cpu           ; work         ;
+;          |D_FF:loop[7].df|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df     ; D_FF          ; work         ;
+;    |cpu:very_half_sam|           ; 153 (153)           ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Toplevel|cpu:very_half_sam                                          ; cpu           ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -307,16 +308,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[5].df|q  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[3].df|q ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[5].df|q   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IAR|D_FF:loop[6].df|q  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[7].df|q ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:PC|D_FF:loop[7].df|q   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Toplevel|cpu:very_half_sam|Mux_Acc_In_Sel[1]                        ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[5].df|q  ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[1].df|q  ;
-; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |Toplevel|cpu:very_half_sam|tick[3]                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:very_half_sam|Mux16                                    ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Toplevel|Datapath:path_of_data|Pipo_Register:ACC|D_FF:loop[0].df|q  ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |Toplevel|cpu:very_half_sam|tick[1]                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Toplevel|cpu:very_half_sam|Mux21                                    ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Toplevel|Bus_Conductor:bus|bus_out[7]                               ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Toplevel|Bus_Conductor:bus|bus_out[0]                               ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Toplevel|Bus_Conductor:bus|bus_out[3]                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
@@ -399,14 +400,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 11                          ;
 ;     plain             ; 6                           ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 261                         ;
-;     normal            ; 261                         ;
+; cycloneiii_lcell_comb ; 257                         ;
+;     normal            ; 257                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 39                          ;
-;         3 data inputs ; 42                          ;
+;         3 data inputs ; 38                          ;
 ;         4 data inputs ; 179                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
+; Max LUT depth         ; 9.00                        ;
 ; Average LUT depth     ; 4.66                        ;
 +-----------------------+-----------------------------+
 
@@ -426,59 +427,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Feb 01 12:44:22 2025
+    Info: Processing started: Mon Mar 10 23:56:06 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Very_Half_SAM -c Very_Half_SAM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bus_conductor.v
-    Info (12023): Found entity 1: Bus_Conductor File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 1
+    Info (12023): Found entity 1: Bus_Conductor File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_8.v
-    Info (12023): Found entity 1: AND_8 File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/AND_8.v Line: 1
+    Info (12023): Found entity 1: AND_8 File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/AND_8.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
-    Info (12023): Found entity 1: Testbench File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Testbench.v Line: 3
+    Info (12023): Found entity 1: Testbench File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Testbench.v Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file adder_8.v
-    Info (12023): Found entity 1: Full_Adder File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 1
-    Info (12023): Found entity 2: Adder_8 File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 9
+    Info (12023): Found entity 1: Full_Adder File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Adder_8.v Line: 1
+    Info (12023): Found entity 2: Adder_8 File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Adder_8.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_8_bit.v
-    Info (12023): Found entity 1: Mux_2x1_8_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_8_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_2x1_8_bit File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_2x1_8_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_1_bit.v
-    Info (12023): Found entity 1: Mux_2x1_1_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_2x1_1_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_2x1_1_bit File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_2x1_1_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1_8_bit.v
-    Info (12023): Found entity 1: Mux_4x1_8_bit File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Mux_4x1_8_bit.v Line: 1
+    Info (12023): Found entity 1: Mux_4x1_8_bit File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Mux_4x1_8_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_flip_flop.v
-    Info (12023): Found entity 1: D_FF File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/D_Flip_Flop.v Line: 1
+    Info (12023): Found entity 1: D_FF File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/D_Flip_Flop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pipo_register.v
-    Info (12023): Found entity 1: Pipo_Register File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 1
+    Info (12023): Found entity 1: Pipo_Register File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Pipo_Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
-    Info (12023): Found entity 1: cpu File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/CPU.v Line: 1
+    Info (12023): Found entity 1: cpu File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/CPU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.v
-    Info (12023): Found entity 1: Toplevel File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 1
+    Info (12023): Found entity 1: Toplevel File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Toplevel.v Line: 1
 Info (12127): Elaborating entity "Toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:very_half_sam" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 28
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:path_of_data" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 33
-Info (12128): Elaborating entity "Pipo_Register" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 22
-Info (12128): Elaborating entity "D_FF" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 11
-Info (12128): Elaborating entity "Mux_2x1_1_bit" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|Mux_2x1_1_bit:loop[0].mux" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Pipo_Register.v Line: 12
-Info (12128): Elaborating entity "Mux_2x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_2x1_8_bit:IReg_Tristate_Buffer" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 23
-Info (12128): Elaborating entity "Adder_8" for hierarchy "Datapath:path_of_data|Adder_8:Adder" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 28
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "Datapath:path_of_data|Adder_8:Adder|Full_Adder:F1" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Adder_8.v Line: 17
-Info (12128): Elaborating entity "Mux_4x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_4x1_8_bit:Mux_ACC" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 36
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:path_of_data|ALU:AL_Unit" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Datapath.v Line: 40
-Info (12128): Elaborating entity "AND_8" for hierarchy "Datapath:path_of_data|ALU:AL_Unit|AND_8:u1" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/ALU.v Line: 7
-Info (12128): Elaborating entity "Bus_Conductor" for hierarchy "Bus_Conductor:bus" File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Toplevel.v Line: 39
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:very_half_sam" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Toplevel.v Line: 28
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:path_of_data" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Toplevel.v Line: 33
+Info (12128): Elaborating entity "Pipo_Register" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 22
+Info (12128): Elaborating entity "D_FF" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|D_FF:loop[0].df" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Pipo_Register.v Line: 11
+Info (12128): Elaborating entity "Mux_2x1_1_bit" for hierarchy "Datapath:path_of_data|Pipo_Register:IReg|Mux_2x1_1_bit:loop[0].mux" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Pipo_Register.v Line: 12
+Info (12128): Elaborating entity "Mux_2x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_2x1_8_bit:IReg_Tristate_Buffer" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 23
+Info (12128): Elaborating entity "Adder_8" for hierarchy "Datapath:path_of_data|Adder_8:Adder" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 28
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "Datapath:path_of_data|Adder_8:Adder|Full_Adder:F1" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Adder_8.v Line: 17
+Info (12128): Elaborating entity "Mux_4x1_8_bit" for hierarchy "Datapath:path_of_data|Mux_4x1_8_bit:Mux_ACC" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 36
+Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:path_of_data|ALU:AL_Unit" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Datapath.v Line: 40
+Info (12128): Elaborating entity "AND_8" for hierarchy "Datapath:path_of_data|ALU:AL_Unit|AND_8:u1" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/ALU.v Line: 7
+Info (12128): Elaborating entity "Bus_Conductor" for hierarchy "Bus_Conductor:bus" File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Toplevel.v Line: 39
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[0]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[1]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[2]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[3]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[4]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[5]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[6]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
-    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[7]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[0]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[1]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[2]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[3]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[4]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[5]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[6]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
+    Warning (13049): Converted tri-state buffer "Bus_Conductor:bus|Data_Bus_In[7]" feeding internal logic into a wire File: C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/Bus_Conductor.v Line: 7
     Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
@@ -505,23 +506,23 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "Datapath:path_of_data|comb~synth" feeding internal logic into a wire
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/output_files/Very_Half_SAM.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/output_files/Very_Half_SAM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 316 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 276 logic cells
+    Info (21061): Implemented 272 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Sat Feb 01 12:44:34 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4769 megabytes
+    Info: Processing ended: Mon Mar 10 23:56:17 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/Semester_4/Hardware_Description_Languages/Very_Half_SAM/output_files/Very_Half_SAM.map.smsg.
+The suppressed messages can be found in C:/Users/manan/Documents/SAM_family_working/Very_Half_SAM/output_files/Very_Half_SAM.map.smsg.
 
 

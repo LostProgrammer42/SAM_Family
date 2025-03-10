@@ -174,11 +174,11 @@ module cpu
 					end 
 				end
 				iLoad : begin
-					if (tick == 4'h2) IAR_En <= 1'b1;
-					else if (tick == 4'h5) begin
+					if (tick == 4'h1) IAR_En <= 1'b1;
+					else if (tick == 4'h4) begin
 						Mux_Acc_In_Sel <= 2'b10;
 						Acc_En <= 1'b1;
-					end else if (tick == 4'h6) wrapup;
+					end else if (tick == 4'h5) wrapup;
 				end
 				dStore : begin
 					if (tick == 4'h3) wrapup;
@@ -277,11 +277,11 @@ module cpu
 				else if (tick == 4'h1) begin
 					En <= 1'b1;
 				end
-				else if (tick == 4'h4) begin
+				else if (tick == 4'h3) begin
 					IAR_Buffer_Sel <= 1'b1;
 					ALE <= 1'b1;
 				end
-				else if (tick == 4'h5) begin
+				else if (tick == 4'h4) begin
 					En <= 1'b1;
 				end
 			end
