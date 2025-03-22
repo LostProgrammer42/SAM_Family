@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module SAM_Con_tb;
+module Testbench;
     // Parameters
     parameter KERNEL_SIZE = 8;
     parameter STRIDE = 1;
@@ -12,8 +12,9 @@ module SAM_Con_tb;
     
     // Outputs
     wire [31:0] Data_Out;
-    wire Last_Data_Out;
-    
+    wire Last_Data_Out; 
+	 integer i = 0;
+
     // Instantiate the module
     SAM_Con #(KERNEL_SIZE, STRIDE) uut (
         .Data_in(Data_in),
@@ -35,13 +36,12 @@ module SAM_Con_tb;
         Data_in = 0;
         Kernel_Serial_Input = 0;
         Last_Data_In = 0;
-        
         // Reset pulse
         #10;
         Rst = 0;
-        
+        #5;
         // Apply test inputs
-        for (integer i = 0; i < 16; i = i + 1) begin
+        for (i = 0; i < 16; i = i + 1) begin
             Data_in = i;
             Kernel_Serial_Input = i % 2;
             Last_Data_In = (i == 15) ? 1 : 0;

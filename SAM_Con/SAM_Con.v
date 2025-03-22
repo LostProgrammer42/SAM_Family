@@ -5,13 +5,15 @@ module SAM_Con #(parameter KERNEL_SIZE = 8, STRIDE = 1)(Data_in,Data_Out,Kernel_
 	input Last_Data_In, Clk, Rst;
 	output reg Last_Data_Out;
 	
-	wire [1:0] Kernel [KERNEL_SIZE-1:0];
+	reg [31:0] Data_Out_Temp;
+	reg [1:0] Kernel [KERNEL_SIZE-1:0];
 	reg [31:0] Data_Cache [KERNEL_SIZE:0];
 	
 	parameter Initial_State = 2'b00, Wait_State = 2'b01, Computation_State = 2'b10, Wrapup_State = 2'b11;
 	reg [1:0] State;
 	
 	reg [7:0] Counter; //Max Kernel Size Supported: 256 Bits
+	integer i = 0;
 	
 	always@(posedge Clk) begin
 		if (Rst == 1'b1) begin
@@ -27,23 +29,33 @@ module SAM_Con #(parameter KERNEL_SIZE = 8, STRIDE = 1)(Data_in,Data_Out,Kernel_
 					end else begin
 						State <= Initial_State;
 					end
-					Data_Cache[Counter] <= Data_in;
-					Kernel[Counter] <= Kernel_Serial_Input;
+					for (i = 0; i < KERNEL_SIZE; i = i + 1) begin
+						Data_Cache[i] <= Data_Cache[i + 1]; // Correctly shift elements down
+					end
+					Data_Cache[KERNEL_SIZE] <= Data_in; // Insert new data at the latest position
+					
+					for (i = 0; i < KERNEL_SIZE-1; i = i + 1) begin
+						Kernel[i] <= Kernel[i + 1];
+					end
+					Kernel[KERNEL_SIZE-1] <= Kernel_Serial_Input;
+
 					Counter <= Counter + 1;
 				end
 				
 				Computation_State: begin
 					Counter <= 8'b0;
 					//Shifting Logic
-					for (integer i = 0; i < KERNEL_SIZE; i = i + 1) begin
+					
+					for (i = 0; i < KERNEL_SIZE; i = i + 1) begin
 						Data_Cache[i] <= Data_Cache[i + 1]; //Lower (0 is lower than 1) Index stores older value
 					end
 					Data_Cache[KERNEL_SIZE] <= Data_in;
 					// Computation Logic
-					Data_Out = 32'b0;
-               for (integer i = 0; i < KERNEL_SIZE; i = i + 1) begin
-						Data_Out = Data_Out + Data_Cache[i];
+					Data_Out_Temp = 32'b0;
+               for (i = 0; i < KERNEL_SIZE; i = i + 1) begin
+						Data_Out_Temp = Data_Out_Temp + Data_Cache[i];
 					end
+					Data_Out = Data_Out_Temp;
 					if (Last_Data_In == 1'b1) begin
 						State <= Wrapup_State;
 					end else if (STRIDE == 1) begin
@@ -54,7 +66,7 @@ module SAM_Con #(parameter KERNEL_SIZE = 8, STRIDE = 1)(Data_in,Data_Out,Kernel_
 					
 				end
 				Wait_State: begin
-					for (integer i = 0; i < KERNEL_SIZE; i = i + 1) begin
+					for (i = 0; i < KERNEL_SIZE; i = i + 1) begin
 						Data_Cache[i] <= Data_Cache[i + 1]; //Lower (0 is lower than 1) Index stores older value
 					end
 					Data_Cache[KERNEL_SIZE] <= Data_in;
@@ -71,7 +83,7 @@ module SAM_Con #(parameter KERNEL_SIZE = 8, STRIDE = 1)(Data_in,Data_Out,Kernel_
 				end
 				
 				Wrapup_State: begin
-					Last_Data_Out <= 1'b0;
+					Last_Data_Out <= 1'b1;
 					State <= Wrapup_State;
 				end
 			endcase

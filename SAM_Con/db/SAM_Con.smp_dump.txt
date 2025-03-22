@@ -1,0 +1,7 @@
+
+State Machine - |SAM_Con|State
+Name State.Wrapup_State State.Computation_State State.Wait_State State.Initial_State 
+State.Initial_State 0 0 0 0 
+State.Wait_State 0 0 1 1 
+State.Computation_State 0 1 0 1 
+State.Wrapup_State 1 0 0 1 

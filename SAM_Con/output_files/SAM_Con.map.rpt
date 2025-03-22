@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAM_Con
-Sat Mar 22 19:45:43 2025
+Sat Mar 22 20:26:51 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |SAM_Con|State
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |SAM_Con
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,22 +47,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Mar 22 19:45:43 2025           ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 22 20:26:51 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; SAM_Con                                     ;
 ; Top-level Entity Name              ; SAM_Con                                     ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 562                                         ;
+;     Total combinational functions  ; 274                                         ;
+;     Dedicated logic registers      ; 364                                         ;
+; Total registers                    ; 364                                         ;
+; Total pins                         ; 70                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -151,11 +161,159 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; SAM_Con.v                        ; yes             ; User Verilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 562       ;
+;                                             ;           ;
+; Total combinational functions               ; 274       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 4         ;
+;     -- 3 input functions                    ; 218       ;
+;     -- <=2 input functions                  ; 52        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 50        ;
+;     -- arithmetic mode                      ; 224       ;
+;                                             ;           ;
+; Total registers                             ; 364       ;
+;     -- Dedicated logic registers            ; 364       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 70        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Clk~input ;
+; Maximum fan-out                             ; 364       ;
+; Total fan-out                               ; 1975      ;
+; Average fan-out                             ; 2.54      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |SAM_Con                   ; 274 (274)           ; 364 (364)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 70   ; 0            ; 0          ; |SAM_Con            ; SAM_Con     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |SAM_Con|State                                                                                  ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+; Name                    ; State.Wrapup_State ; State.Computation_State ; State.Wait_State ; State.Initial_State ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+; State.Initial_State     ; 0                  ; 0                       ; 0                ; 0                   ;
+; State.Wait_State        ; 0                  ; 0                       ; 1                ; 1                   ;
+; State.Computation_State ; 0                  ; 1                       ; 0                ; 1                   ;
+; State.Wrapup_State      ; 1                  ; 0                       ; 0                ; 1                   ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; State~4                               ; Lost fanout                            ;
+; State~5                               ; Lost fanout                            ;
+; State.Wait_State                      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 364   ;
+; Number of registers using Synchronous Clear  ; 11    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 360   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |SAM_Con|Counter[0]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |SAM_Con ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; KERNEL_SIZE    ; 8     ; Signed Integer                                 ;
+; STRIDE         ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 70                          ;
+; cycloneiii_ff         ; 364                         ;
+;     ENA               ; 352                         ;
+;     ENA SCLR          ; 8                           ;
+;     SCLR              ; 3                           ;
+;     plain             ; 1                           ;
+; cycloneiii_io_obuf    ; 32                          ;
+; cycloneiii_lcell_comb ; 274                         ;
+;     arith             ; 224                         ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 217                         ;
+;     normal            ; 50                          ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 4                           ;
+;                       ;                             ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 4.54                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,23 +322,35 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 22 19:45:38 2025
+    Info: Processing started: Sat Mar 22 20:26:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAM_Con -c SAM_Con
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sam_con.v
     Info (12023): Found entity 1: SAM_Con File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 1
-Warning (10222): Verilog HDL Parameter Declaration warning at SAM_Con.v(11): Parameter Declaration in module "SAM_Con" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 11
-Error (10137): Verilog HDL Procedural Assignment error at SAM_Con.v(31): object "Kernel" on left-hand side of assignment must have a variable data type File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 31
-Error (10839): Verilog HDL error at SAM_Con.v(38): declaring local loop variables is a SystemVerilog feature File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 38
-Error (10839): Verilog HDL error at SAM_Con.v(44): declaring local loop variables is a SystemVerilog feature File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 44
-Error (10839): Verilog HDL error at SAM_Con.v(57): declaring local loop variables is a SystemVerilog feature File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
+    Info (12023): Found entity 1: Testbench File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/Testbench.v Line: 3
+Warning (10222): Verilog HDL Parameter Declaration warning at SAM_Con.v(12): Parameter Declaration in module "SAM_Con" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 12
+Info (12127): Elaborating entity "SAM_Con" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at SAM_Con.v(42): truncated value with size 32 to match size of target (8) File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 42
+Warning (10230): Verilog HDL assignment warning at SAM_Con.v(81): truncated value with size 32 to match size of target (8) File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 81
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file E:/Semester_4/Hardware_Description_Languages/SAM_Con/output_files/SAM_Con.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 2 warnings
-    Error: Peak virtual memory: 4710 megabytes
-    Error: Processing ended: Sat Mar 22 19:45:44 2025
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:13
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Kernel_Serial_Input[0]" File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 4
+    Warning (15610): No output dependent on input pin "Kernel_Serial_Input[1]" File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 4
+Info (21057): Implemented 632 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 562 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Sat Mar 22 20:26:51 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+

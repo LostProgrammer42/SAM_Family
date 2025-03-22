@@ -1,2 +1,2 @@
-Warning (10273): Verilog HDL warning at SAM_Con.v(19): extended using "x" or "z" File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 19
-Warning (10268): Verilog HDL information at SAM_Con.v(16): always construct contains both blocking and non-blocking assignments File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 16
+Warning (10273): Verilog HDL warning at SAM_Con.v(21): extended using "x" or "z" File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 21
+Warning (10268): Verilog HDL information at SAM_Con.v(18): always construct contains both blocking and non-blocking assignments File: E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v Line: 18

@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Semester_4/Hardware_Description_Languages/SAM_Con/simulation/modelsim
+vSAM_Con
+!s110 1742655421
+!i10b 1
+!s100 9UNDY?gnhiA2aB?4Y8=2>0
+Ilj>oCG;hmA8NBPLmzIQze2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1742655404
+8E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v
+FE:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1742655421.000000
+!s107 E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/SAM_Con|E:/Semester_4/Hardware_Description_Languages/SAM_Con/SAM_Con.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+E:/Semester_4/Hardware_Description_Languages/SAM_Con
+Z6 tCvgOpt 0
+n@s@a@m_@con
+vTestbench
+!s110 1742655422
+!i10b 1
+!s100 MQYU2he`BVHZ_f972<B1E3
+IkODMoCL>eQALFzFU?W4JC1
+R1
+R0
+w1742654078
+8E:/Semester_4/Hardware_Description_Languages/SAM_Con/Testbench.v
+FE:/Semester_4/Hardware_Description_Languages/SAM_Con/Testbench.v
+L0 3
+R2
+r1
+!s85 0
+31
+R3
+!s107 E:/Semester_4/Hardware_Description_Languages/SAM_Con/Testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_4/Hardware_Description_Languages/SAM_Con|E:/Semester_4/Hardware_Description_Languages/SAM_Con/Testbench.v|
+!i113 1
+R4
+R5
+R6
+n@testbench
