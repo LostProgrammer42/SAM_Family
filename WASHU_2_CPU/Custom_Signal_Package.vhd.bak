@@ -1,7 +1,0 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-package my_package is
-    type address is std_logic_vector(15 downto 0);
-	 type word is std_logic_vector(15 downto 0);
-end package my_package;

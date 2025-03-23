@@ -1,8 +1,0 @@
-module Toplevel(clk,Data_Bus,Address_Bus,rst,Rw,En);
-	input clk, rst;
-	output rw, en;
-	output [7:0] Address_Bus;
-	inout [7:0] Data_Bus;
-	
-	wire IReg_En, Mux_PC_Add_Sel, Mux_PC_In_Sel, PC_En, IAR_En, Acc_En, IReg_Buffer_Sel, PC_Buffer_Sel, IAR_Buffer_Sel, 
-	Acc_Buffer_Sel, Mux_Acc_In_Sel, ALU_Sel, IReg_Data_Out, PC_Data_Out, Acc_Data_Out, regSelect, dispReg, pause;
