@@ -1,0 +1,130 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do PicoRV_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/SAM_Con.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:16 on Jun 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/SAM_Con.sv 
+# -- Compiling module SAM_Con
+# 
+# Top level modules:
+# 	SAM_Con
+# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/picorv32.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:16 on Jun 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/picorv32.sv 
+# -- Compiling module picorv32
+# -- Compiling module picorv32_regs
+# -- Compiling module picorv32_pcpi_mul
+# -- Compiling module picorv32_pcpi_fast_mul
+# -- Compiling module picorv32_pcpi_div
+# -- Compiling module picorv32_axi
+# -- Compiling module picorv32_axi_adapter
+# -- Compiling module picorv32_wb
+# 
+# Top level modules:
+# 	picorv32_regs
+# 	picorv32_axi
+# 	picorv32_wb
+# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:16 on Jun 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv 
+# -- Compiling module SAM_Con_Wrapper
+# 
+# Top level modules:
+# 	SAM_Con_Wrapper
+# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:16 on Jun 01,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/toplevel.sv 
+# -- Compiling module toplevel
+# 
+# Top level modules:
+# 	toplevel
+# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/testbench_ez.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:16:16 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/testbench_ez.v 
+# -- Compiling module testbench_ez
+# 
+# Top level modules:
+# 	testbench_ez
+# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench_ez
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench_ez 
+# Start time: 16:16:16 on Jun 01,2025
+# Loading work.testbench_ez
+# Loading sv_std.std
+# Loading work.toplevel
+# Loading work.picorv32
+# Loading work.SAM_Con_Wrapper
+# Loading work.SAM_Con
+# ** Warning: (vsim-3017) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Too few port connections. Expected 27, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ez/uut/uut File: E:/Semester_5/PicoRV/picorv32.sv
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_read'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_write'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_addr'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_wdata'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_wstrb'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rs1'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rs2'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_wr'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rd'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'irq'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'eoi'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_valid'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_data'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position insertpoint  \
+sim:/testbench_ez/memory
+restart
+# ** Warning: (vsim-3017) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Too few port connections. Expected 27, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_ez/uut/uut File: E:/Semester_5/PicoRV/picorv32.sv
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_read'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_write'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_addr'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_wdata'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'mem_la_wstrb'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rs1'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rs2'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_wr'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'pcpi_rd'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'irq'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'eoi'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_valid'.
+# ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_data'.
+run -all
+# ifetch 0x00000000: 0x00010143
+# ifetch 0x00000004: 0x000000c7
+# ifetch 0x00000008: 0x0000094b
+# ifetch 0x0000000c: 0x0000054f
+# ifetch 0x00000010: 0xxxxxxxxx
+# End time: 16:16:43 on Jun 01,2025, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 28

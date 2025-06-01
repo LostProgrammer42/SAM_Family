@@ -1,0 +1,29 @@
+module Convolution#(parameter KERNEL_SIZE = 16)(Data_In, Data_Out, Kernel, En);
+	input wire En;
+	input wire [1:0] Kernel [KERNEL_SIZE-1:0];
+	input wire [31:0] Data_In [KERNEL_SIZE-1:0];
+	output wire [31:0] Data_Out;
+
+	wire [31:0] Incrementer_In [KERNEL_SIZE-1:0];  
+	wire [31:0] Incrementer_Out [KERNEL_SIZE-1:0];
+	wire [31:0] Running_Sum [KERNEL_SIZE-1:0];
+	wire [32:0] Carry [KERNEL_SIZE-1:0];
+	wire [KERNEL_SIZE-1:0] dummy;
+	genvar p,q;
+	
+	generate
+		for(p = 0; p < KERNEL_SIZE; p = p + 1) begin : mul_gen1
+			assign Carry[p][0] = Kernel[p][1];
+			assign Incrementer_In[p] = Data_In[p] ^ {32{Carry[p][0]}};
+			for(q = 0; q < 32; q = q + 1) begin : mul_gen2
+				assign Incrementer_Out[p][q] = (Incrementer_In[p][q] ^ Carry[p][q]) & Kernel[p][0];
+				assign Carry[p][q+1] = Incrementer_In[p][q] & Carry[p][q];
+			end
+		end
+		assign Running_Sum[0] = Incrementer_Out[0];
+		for(p = 0; p < KERNEL_SIZE-1; p = p + 1) begin : sum_gen
+			Adder_32 cumulative(.a(Incrementer_Out[p+1]), .b(Running_Sum[p]), .cin(1'b0), .s(Running_Sum[p+1]), .cout(dummy[p]));
+		end
+		assign Data_Out = Running_Sum[KERNEL_SIZE-1] & {32{En}};
+	endgenerate
+endmodule 

@@ -1,0 +1,30 @@
+
+State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|sub_counter
+Name sub_counter.00 sub_counter.10 sub_counter.01 
+sub_counter.00 0 0 0 
+sub_counter.01 1 0 1 
+sub_counter.10 1 1 0 
+
+State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State
+Name State.Wrapup_State State.Computation_State State.Wait_State State.Initial_State 
+State.Initial_State 0 0 0 0 
+State.Wait_State 0 0 1 1 
+State.Computation_State 0 1 0 1 
+State.Wrapup_State 1 0 0 1 
+
+State Machine - |toplevel|picorv32:uut|mem_wordsize
+Name mem_wordsize.00 mem_wordsize.10 mem_wordsize.01 
+mem_wordsize.00 0 0 0 
+mem_wordsize.01 1 0 1 
+mem_wordsize.10 1 1 0 
+
+State Machine - |toplevel|picorv32:uut|cpu_state
+Name cpu_state.cpu_state_trap cpu_state.cpu_state_fetch cpu_state.cpu_state_ld_rs1 cpu_state.cpu_state_ld_rs2 cpu_state.cpu_state_exec cpu_state.cpu_state_shift cpu_state.cpu_state_stmem cpu_state.cpu_state_ldmem 
+cpu_state.cpu_state_trap 0 0 0 0 0 0 0 0 
+cpu_state.cpu_state_stmem 1 0 0 0 0 0 1 0 
+cpu_state.cpu_state_shift 1 0 0 0 0 1 0 0 
+cpu_state.cpu_state_exec 1 0 0 0 1 0 0 0 
+cpu_state.cpu_state_ld_rs2 1 0 0 1 0 0 0 0 
+cpu_state.cpu_state_ld_rs1 1 0 1 0 0 0 0 0 
+cpu_state.cpu_state_fetch 1 1 0 0 0 0 0 0 
+cpu_state.cpu_state_ldmem 1 0 0 0 0 0 0 1 

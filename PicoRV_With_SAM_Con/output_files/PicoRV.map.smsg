@@ -1,0 +1,26 @@
+Warning (10273): Verilog HDL warning at SAM_Con.sv(23): extended using "x" or "z" File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 23
+Warning (10268): Verilog HDL information at SAM_Con.sv(20): always construct contains both blocking and non-blocking assignments File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+Warning (10273): Verilog HDL warning at picorv32.sv(300): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 300
+Warning (10273): Verilog HDL warning at picorv32.sv(320): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 320
+Warning (10273): Verilog HDL warning at picorv32.sv(327): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 327
+Warning (10273): Verilog HDL warning at picorv32.sv(386): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 386
+Warning (10273): Verilog HDL warning at picorv32.sv(388): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 388
+Warning (10273): Verilog HDL warning at picorv32.sv(1038): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1038
+Warning (10273): Verilog HDL warning at picorv32.sv(1250): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1250
+Warning (10273): Verilog HDL warning at picorv32.sv(1267): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1267
+Warning (10273): Verilog HDL warning at picorv32.sv(1311): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1311
+Warning (10273): Verilog HDL warning at picorv32.sv(1349): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1349
+Warning (10273): Verilog HDL warning at picorv32.sv(1404): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1404
+Warning (10273): Verilog HDL warning at picorv32.sv(1405): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1405
+Warning (10273): Verilog HDL warning at picorv32.sv(1417): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1417
+Warning (10273): Verilog HDL warning at picorv32.sv(1418): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1418
+Warning (10273): Verilog HDL warning at picorv32.sv(1436): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1436
+Warning (10273): Verilog HDL warning at picorv32.sv(1437): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1437
+Warning (10273): Verilog HDL warning at picorv32.sv(1440): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1440
+Warning (10273): Verilog HDL warning at picorv32.sv(1455): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1455
+Warning (10273): Verilog HDL warning at picorv32.sv(1580): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1580
+Warning (10273): Verilog HDL warning at picorv32.sv(1581): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1581
+Warning (10273): Verilog HDL warning at picorv32.sv(1974): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 1974
+Warning (10268): Verilog HDL information at picorv32.sv(1402): always construct contains both blocking and non-blocking assignments File: E:/Semester_5/PicoRV/picorv32.sv Line: 1402
+Warning (10273): Verilog HDL warning at picorv32.sv(2467): extended using "x" or "z" File: E:/Semester_5/PicoRV/picorv32.sv Line: 2467
+Warning (10268): Verilog HDL information at SAM_Con_Wrapper.sv(33): always construct contains both blocking and non-blocking assignments File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 33

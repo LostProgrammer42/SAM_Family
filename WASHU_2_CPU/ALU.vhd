@@ -43,5 +43,5 @@ architecture str of ALU is
 		Ander: AND_16 port map (a=>a, b=>b, c=>And_out);
 		
 		Mux2: mux_4x1_16bit port map(I3=>"ZZZZZZZZZZZZZZZZ", I2=>And_Out, I1=>Add_Out, I0=>Add_Out, S=>ALU_Sel, Y=>c); 
-	
+		
 end architecture;

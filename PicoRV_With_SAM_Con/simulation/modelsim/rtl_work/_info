@@ -1,0 +1,309 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Semester_5/PicoRV/simulation/modelsim
+vpicorv32
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1748774776
+!i10b 1
+!s100 >Y24eB^I>NS=O;I1JdDh10
+IBcj9_mJ8JlEI9QMoYWbTC3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 picorv32_sv_unit
+S1
+R0
+Z5 w1748625375
+Z6 8E:/Semester_5/PicoRV/picorv32.sv
+Z7 FE:/Semester_5/PicoRV/picorv32.sv
+L0 62
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1748774776.000000
+Z10 !s107 E:/Semester_5/PicoRV/picorv32.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Semester_5/PicoRV|E:/Semester_5/PicoRV/picorv32.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+E:/Semester_5/PicoRV
+Z14 tCvgOpt 0
+vpicorv32_axi
+R1
+R2
+!i10b 1
+!s100 HdBdXF[5eF6H9@]f<c5Z`3
+Ig6QOiLjVn;?SMCjnMzjO40
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2517
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_axi_adapter
+R1
+R2
+!i10b 1
+!s100 E3jE53VO6HSYU7;VQK>Ao3
+IjgENaD[5MiNlWbY3>SeNJ2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2731
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_pcpi_div
+R1
+R2
+!i10b 1
+!s100 8;PgABaJo@g8>:XiG5_Al0
+IV^IfEB38K@Q1gkd>kQmeV2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2420
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_pcpi_fast_mul
+R1
+R2
+!i10b 1
+!s100 n7Vz6H3?JOK<7;7oH4dK>0
+IY2^FSUQGJULiR]HodiAIA2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2318
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_pcpi_mul
+R1
+R2
+!i10b 1
+!s100 R3md]PaOzTJ7hj=MEz1d:1
+IeN6oQc43i6HIi86PzTf3W3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2197
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_regs
+R1
+R2
+!i10b 1
+!s100 U]47G[df`BM[5BoLfm:PQ1
+IGELfNU1WWoM5RbzE0Ee5[0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2174
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vpicorv32_wb
+R1
+R2
+!i10b 1
+!s100 Jk;D_;0SWm9=zDMOMhC4a1
+IMIZQAgXdVoVLFdAA9B?hD0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2815
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vSAM_Con
+R1
+R2
+!i10b 1
+!s100 m_O?TGO5B?WP0NIO]o5G52
+I2dW<>]=6Wna51K^kf;NQn1
+R3
+!s105 SAM_Con_sv_unit
+S1
+R0
+w1748766550
+8E:/Semester_5/PicoRV/SAM_Con.sv
+FE:/Semester_5/PicoRV/SAM_Con.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/Semester_5/PicoRV/SAM_Con.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Semester_5/PicoRV|E:/Semester_5/PicoRV/SAM_Con.sv|
+!i113 1
+R12
+R13
+R14
+n@s@a@m_@con
+vSAM_Con_Wrapper
+R1
+R2
+!i10b 1
+!s100 o5J_358_MSfn@5LDzJUcS2
+Ild=@U=FXNbg<67k5ZMizX1
+R3
+!s105 SAM_Con_Wrapper_sv_unit
+S1
+R0
+w1748772749
+8E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv
+FE:/Semester_5/PicoRV/SAM_Con_Wrapper.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Semester_5/PicoRV|E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv|
+!i113 1
+R12
+R13
+R14
+n@s@a@m_@con_@wrapper
+vtestbench_ez
+R2
+!i10b 1
+!s100 XGb:X@NljXjoI0L51EQjQ0
+I6PiPfEVaEKYFO[K=Aad`D1
+R3
+R0
+w1748774731
+8E:/Semester_5/PicoRV/testbench_ez.v
+FE:/Semester_5/PicoRV/testbench_ez.v
+L0 10
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/Semester_5/PicoRV/testbench_ez.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Semester_5/PicoRV|E:/Semester_5/PicoRV/testbench_ez.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+E:/Semester_5/PicoRV
+R14
+vtoplevel
+R1
+R2
+!i10b 1
+!s100 _S_H7;kRJe9ARAcbe;jGl0
+IXSWYMA7JZU82]k@;0ARkH1
+R3
+!s105 toplevel_sv_unit
+S1
+R0
+w1748624109
+8E:/Semester_5/PicoRV/toplevel.sv
+FE:/Semester_5/PicoRV/toplevel.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/Semester_5/PicoRV/toplevel.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/Semester_5/PicoRV|E:/Semester_5/PicoRV/toplevel.sv|
+!i113 1
+R12
+R13
+R14

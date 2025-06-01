@@ -1,0 +1,817 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "mem_valid",
+					"strict" : false
+				},
+				{
+					"name" : "mem_instr",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr[31]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata[31]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_en_SAM",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb_SAM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb_SAM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb_SAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wstrb_SAM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_addr_SAM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_wdata_SAM[31]",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "mem_ready",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[31]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[16]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[17]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[18]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[19]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[20]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[21]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[22]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[23]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[24]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[25]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[26]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[27]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[28]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[29]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[30]",
+					"strict" : false
+				},
+				{
+					"name" : "mem_rdata_SAM[31]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1122 @@
+Analysis & Synthesis report for PicoRV
+Sun Jun 01 16:16:00 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|sub_counter
+ 10. State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State
+ 11. State Machine - |toplevel|picorv32:uut|mem_wordsize
+ 12. State Machine - |toplevel|picorv32:uut|cpu_state
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Registers Added for RAM Pass-Through Logic
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for picorv32:uut|altsyncram:cpuregs_rtl_0|altsyncram_j6d1:auto_generated
+ 19. Source assignments for picorv32:uut|altsyncram:cpuregs_rtl_1|altsyncram_j6d1:auto_generated
+ 20. Parameter Settings for User Entity Instance: picorv32:uut
+ 21. Parameter Settings for User Entity Instance: SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner
+ 22. Parameter Settings for Inferred Entity Instance: picorv32:uut|altsyncram:cpuregs_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: picorv32:uut|altsyncram:cpuregs_rtl_1
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner"
+ 26. Port Connectivity Checks: "picorv32:uut"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jun 01 16:16:00 2025       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; PicoRV                                      ;
+; Top-level Entity Name              ; toplevel                                    ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 4,542                                       ;
+;     Total combinational functions  ; 4,259                                       ;
+;     Dedicated logic registers      ; 1,572                                       ;
+; Total registers                    ; 1572                                        ;
+; Total pins                         ; 207                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; toplevel           ; PicoRV             ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processors 7-10        ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; SAM_Con.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/SAM_Con.sv                                              ;         ;
+; picorv32.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/picorv32.sv                                             ;         ;
+; SAM_Con_Wrapper.sv               ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv                                      ;         ;
+; toplevel.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/toplevel.sv                                             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_j6d1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/altsyncram_j6d1.tdf                                  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,542     ;
+;                                             ;           ;
+; Total combinational functions               ; 4259      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1307      ;
+;     -- 3 input functions                    ; 2432      ;
+;     -- <=2 input functions                  ; 520       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 3248      ;
+;     -- arithmetic mode                      ; 1011      ;
+;                                             ;           ;
+; Total registers                             ; 1572      ;
+;     -- Dedicated logic registers            ; 1572      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 207       ;
+; Total memory bits                           ; 2048      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1636      ;
+; Total fan-out                               ; 20073     ;
+; Average fan-out                             ; 3.18      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                            ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-----------------+--------------+
+; |toplevel                                 ; 4259 (1)            ; 1572 (0)                  ; 2048        ; 0          ; 0            ; 0       ; 0         ; 207  ; 0            ; 0          ; |toplevel                                                                      ; toplevel        ; work         ;
+;    |SAM_Con_Wrapper:SAM_PCPI|             ; 2671 (356)          ; 885 (298)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|SAM_Con_Wrapper:SAM_PCPI                                             ; SAM_Con_Wrapper ; work         ;
+;       |SAM_Con:Convolutioner|             ; 2315 (2315)         ; 587 (587)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner                       ; SAM_Con         ; work         ;
+;    |picorv32:uut|                         ; 1587 (1587)         ; 687 (687)                 ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|picorv32:uut                                                         ; picorv32        ; work         ;
+;       |altsyncram:cpuregs_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|picorv32:uut|altsyncram:cpuregs_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_j6d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|picorv32:uut|altsyncram:cpuregs_rtl_0|altsyncram_j6d1:auto_generated ; altsyncram_j6d1 ; work         ;
+;       |altsyncram:cpuregs_rtl_1|          ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|picorv32:uut|altsyncram:cpuregs_rtl_1                                ; altsyncram      ; work         ;
+;          |altsyncram_j6d1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |toplevel|picorv32:uut|altsyncram:cpuregs_rtl_1|altsyncram_j6d1:auto_generated ; altsyncram_j6d1 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                    ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                            ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; picorv32:uut|altsyncram:cpuregs_rtl_0|altsyncram_j6d1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
+; picorv32:uut|altsyncram:cpuregs_rtl_1|altsyncram_j6d1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
++---------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------+
+; State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|sub_counter    ;
++----------------+----------------+----------------+----------------+
+; Name           ; sub_counter.00 ; sub_counter.10 ; sub_counter.01 ;
++----------------+----------------+----------------+----------------+
+; sub_counter.00 ; 0              ; 0              ; 0              ;
+; sub_counter.01 ; 1              ; 0              ; 1              ;
+; sub_counter.10 ; 1              ; 1              ; 0              ;
++----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State                                  ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+; Name                    ; State.Wrapup_State ; State.Computation_State ; State.Wait_State ; State.Initial_State ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+; State.Initial_State     ; 0                  ; 0                       ; 0                ; 0                   ;
+; State.Wait_State        ; 0                  ; 0                       ; 1                ; 1                   ;
+; State.Computation_State ; 0                  ; 1                       ; 0                ; 1                   ;
+; State.Wrapup_State      ; 1                  ; 0                       ; 0                ; 1                   ;
++-------------------------+--------------------+-------------------------+------------------+---------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |toplevel|picorv32:uut|mem_wordsize                   ;
++-----------------+-----------------+-----------------+-----------------+
+; Name            ; mem_wordsize.00 ; mem_wordsize.10 ; mem_wordsize.01 ;
++-----------------+-----------------+-----------------+-----------------+
+; mem_wordsize.00 ; 0               ; 0               ; 0               ;
+; mem_wordsize.01 ; 1               ; 0               ; 1               ;
+; mem_wordsize.10 ; 1               ; 1               ; 0               ;
++-----------------+-----------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |toplevel|picorv32:uut|cpu_state                                                                                                                                                                                                           ;
++----------------------------+--------------------------+---------------------------+----------------------------+----------------------------+--------------------------+---------------------------+---------------------------+---------------------------+
+; Name                       ; cpu_state.cpu_state_trap ; cpu_state.cpu_state_fetch ; cpu_state.cpu_state_ld_rs1 ; cpu_state.cpu_state_ld_rs2 ; cpu_state.cpu_state_exec ; cpu_state.cpu_state_shift ; cpu_state.cpu_state_stmem ; cpu_state.cpu_state_ldmem ;
++----------------------------+--------------------------+---------------------------+----------------------------+----------------------------+--------------------------+---------------------------+---------------------------+---------------------------+
+; cpu_state.cpu_state_trap   ; 0                        ; 0                         ; 0                          ; 0                          ; 0                        ; 0                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_stmem  ; 1                        ; 0                         ; 0                          ; 0                          ; 0                        ; 0                         ; 1                         ; 0                         ;
+; cpu_state.cpu_state_shift  ; 1                        ; 0                         ; 0                          ; 0                          ; 0                        ; 1                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_exec   ; 1                        ; 0                         ; 0                          ; 0                          ; 1                        ; 0                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_ld_rs2 ; 1                        ; 0                         ; 0                          ; 1                          ; 0                        ; 0                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_ld_rs1 ; 1                        ; 0                         ; 1                          ; 0                          ; 0                        ; 0                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_fetch  ; 1                        ; 1                         ; 0                          ; 0                          ; 0                        ; 0                         ; 0                         ; 0                         ;
+; cpu_state.cpu_state_ldmem  ; 1                        ; 0                         ; 0                          ; 0                          ; 0                        ; 0                         ; 0                         ; 1                         ;
++----------------------------+--------------------------+---------------------------+----------------------------+----------------------------+--------------------------+---------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                       ;
++-------------------------------------------------------------------+------------------------------------------------------+
+; Register name                                                     ; Reason for Removal                                   ;
++-------------------------------------------------------------------+------------------------------------------------------+
+; picorv32:uut|instr_retirq                                         ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|instr_waitirq                                        ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|decoded_imm_j[0]                                     ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|compressed_instr                                     ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|instr_getq                                           ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|instr_setq                                           ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|instr_maskirq                                        ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|instr_timer                                          ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|do_waitirq                                           ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[0]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[1]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[2]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[3]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[4]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[5]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[6]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[7]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[8]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[9]~en     ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[10]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[11]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[12]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[13]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[14]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[15]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[16]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[17]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[18]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[19]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[20]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[21]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[22]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[23]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[24]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[25]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[26]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[27]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[28]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[29]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[30]~en    ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[31]~en    ; Lost fanout                                          ;
+; picorv32:uut|mem_addr[0,1]                                        ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|latched_compr                                        ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|mem_addr_SAM[1]                          ; Merged with SAM_Con_Wrapper:SAM_PCPI|mem_addr_SAM[0] ;
+; picorv32:uut|reg_pc[0]                                            ; Merged with picorv32:uut|reg_next_pc[0]              ;
+; picorv32:uut|decoded_rs2[4]                                       ; Merged with picorv32:uut|decoded_imm_j[4]            ;
+; picorv32:uut|decoded_rs2[3]                                       ; Merged with picorv32:uut|decoded_imm_j[3]            ;
+; picorv32:uut|decoded_rs2[2]                                       ; Merged with picorv32:uut|decoded_imm_j[2]            ;
+; picorv32:uut|decoded_rs2[1]                                       ; Merged with picorv32:uut|decoded_imm_j[1]            ;
+; picorv32:uut|decoded_rs2[0]                                       ; Merged with picorv32:uut|decoded_imm_j[11]           ;
+; picorv32:uut|decoded_rs1[4]                                       ; Merged with picorv32:uut|decoded_imm_j[19]           ;
+; picorv32:uut|decoded_rs1[3]                                       ; Merged with picorv32:uut|decoded_imm_j[18]           ;
+; picorv32:uut|decoded_rs1[2]                                       ; Merged with picorv32:uut|decoded_imm_j[17]           ;
+; picorv32:uut|decoded_rs1[1]                                       ; Merged with picorv32:uut|decoded_imm_j[16]           ;
+; picorv32:uut|decoded_rs1[0]                                       ; Merged with picorv32:uut|decoded_imm_j[15]           ;
+; picorv32:uut|decoded_imm_j[21..31]                                ; Merged with picorv32:uut|decoded_imm_j[20]           ;
+; picorv32:uut|reg_next_pc[0]                                       ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|Last_Data_In                             ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|mem_addr_SAM[0]                          ; Stuck at GND due to stuck port data_in               ;
+; picorv32:uut|latched_is_lu                                        ; Lost fanout                                          ;
+; picorv32:uut|is_lbu_lhu_lw                                        ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State~6            ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State~7            ; Lost fanout                                          ;
+; picorv32:uut|cpu_state.cpu_state_ld_rs2                           ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|State.Wrapup_State ; Stuck at GND due to stuck port data_in               ;
+; SAM_Con_Wrapper:SAM_PCPI|Output_Location[30,31]                   ; Lost fanout                                          ;
+; SAM_Con_Wrapper:SAM_PCPI|Input_Location[30,31]                    ; Lost fanout                                          ;
+; Total Number of Removed Registers = 80                            ;                                                      ;
++-------------------------------------------------------------------+------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++----------------------------------------------+---------------------------+----------------------------------------------+
+; Register name                                ; Reason for Removal        ; Registers Removed due to This Register       ;
++----------------------------------------------+---------------------------+----------------------------------------------+
+; picorv32:uut|compressed_instr                ; Stuck at GND              ; picorv32:uut|latched_compr                   ;
+;                                              ; due to stuck port data_in ;                                              ;
+; picorv32:uut|latched_is_lu                   ; Lost Fanouts              ; picorv32:uut|is_lbu_lhu_lw                   ;
+; SAM_Con_Wrapper:SAM_PCPI|Output_Location[31] ; Lost Fanouts              ; SAM_Con_Wrapper:SAM_PCPI|Output_Location[30] ;
+; SAM_Con_Wrapper:SAM_PCPI|Input_Location[31]  ; Lost Fanouts              ; SAM_Con_Wrapper:SAM_PCPI|Input_Location[30]  ;
++----------------------------------------------+---------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1572  ;
+; Number of registers using Synchronous Clear  ; 701   ;
+; Number of registers using Synchronous Load   ; 85    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1280  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                         ;
++---------------------------------------+----------------------------+
+; Register Name                         ; RAM Name                   ;
++---------------------------------------+----------------------------+
+; picorv32:uut|cpuregs_rtl_0_bypass[0]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[1]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[2]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[3]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[4]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[5]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[6]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[7]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[8]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[9]  ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[10] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[11] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[12] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[13] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[14] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[15] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[16] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[17] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[18] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[19] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[20] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[21] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[22] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[23] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[24] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[25] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[26] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[27] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[28] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[29] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[30] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[31] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[32] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[33] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[34] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[35] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[36] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[37] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[38] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[39] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[40] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[41] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_0_bypass[42] ; picorv32:uut|cpuregs_rtl_0 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[0]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[1]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[2]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[3]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[4]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[5]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[6]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[7]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[8]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[9]  ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[10] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[11] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[12] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[13] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[14] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[15] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[16] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[17] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[18] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[19] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[20] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[21] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[22] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[23] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[24] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[25] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[26] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[27] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[28] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[29] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[30] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[31] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[32] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[33] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[34] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[35] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[36] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[37] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[38] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[39] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[40] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[41] ; picorv32:uut|cpuregs_rtl_1 ;
+; picorv32:uut|cpuregs_rtl_1_bypass[42] ; picorv32:uut|cpuregs_rtl_1 ;
++---------------------------------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+; 3:1                ; 95 bits   ; 190 LEs       ; 95 LEs               ; 95 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_pc[7]                                            ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Input_Location[12]                       ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Output_Location[12]                      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Input_Location[29]                       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Output_Location[28]                      ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_addr[17]                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_wstrb[0]                                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Data_In[17]                              ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |toplevel|picorv32:uut|instr_andi                                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|picorv32:uut|pcpi_timeout_counter[0]                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[15][11] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_wdata[26]                                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[0][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[1][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[2][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[3][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[4][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[5][1]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[6][1]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[7][1]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[8][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[9][0]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[10][1]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[11][0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[12][0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[13][1]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Kernel[14][0]      ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|mem_addr_SAM[8]                          ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_next_pc[8]                                       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |toplevel|picorv32:uut|latched_rd[1]                                        ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[0][20]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[1][17]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[2][18]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[3][31]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[4][30]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[5][2]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[6][22]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[7][5]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[8][11]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[9][2]   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[10][13] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[11][7]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[12][26] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[13][31] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[14][0]  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |toplevel|picorv32:uut|reg_op2[2]                                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|decoded_imm[10]                                      ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|decoded_imm[29]                                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Counter[7]         ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 22 LEs               ; 20 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Kernel_Serial_Input[0]                   ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|alu_out_q[1]                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|decoded_imm[2]                                       ;
+; 5:1                ; 27 bits   ; 81 LEs        ; 54 LEs               ; 27 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_op2[16]                                          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|reg_out[8]                                           ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 6 LEs                ; 8 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_state[1]                                         ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|picorv32:uut|reg_sh[0]                                            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |toplevel|picorv32:uut|reg_sh[3]                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_out[25]                                          ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; Yes        ; |toplevel|picorv32:uut|reg_out[2]                                           ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_op1[30]                                          ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_op1[1]                                           ;
+; 15:1               ; 24 bits   ; 240 LEs       ; 144 LEs              ; 96 LEs                 ; Yes        ; |toplevel|picorv32:uut|reg_op1[7]                                           ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[8]~reg0   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|picorv32:uut|cpu_state                                            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|picorv32:uut|cpuregs_rs2[4]                                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out_Temp      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |toplevel|picorv32:uut|Selector149                                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|picorv32:uut|Selector9                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|picorv32:uut|Selector10                                           ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |toplevel|picorv32:uut|mem_wordsize                                         ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |toplevel|picorv32:uut|cpu_state                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Source assignments for picorv32:uut|altsyncram:cpuregs_rtl_0|altsyncram_j6d1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------+
+; Assignment                      ; Value              ; From ; To                            ;
++---------------------------------+--------------------+------+-------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                             ;
++---------------------------------+--------------------+------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Source assignments for picorv32:uut|altsyncram:cpuregs_rtl_1|altsyncram_j6d1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------+
+; Assignment                      ; Value              ; From ; To                            ;
++---------------------------------+--------------------+------+-------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                             ;
++---------------------------------+--------------------+------+-------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: picorv32:uut                 ;
++----------------------+----------------------------------+-----------------+
+; Parameter Name       ; Value                            ; Type            ;
++----------------------+----------------------------------+-----------------+
+; ENABLE_COUNTERS      ; 1                                ; Unsigned Binary ;
+; ENABLE_COUNTERS64    ; 1                                ; Unsigned Binary ;
+; ENABLE_REGS_16_31    ; 1                                ; Unsigned Binary ;
+; ENABLE_REGS_DUALPORT ; 1                                ; Unsigned Binary ;
+; LATCHED_MEM_RDATA    ; 0                                ; Unsigned Binary ;
+; TWO_STAGE_SHIFT      ; 1                                ; Unsigned Binary ;
+; BARREL_SHIFTER       ; 0                                ; Unsigned Binary ;
+; TWO_CYCLE_COMPARE    ; 0                                ; Unsigned Binary ;
+; TWO_CYCLE_ALU        ; 0                                ; Unsigned Binary ;
+; COMPRESSED_ISA       ; 0                                ; Unsigned Binary ;
+; CATCH_MISALIGN       ; 1                                ; Unsigned Binary ;
+; CATCH_ILLINSN        ; 1                                ; Unsigned Binary ;
+; ENABLE_PCPI          ; 1                                ; Unsigned Binary ;
+; ENABLE_MUL           ; 0                                ; Unsigned Binary ;
+; ENABLE_FAST_MUL      ; 0                                ; Unsigned Binary ;
+; ENABLE_DIV           ; 0                                ; Unsigned Binary ;
+; ENABLE_IRQ           ; 0                                ; Unsigned Binary ;
+; ENABLE_IRQ_QREGS     ; 1                                ; Unsigned Binary ;
+; ENABLE_IRQ_TIMER     ; 1                                ; Unsigned Binary ;
+; ENABLE_TRACE         ; 0                                ; Unsigned Binary ;
+; REGS_INIT_ZERO       ; 0                                ; Unsigned Binary ;
+; MASKED_IRQ           ; 00000000000000000000000000000000 ; Unsigned Binary ;
+; LATCHED_IRQ          ; 11111111111111111111111111111111 ; Unsigned Binary ;
+; PROGADDR_RESET       ; 00000000000000000000000000000000 ; Unsigned Binary ;
+; PROGADDR_IRQ         ; 00000000000000000000000000010000 ; Unsigned Binary ;
+; STACKADDR            ; 11111111111111111111111111111111 ; Unsigned Binary ;
++----------------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner ;
++-----------------+-------+-------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                              ;
++-----------------+-------+-------------------------------------------------------------------+
+; MAX_KERNEL_SIZE ; 16    ; Signed Integer                                                    ;
++-----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: picorv32:uut|altsyncram:cpuregs_rtl_0 ;
++------------------------------------+----------------------+----------------------------+
+; Parameter Name                     ; Value                ; Type                       ;
++------------------------------------+----------------------+----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                    ;
+; WIDTH_A                            ; 32                   ; Untyped                    ;
+; WIDTHAD_A                          ; 5                    ; Untyped                    ;
+; NUMWORDS_A                         ; 32                   ; Untyped                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WIDTH_B                            ; 32                   ; Untyped                    ;
+; WIDTHAD_B                          ; 5                    ; Untyped                    ;
+; NUMWORDS_B                         ; 32                   ; Untyped                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                    ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                    ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                    ;
+; CBXI_PARAMETER                     ; altsyncram_j6d1      ; Untyped                    ;
++------------------------------------+----------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: picorv32:uut|altsyncram:cpuregs_rtl_1 ;
++------------------------------------+----------------------+----------------------------+
+; Parameter Name                     ; Value                ; Type                       ;
++------------------------------------+----------------------+----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                    ;
+; WIDTH_A                            ; 32                   ; Untyped                    ;
+; WIDTHAD_A                          ; 5                    ; Untyped                    ;
+; NUMWORDS_A                         ; 32                   ; Untyped                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                    ;
+; WIDTH_B                            ; 32                   ; Untyped                    ;
+; WIDTHAD_B                          ; 5                    ; Untyped                    ;
+; NUMWORDS_B                         ; 32                   ; Untyped                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                    ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                    ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                    ;
+; CBXI_PARAMETER                     ; altsyncram_j6d1      ; Untyped                    ;
++------------------------------------+----------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                  ;
++-------------------------------------------+---------------------------------------+
+; Name                                      ; Value                                 ;
++-------------------------------------------+---------------------------------------+
+; Number of entity instances                ; 2                                     ;
+; Entity Instance                           ; picorv32:uut|altsyncram:cpuregs_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                             ;
+;     -- WIDTH_A                            ; 32                                    ;
+;     -- NUMWORDS_A                         ; 32                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                          ;
+;     -- WIDTH_B                            ; 32                                    ;
+;     -- NUMWORDS_B                         ; 32                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                          ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                             ;
+; Entity Instance                           ; picorv32:uut|altsyncram:cpuregs_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                             ;
+;     -- WIDTH_A                            ; 32                                    ;
+;     -- NUMWORDS_A                         ; 32                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                          ;
+;     -- WIDTH_B                            ; 32                                    ;
+;     -- NUMWORDS_B                         ; 32                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                          ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                             ;
++-------------------------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner" ;
++---------------+--------+----------+----------------------------------------+
+; Port          ; Type   ; Severity ; Details                                ;
++---------------+--------+----------+----------------------------------------+
+; Last_Data_Out ; Output ; Info     ; Explicitly unconnected                 ;
++---------------+--------+----------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "picorv32:uut"                                                                                                                                        ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                      ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; trap         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; mem_la_read  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; mem_la_write ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; mem_la_addr  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; mem_la_wdata ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; mem_la_wstrb ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; pcpi_rs1     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; pcpi_rs2     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; pcpi_wr      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; pcpi_rd      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; irq          ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; eoi          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; trace_valid  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; trace_data   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 207                         ;
+; cycloneiii_ff         ; 1572                        ;
+;     ENA               ; 623                         ;
+;     ENA SCLR          ; 597                         ;
+;     ENA SLD           ; 60                          ;
+;     SCLR              ; 87                          ;
+;     SCLR SLD          ; 17                          ;
+;     SLD               ; 8                           ;
+;     plain             ; 180                         ;
+; cycloneiii_lcell_comb ; 4259                        ;
+;     arith             ; 1011                        ;
+;         2 data inputs ; 351                         ;
+;         3 data inputs ; 660                         ;
+;     normal            ; 3248                        ;
+;         0 data inputs ; 5                           ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 150                         ;
+;         3 data inputs ; 1772                        ;
+;         4 data inputs ; 1307                        ;
+; cycloneiii_ram_block  ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 34.70                       ;
+; Average LUT depth     ; 13.75                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Jun 01 16:15:40 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PicoRV -c PicoRV
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sam_con.sv
+    Info (12023): Found entity 1: SAM_Con File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file convolution.sv
+    Info (12023): Found entity 1: Convolution File: E:/Semester_5/PicoRV/Convolution.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file adder_32.v
+    Info (12023): Found entity 1: Full_Adder File: E:/Semester_5/PicoRV/Adder_32.v Line: 1
+    Info (12023): Found entity 2: Adder_32 File: E:/Semester_5/PicoRV/Adder_32.v Line: 9
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(331) File: E:/Semester_5/PicoRV/picorv32.sv Line: 331
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(402) File: E:/Semester_5/PicoRV/picorv32.sv Line: 402
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1119) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1119
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1251) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1251
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1251) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1251
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1268) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1268
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1268) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1268
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1314) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1314
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1485) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1485
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1485) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1485
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1497) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1497
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1583) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1583
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1627) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1627
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1627) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1627
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1735) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1735
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1766) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1766
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1836) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1836
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1836) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1836
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1844) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1844
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1844) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1844
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1859) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1859
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1859) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1859
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1884) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1884
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1884) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1884
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1901) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1901
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1901) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1901
+Info (12021): Found 8 design units, including 8 entities, in source file picorv32.sv
+    Info (12023): Found entity 1: picorv32 File: E:/Semester_5/PicoRV/picorv32.sv Line: 62
+    Info (12023): Found entity 2: picorv32_regs File: E:/Semester_5/PicoRV/picorv32.sv Line: 2174
+    Info (12023): Found entity 3: picorv32_pcpi_mul File: E:/Semester_5/PicoRV/picorv32.sv Line: 2197
+    Info (12023): Found entity 4: picorv32_pcpi_fast_mul File: E:/Semester_5/PicoRV/picorv32.sv Line: 2318
+    Info (12023): Found entity 5: picorv32_pcpi_div File: E:/Semester_5/PicoRV/picorv32.sv Line: 2420
+    Info (12023): Found entity 6: picorv32_axi File: E:/Semester_5/PicoRV/picorv32.sv Line: 2517
+    Info (12023): Found entity 7: picorv32_axi_adapter File: E:/Semester_5/PicoRV/picorv32.sv Line: 2731
+    Info (12023): Found entity 8: picorv32_wb File: E:/Semester_5/PicoRV/picorv32.sv Line: 2815
+Info (12021): Found 1 design units, including 1 entities, in source file testbench_ez.v
+    Info (12023): Found entity 1: testbench_ez File: E:/Semester_5/PicoRV/testbench_ez.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file sam_con_wrapper.sv
+    Info (12023): Found entity 1: SAM_Con_Wrapper File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.sv
+    Info (12023): Found entity 1: toplevel File: E:/Semester_5/PicoRV/toplevel.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at SAM_Con_Wrapper.sv(147): created implicit net for "SAM_Con_Rst" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 147
+Warning (10222): Verilog HDL Parameter Declaration warning at SAM_Con.sv(15): Parameter Declaration in module "SAM_Con" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 15
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "picorv32" for hierarchy "picorv32:uut" File: E:/Semester_5/PicoRV/toplevel.sv Line: 26
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(181): object "dbg_insn_addr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 181
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(183): object "dbg_mem_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 183
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(184): object "dbg_mem_instr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 184
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(185): object "dbg_mem_ready" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 185
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(186): object "dbg_mem_addr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 186
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(187): object "dbg_mem_wdata" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 187
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(188): object "dbg_mem_wstrb" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 188
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(189): object "dbg_mem_rdata" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 189
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(375): object "mem_busy" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 375
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(696): object "dbg_rs1val" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 696
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(697): object "dbg_rs2val" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 697
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(698): object "dbg_rs1val_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 698
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(699): object "dbg_rs2val_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 699
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(769): object "dbg_valid_insn" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 769
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(1184): object "dbg_ascii_state" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 1184
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(334): truncated value with size 32 to match size of target (1) File: E:/Semester_5/PicoRV/picorv32.sv Line: 334
+Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(332): incomplete case statement has no default case item File: E:/Semester_5/PicoRV/picorv32.sv Line: 332
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(617): truncated value with size 32 to match size of target (2) File: E:/Semester_5/PicoRV/picorv32.sv Line: 617
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1245): truncated value with size 33 to match size of target (32) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1245
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1250): truncated value with size 32 to match size of target (1) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1250
+Warning (10763): Verilog HDL warning at picorv32.sv(1252): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1252
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1252): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1252
+Warning (10763): Verilog HDL warning at picorv32.sv(1269): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1269
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1269): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1269
+Warning (10763): Verilog HDL warning at picorv32.sv(1315): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1315
+Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(1315): incomplete case statement has no default case item File: E:/Semester_5/PicoRV/picorv32.sv Line: 1315
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1349): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1349
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1404): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1404
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1426): truncated value with size 32 to match size of target (4) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1426
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1428): truncated value with size 32 to match size of target (4) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1428
+Warning (10763): Verilog HDL warning at picorv32.sv(1498): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1498
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1594): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1594
+Warning (10763): Verilog HDL warning at picorv32.sv(1628): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1628
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1628): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1628
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1731): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1731
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1761): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1761
+Warning (10763): Verilog HDL warning at picorv32.sv(1837): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1837
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1837): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1837
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1842): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1842
+Warning (10763): Verilog HDL warning at picorv32.sv(1845): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1845
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1845): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1845
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1850): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1850
+Warning (10763): Verilog HDL warning at picorv32.sv(1860): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1860
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1860): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1860
+Warning (10763): Verilog HDL warning at picorv32.sv(1885): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1885
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1885): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1885
+Warning (10763): Verilog HDL warning at picorv32.sv(1902): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1902
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1902): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1902
+Info (12128): Elaborating entity "SAM_Con_Wrapper" for hierarchy "SAM_Con_Wrapper:SAM_PCPI" File: E:/Semester_5/PicoRV/toplevel.sv Line: 30
+Warning (10036): Verilog HDL or VHDL warning at SAM_Con_Wrapper.sv(24): object "SAM_Con_rst" assigned a value but never read File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at SAM_Con_Wrapper.sv(31): object "Stride_counter" assigned a value but never read File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 31
+Warning (10030): Net "SAM_Con_Rst" at SAM_Con_Wrapper.sv(147) has no driver or initial value, using a default initial value '0' File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 147
+Info (12128): Elaborating entity "SAM_Con" for hierarchy "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 147
+Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(51): truncated value with size 32 to match size of target (8) File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(99): truncated value with size 32 to match size of target (8) File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 99
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[0]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[1]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[2]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[3]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[4]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[5]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[6]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[7]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[8]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[9]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[10]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[11]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[12]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[13]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[14]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[15]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[16]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[17]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[18]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[19]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[20]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[21]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[22]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[23]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[24]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[25]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[26]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[27]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[28]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[29]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[30]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[31]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+Warning (276020): Inferred RAM node "picorv32:uut|cpuregs_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "picorv32:uut|cpuregs_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "picorv32:uut|cpuregs_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "picorv32:uut|cpuregs_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "picorv32:uut|altsyncram:cpuregs_rtl_0"
+Info (12133): Instantiated megafunction "picorv32:uut|altsyncram:cpuregs_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_j6d1.tdf
+    Info (12023): Found entity 1: altsyncram_j6d1 File: E:/Semester_5/PicoRV/db/altsyncram_j6d1.tdf Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "mem_addr[0]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 9
+    Warning (13410): Pin "mem_addr[1]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 9
+    Warning (13410): Pin "mem_addr_SAM[0]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 20
+    Warning (13410): Pin "mem_addr_SAM[1]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 40 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/Semester_5/PicoRV/output_files/PicoRV.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "trap" File: E:/Semester_5/PicoRV/toplevel.sv Line: 5
+Info (21057): Implemented 4880 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 139 output pins
+    Info (21061): Implemented 4609 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 125 warnings
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Sun Jun 01 16:16:00 2025
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:31
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Semester_5/PicoRV/output_files/PicoRV.map.smsg.
+
+
