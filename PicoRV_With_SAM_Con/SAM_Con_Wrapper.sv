@@ -110,7 +110,7 @@ mem_wdata_SAM, Clk, Rst);
 							SAM_Con_En = 1'b0;
 							sub_counter = 2'b01;
 							
-						end else if (sub_counter == 2'b01) begin
+						end else if (sub_counter == 2'b01 && Stride_counter == 0) begin
 							sub_counter = 2'b10;
 							SAM_Con_En = 1'b0;
 							mem_wdata_SAM = Data_Out;
@@ -127,6 +127,7 @@ mem_wdata_SAM, Clk, Rst);
 							sub_counter = 2'b00;
 							SAM_Con_En = 1'b1;
 							counter = counter + 1;
+							Stride_counter = (Stride_counter + 1) % Stride;
 						end
 					end else if (counter == Data_Size + 2) begin
 						mem_wdata_SAM = Data_Out;

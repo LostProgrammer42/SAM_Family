@@ -64,23 +64,23 @@ module SAM_Con #(parameter MAX_KERNEL_SIZE = 16)(STRIDE,KERNEL_SIZE,En,Data_in,D
 					// Computation Logic
 					Data_Out_Temp = 32'b0;
                for (int i = 0; i < KERNEL_SIZE[3:0]; i = i + 1) begin
-						if (Kernel[i] == 2'b01) begin
+						if (Kernel[KERNEL_SIZE[3:0] - i - 1] == 2'b01) begin
 							Data_Out_Temp = Data_Out_Temp + Data_Cache[i];
-						end else if(Kernel[i] == 2'b11) begin
+						end else if(Kernel[KERNEL_SIZE[3:0] - i - 1] == 2'b11) begin
 							Data_Out_Temp = Data_Out_Temp - Data_Cache[i];
 						end
 					end
 					Data_Out = Data_Out_Temp;
 					
-					if (En == 1'b1) begin
-						if (Last_Data_In == 1'b1) begin
-							State <= Wrapup_State;
-						end else if (STRIDE == 1) begin
-							State <= Computation_State;
-						end else begin
-							State <= Wait_State;
-						end
+					
+					if (Last_Data_In == 1'b1) begin
+						State <= Wrapup_State;
+					end else if (STRIDE == 1) begin
+						State <= Computation_State;
+					end else begin
+						State <= Wait_State;
 					end
+					
 				end
 				Wait_State: begin
 					if (En == 1'b1) begin

@@ -12,17 +12,17 @@
 # 
 # vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/SAM_Con.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:07 on Jun 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/SAM_Con.sv 
 # -- Compiling module SAM_Con
 # 
 # Top level modules:
 # 	SAM_Con
-# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# End time: 19:31:07 on Jun 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/picorv32.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:07 on Jun 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/picorv32.sv 
 # -- Compiling module picorv32
 # -- Compiling module picorv32_regs
@@ -37,43 +37,50 @@
 # 	picorv32_regs
 # 	picorv32_axi
 # 	picorv32_wb
-# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# End time: 19:31:07 on Jun 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:07 on Jun 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv 
 # -- Compiling module SAM_Con_Wrapper
 # 
 # Top level modules:
 # 	SAM_Con_Wrapper
-# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# End time: 19:31:07 on Jun 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/toplevel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:07 on Jun 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/toplevel.sv 
 # -- Compiling module toplevel
 # 
 # Top level modules:
 # 	toplevel
-# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
+# End time: 19:31:07 on Jun 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+E:/Semester_5/PicoRV {E:/Semester_5/PicoRV/testbench_ez.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:08 on Jun 01,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Semester_5/PicoRV" E:/Semester_5/PicoRV/testbench_ez.v 
 # -- Compiling module testbench_ez
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(63): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(67): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(72): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(76): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(81): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(86): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: E:/Semester_5/PicoRV/testbench_ez.v(90): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	testbench_ez
-# End time: 16:16:16 on Jun 01,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 19:31:08 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 7
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench_ez
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench_ez 
-# Start time: 16:16:16 on Jun 01,2025
+# Start time: 19:31:08 on Jun 01,2025
 # Loading work.testbench_ez
 # Loading sv_std.std
 # Loading work.toplevel
@@ -121,10 +128,10 @@ restart
 # ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_valid'.
 # ** Warning: (vsim-3722) E:/Semester_5/PicoRV/toplevel.sv(22): [TFMPC] - Missing connection for port 'trace_data'.
 run -all
-# ifetch 0x00000000: 0x00010143
-# ifetch 0x00000004: 0x000000c7
-# ifetch 0x00000008: 0x0000094b
+# ifetch 0x00000000: 0x001007c3
+# ifetch 0x00000004: 0x00000147
+# ifetch 0x00000008: 0x0000204b
 # ifetch 0x0000000c: 0x0000054f
 # ifetch 0x00000010: 0xxxxxxxxx
-# End time: 16:16:43 on Jun 01,2025, Elapsed time: 0:00:27
+# End time: 19:34:53 on Jun 01,2025, Elapsed time: 0:03:45
 # Errors: 0, Warnings: 28

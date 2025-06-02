@@ -52,18 +52,45 @@ module testbench_ez;
 	reg [31:0] memory [0:255];
 
 	initial begin
-		memory[0] =  32'b 00000000000000010000000101000011; //Data_Size = 6, Kernel_Size = 2
-		memory[1] =  32'b 00000000000000000000000011000111; //Stride = 1
-		memory[2] =  32'b 00000000000000000000100101001011; //Output_Location = 18
+		memory[0] =  32'b 00000000000100000000011111000011; //Data_Size = 32, Kernel_Size = 15
+		memory[1] =  32'b 00000000000000000000000101000111; //Stride = 2
+		memory[2] =  32'b 00000000000000000010000001001011; //Output_Location = 64
 		memory[3] =  32'b 00000000000000000000010101001111; //Input_Location = 10;
 		
-		memory[10] = 32'b 00000000000000000000000000000011; //Kernel
-		memory[11] = 32'h 00000003; //Data Point 1     
-		memory[12] = 32'h 00000004; //Data Point 2 
-		memory[13] = 32'h 00000005; //Data Point 3
-		memory[14] = 32'h 00000003; //Data Point 4     
-		memory[15] = 32'h 00000004; //Data Point 5 
-		memory[16] = 32'h 00000005; //Data Point 6
+		memory[10] = 32'b 00001100011100010011010001110001; //Kernel
+//		memory[10] = 32'b 00000000000000000000000000000001; //Kernel
+		memory[11] = 32'h 00000002; //Data Point 1     
+		memory[12] = 32'h 0FFFFFFFF; //Data Point 2 
+		memory[13] = 32'h 00000000; //Data Point 3
+		memory[14] = 32'h 00000001; //Data Point 4     
+		memory[15] = 32'h 00000003; //Data Point 5 
+		memory[16] = 32'h 0FFFFFFFE; //Data Point 6
+		memory[17] = 32'h 00000006; //Data Point 7
+		memory[18] = 32'h 00000007; //Data Point 8
+		memory[19] = 32'h 00000001; //Data Point 9
+		memory[20] = 32'h 00000004; //Data Point 10
+		memory[21] = 32'h 0FFFFFFFD; //Data Point 11
+		memory[22] = 32'h 00000000; //Data Point 12
+		memory[23] = 32'h 00000002; //Data Point 13
+		memory[24] = 32'h 00000001; //Data Point 14
+		memory[25] = 32'h 0FFFFFFFC; //Data Point 15
+		memory[26] = 32'h 00000005; //Data Point 16
+		memory[27] = 32'h 00000002; //Data Point 17
+		memory[28] = 32'h 00000003; //Data Point 18
+		memory[29] = 32'h 00000001; //Data Point 19
+		memory[30] = 32'h 0FFFFFFFF; //Data Point 20
+		memory[31] = 32'h 00000000; //Data Point 21
+		memory[32] = 32'h 00000002; //Data Point 22
+		memory[33] = 32'h 00000006; //Data Point 23
+		memory[34] = 32'h 00000003; //Data Point 24
+		memory[35] = 32'h 0FFFFFFFE; //Data Point 25
+		memory[36] = 32'h 00000004; //Data Point 26
+		memory[37] = 32'h 00000001; //Data Point 27
+		memory[38] = 32'h 00000000; //Data Point 28
+		memory[39] = 32'h 0FFFFFFFD; //Data Point 29
+		memory[40] = 32'h 00000002; //Data Point 30
+		memory[41] = 32'h 00000001; //Data Point 31
+		memory[42] = 32'h 00000005; //Data Point 32
 	end
 	
 	always @(posedge clk) begin

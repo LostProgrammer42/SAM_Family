@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Jun 01 16:16:00 2025
+Analysis & Synthesis Status : Successful - Sun Jun 01 19:30:57 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : PicoRV
 Top-level Entity Name : toplevel
 Family : MAX 10
-Total logic elements : 4,542
-    Total combinational functions : 4,259
-    Dedicated logic registers : 1,572
-Total registers : 1572
+Total logic elements : 4,790
+    Total combinational functions : 4,508
+    Dedicated logic registers : 1,579
+Total registers : 1579
 Total pins : 207
 Total virtual pins : 0
 Total memory bits : 2,048
