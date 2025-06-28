@@ -1,0 +1,48 @@
+defproc Reg_File (chan?(int<1>) rw_chan; chan?(int<5>) read_address1; chan?(int<5>) read_address2; chan?(int<5>) write_address; chan!(int<32>) read_out1; chan!(int<32>) read_out2; chan?(int<32>) write_in){
+	int<32> registers[32]; 
+    int<32>data_in;
+	int<5> addresses[3]; //0 is writing address, 1 and 2 for read
+	int<1>  rw;   // 1=read,0=write
+    chp{
+        *[
+            rw_chan?rw;
+            [rw = 1 -> read_address1?addresses[1], read_address2?addresses[2]; read_out1 ! registers[addresses[1]], read_out2 ! registers[addresses[2]]
+            [] rw = 0 -> write_address?addresses[0], write_in?data_in; registers[addresses[0]] := data_in
+            ]
+        ]
+    }
+}
+
+defproc Source (chan!(int<1>) rw_out; chan!(int<5>)ra1; chan!(int<5>)ra2; chan!(int<5>)wa1; chan?(int<32>)data_1; chan?(int<32>)data_2; chan!(int<32>)data_write){
+    int<32> x,y;
+    chp{
+        rw_out!0;
+        wa1!10;
+        data_write!320;
+
+        rw_out!0;
+        wa1!11;
+        data_write!101;
+
+        rw_out!1;
+        ra1!10;
+        ra2!11;
+        data_1?x;
+        data_2?y;
+
+        log("x: ", x);
+        log("y: ", y)
+    }
+}
+
+defproc Test() {
+    Source src;
+    Reg_File rf;
+    rf.rw_chan = src.rw_out;
+    rf.read_address1 =  src.ra1;
+    rf.read_address2 = src.ra2;
+    rf.write_address = src.wa1;
+    rf.read_out1 = src.data_1;
+    rf.read_out2 = src.data_2;
+    rf.write_in = src.data_write;
+}
