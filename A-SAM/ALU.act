@@ -1,0 +1,96 @@
+defproc ALU (chan?(int<32>) input_1; chan?(int<32>) input_2; chan?(int<4>) op; chan!(int<32>) out){
+    int<32> r_in1, r_in2;
+    int<4> select;
+    int<1> flip;
+    chp{
+        *[
+            input_1?r_in1, input_2?r_in2, op?select;
+            [select = 0 -> out!(r_in1 & r_in2)
+            [] select = 1 -> out!(r_in1 | r_in2)
+            [] select = 2 -> out!(r_in1 ^ r_in2)
+            [] select = 3 -> out!(r_in1 + r_in2)
+            [] select = 4 -> out!(r_in1 - r_in2)
+            [] select = 5 -> out!(r_in1 << r_in2)
+            [] select = 6 -> out!(r_in1 >> r_in2)
+            [] select = 7 -> out!(r_in1 >>> r_in2)
+            [] (select = 8) | (select = 9) -> [r_in1{31} != r_in2{31} -> flip := select{0} [] r_in1{31} = r_in2{31} -> flip := 0]; out!((int(r_in1<r_in2))^flip)
+            [] select = 10 -> out!(int(r_in1 = r_in2))
+            ]
+        ]
+    }
+}
+/*
+defproc Source (chan!(int<32>) in1; chan!(int<32>) in2; chan!(int<4>) op; chan?(int<32>) result){
+    int<32> x;
+    chp{
+        op!0;
+        in1! 10;
+        in2! 8;
+        result?x;
+        log("10 and 8: ", x);
+
+        op!1;
+        in1! 10;
+        in2! 8;
+        result?x;
+        log("10 or 8: ", x);
+
+        op!2;
+        in1! 10;
+        in2! 8;
+        result?x;
+        log("10 xor 8: ", x);
+
+        op!3;
+        in1! 10;
+        in2! 8;
+        result?x;
+        log("10 + 8: ", x);
+
+        op!4;
+        in1! 8;
+        in2! 10;
+        result?x;
+        log("8 - 10: ", x);
+
+        op!5;
+        in1! 10;
+        in2! 2;
+        result?x;
+        log("10 << 2: ", x);
+
+        op!6;
+        in1! 10;
+        in2! 1;
+        result?x;
+        log("10 >> 1: ", x);
+
+        op!7;
+        in1! 10;
+        in2! 1;
+        result?x;
+        log("10 >>> 1: ", x);
+
+        op!8;
+        in1! 10;
+        in2! 8;
+        result?x;
+        log("10 < 8: ", x);
+
+        op!10;
+        in1! 10;
+        in2! 10;
+        result?x;
+        log("10 == 10: ", x)
+    }
+}
+
+defproc Test() {
+    Source src;
+    ALU al;
+    al.input_1 = src.in1;
+    al.input_2 = src.in2;
+    al.op = src.op;
+    al.out = src.result;
+}
+*/

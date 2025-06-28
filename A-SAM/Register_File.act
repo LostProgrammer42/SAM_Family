@@ -7,12 +7,12 @@ defproc Reg_File (chan?(int<1>) rw_chan; chan?(int<5>) read_address1; chan?(int<
         *[
             rw_chan?rw;
             [rw = 1 -> read_address1?addresses[1], read_address2?addresses[2]; read_out1 ! registers[addresses[1]], read_out2 ! registers[addresses[2]]
-            [] rw = 0 -> write_address?addresses[0], write_in?data_in; registers[addresses[0]] := data_in
+            [] rw = 0 -> write_address?addresses[0], write_in?data_in; registers[addresses[0]] := data_in; log("Writing: ", data_in)
             ]
         ]
     }
 }
-
+/*
 defproc Source (chan!(int<1>) rw_out; chan!(int<5>)ra1; chan!(int<5>)ra2; chan!(int<5>)wa1; chan?(int<32>)data_1; chan?(int<32>)data_2; chan!(int<32>)data_write){
     int<32> x,y;
     chp{
@@ -46,3 +46,4 @@ defproc Test() {
     rf.read_out2 = src.data_2;
     rf.write_in = src.data_write;
 }
+*/

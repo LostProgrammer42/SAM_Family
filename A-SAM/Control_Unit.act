@@ -1,0 +1,144 @@
+import std;
+
+defproc Control_Unit (chan!(int) mem_address,mem_write_data,alu_input1,alu_input2,reg_write_data;
+			  chan!(int<5>) r_s1,r_s2,r_d;
+		      chan?(int) mem_read_data,reg_read_data1,reg_read_data2,alu_output;
+		      chan!(int<1>) mem_rw, reg_rw; chan!(int<4>) alu_sel)
+{
+	int<32> mem_data,instruction,pc,temp1,temp2;
+	int<1> branch_taken,jump;
+
+	chp{
+		pc := 0;
+		*[ //Forever loop
+			mem_rw!(1), mem_address!pc;
+			mem_read_data?instruction;
+			branch_taken := 0; jump := 0;
+			log("Got INSTR: ", instruction);
+			//Decode
+			[ instruction{6..2} = 13 -> 					//lui
+				alu_input1!instruction{31..12}, alu_input2!(12), alu_sel!(5);
+				alu_output?temp1;
+				reg_write_data!temp1, r_d!instruction{11..7}, reg_rw!(0)
+
+			[] instruction{6..2} = 5 -> 					//auipc
+				alu_input1!instruction{31..12}, alu_input2!(12), alu_sel!(5);
+				alu_output?temp1;
+				alu_input1!pc, alu_input2!temp1, alu_sel!3;
+				alu_output?temp1;
+				reg_write_data!temp1, r_d!instruction{11..7}, reg_rw!(0)
+
+			[] instruction{6..2} = 4 -> 	//all immediate alu instructions
+				r_s1!instruction{19..15}, r_s2!0, reg_rw!(1);
+				reg_read_data1?temp1, reg_read_data2?temp2;
+				alu_input1!temp1,
+
+				[ (instruction{14..12} = 5) | (instruction{14..12} = 1)  -> alu_input2!instruction{24..20}
+				[] else -> alu_input2!std::bit::sign_extend<12,32>(instruction{31..20})
+				],
+
+				[ instruction{14..12} = 0 -> alu_sel!(3) 		//addi
+				[] instruction{14..12} = 2 -> alu_sel!(9) 	//slti
+				[] instruction{14..12} = 3 -> alu_sel!(8) 	//sltiu
+				[] instruction{14..12} = 4 -> alu_sel!(2) 	//xori
+				[] instruction{14..12} = 6 -> alu_sel!(1) 	//ori
+				[] instruction{14..12} = 7 -> alu_sel!(0) 	//andi
+				[] instruction{14..12} = 1 -> alu_sel!(5) 	//slli
+				[] instruction{14..12} = 5 -> 
+					[ instruction{30} = 0 -> alu_sel!(6) 		//srli
+					[] else -> alu_sel!(7) 						//srai
+					]
+				];
+				alu_output?temp1;
+				reg_write_data!temp1, r_d!instruction{11..7}, reg_rw!(0)
+
+			[] instruction{6..2} = 12 -> 	//all 2 register alu instructions
+				r_s1!instruction{19..15}, r_s2!instruction{24..20}, reg_rw!(1);
+				reg_read_data1?temp1, reg_read_data2?temp2;
+				alu_input1!temp1, alu_input2!temp2,
+				[ instruction{14..12} = 0 -> 
+					[instruction{30} = 0-> alu_sel!(3) 			//add
+					[] else -> alu_sel!(4) 						//sub
+					]
+				[] instruction{14..12} = 2 -> alu_sel!(9) 	//slt
+				[] instruction{14..12} = 3 -> alu_sel!(8) 	//sltu
+				[] instruction{14..12} = 4 -> alu_sel!(2) 	//xor
+				[] instruction{14..12} = 6 -> alu_sel!(1) 	//or
+				[] instruction{14..12} = 7 -> alu_sel!(0) 	//and
+				[] instruction{14..12} = 1 -> alu_sel!(5) 	//sll
+				[] instruction{14..12} = 5 -> 
+					[ instruction{30} = 0 -> alu_sel!(6) 		//srl
+					[] else -> alu_sel!(7) 						//sra
+					]
+				];
+				alu_output?temp1;
+				reg_write_data!temp1, r_d!instruction{11..7}, reg_rw!(0)
+			
+			[] instruction{6..2} = 24 -> 	//all conditional branching instructions
+				r_s1!instruction{19..15}, r_s2!instruction{24..20}, reg_rw!(1);
+				reg_read_data1?temp1, reg_read_data2?temp2;
+				alu_input1!temp1, alu_input2!temp2,
+				[ instruction{14..13} = 0 -> alu_sel!(10)
+				[] instruction{14..13} = 2 -> alu_sel!(9)
+				[]instruction{14..13} = 3 -> alu_sel!(8)
+				];
+				alu_output?temp1;
+				alu_input1!temp1, alu_input2!instruction{12}, alu_sel!(2);
+				alu_output?temp1;
+				branch_taken := temp1{0}
+
+			[] instruction{6..2} = 25 | instruction{6..2} = 27 -> //jal and jalr
+				[ instruction{3} = 1 -> //for jalr only
+					r_s1!instruction{19..15}, r_s2!0, reg_rw!(1);
+					reg_read_data1?temp1, reg_read_data2?temp2
+				[] else -> skip
+				];
+				alu_input1!pc, alu_input2!(1), alu_sel!(3);
+				alu_output?temp1;
+				reg_write_data!temp1, r_d!instruction{11..7}, reg_rw!(0);
+				jump := 1
+			
+			[] instruction{6..2} = 8 ->		//all store instructions
+				r_s1!instruction{19..15}, r_s2!instruction{24..20}, reg_rw!(1);
+				reg_read_data1?temp1, reg_read_data2?temp2;
+				alu_input1!temp1, alu_input2!std::bit::sign_extend<12,32>({instruction{31..25},instruction{11..7}}), alu_sel!(3);
+				alu_output?temp1;
+				mem_address!temp1, mem_rw!(0),
+				[ instruction{13..12} = 0 -> mem_write_data!temp2{7..0} 		//sb
+				[] instruction{13..12} = 1 -> mem_write_data!temp2{15..0}		//sh
+				[] instruction{13..12} = 2 -> mem_write_data!temp2				//sw
+				]
+
+			[] instruction{6..2} = 0 ->		//all load instructions
+				r_s1!instruction{19..15}, r_s2!instruction{24..20}, reg_rw!(1);
+				reg_read_data1?temp1, reg_read_data2?temp2;
+				alu_input1!temp1, alu_input2!std::bit::sign_extend<12,32>(instruction{31..20}), alu_sel!(3);
+				alu_output?temp1;
+				mem_address!temp1, mem_rw!(1);
+				mem_read_data?temp1;
+				r_d!instruction{11..7}, reg_rw!(0),
+				[ instruction{14..12} = 0 -> reg_write_data!std::bit::sign_extend<8,32>(temp1{7..0})		//lb
+				[] instruction{14..12} = 4 -> reg_write_data!temp1{7..0}									//lbu
+				[] instruction{14..12} = 1 -> reg_write_data!std::bit::sign_extend<16,32>(temp1{15..0})		//lh
+				[] instruction{14..12} = 5 -> reg_write_data!temp1{15..0}									//lhu
+				[] instruction{14..12} = 2 -> reg_write_data!temp1											//lw
+				]
+
+			[] else -> skip
+			];
+
+			//PC update
+			alu_sel!(3),
+			[ branch_taken = 1 -> 
+				alu_input1!pc, alu_input2!std::bit::sign_extend<13,32>({instruction{31},instruction{7},instruction{30..25},instruction{11..8},instruction{2}})
+			[] jump = 1 & instruction{3} = 0 ->
+				alu_input1!pc, alu_input2!std::bit::sign_extend<21,32>({instruction{31},instruction{19..12},instruction{20},instruction{30..21},instruction{4}})
+			[] jump = 1 & instruction{3} = 0 ->
+				alu_input1!temp2, alu_input2!std::bit::sign_extend<12,32>(instruction{31..20})
+			[] else -> 
+				alu_input1!pc, alu_input2!(1)
+			];
+			alu_output?pc
+		]		
+	}
+}
