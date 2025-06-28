@@ -7,7 +7,7 @@ defproc Reg_File (chan?(int<1>) rw_chan; chan?(int<5>) read_address1; chan?(int<
         *[
             rw_chan?rw;
             [rw = 1 -> read_address1?addresses[1], read_address2?addresses[2]; read_out1 ! registers[addresses[1]], read_out2 ! registers[addresses[2]]
-            [] rw = 0 -> write_address?addresses[0], write_in?data_in; registers[addresses[0]] := data_in; log("Writing: ", data_in)
+            [] rw = 0 -> write_address?addresses[0], write_in?data_in; registers[addresses[0]] := data_in; log("Writing ", data_in, " to R",addresses[0])
             ]
         ]
     }

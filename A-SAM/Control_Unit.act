@@ -131,7 +131,7 @@ defproc Control_Unit (chan!(int) mem_address,mem_write_data,alu_input1,alu_input
 			alu_sel!(3),
 			[ branch_taken = 1 -> 
 				alu_input1!pc, alu_input2!std::bit::sign_extend<13,32>({instruction{31},instruction{7},instruction{30..25},instruction{11..8},instruction{2}})
-			[] jump = 1 & instruction{3} = 0 ->
+			[] jump = 1 & instruction{3} = 1 ->
 				alu_input1!pc, alu_input2!std::bit::sign_extend<21,32>({instruction{31},instruction{19..12},instruction{20},instruction{30..21},instruction{4}})
 			[] jump = 1 & instruction{3} = 0 ->
 				alu_input1!temp2, alu_input2!std::bit::sign_extend<12,32>(instruction{31..20})
