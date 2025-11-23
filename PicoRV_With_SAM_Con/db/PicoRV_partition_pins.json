@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "trap",
+					"strict" : false
+				},
+				{
 					"name" : "mem_valid",
 					"strict" : false
 				},
@@ -548,11 +552,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "mem_ready",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "mem_ready",
 					"strict" : false
 				},
 				{

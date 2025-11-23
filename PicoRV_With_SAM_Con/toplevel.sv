@@ -2,7 +2,7 @@ module toplevel (clk, resetn, trap, mem_valid, mem_instr, mem_ready, mem_addr, m
 					  mem_addr_SAM, mem_rdata_SAM, mem_wdata_SAM);
 					  
 	input wire clk, resetn;
-	input wire trap;
+	output wire trap;
 	output wire mem_valid;
 	output wire mem_instr;
 	input reg mem_ready;

@@ -71,6 +71,7 @@ mem_wdata_SAM, Clk, Rst);
 				endcase
 				SAM_Con_rst = 1'b1;
 			end else begin
+				SAM_Con_rst = 1'b0;
 				if (sup_counter ==  1'b0) begin
 					sup_counter = 1'b1;
 					SAM_Con_En = 1'b0;

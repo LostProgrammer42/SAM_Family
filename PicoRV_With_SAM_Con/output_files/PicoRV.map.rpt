@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PicoRV
-Sun Jun 01 19:30:57 2025
+Mon Nov 24 01:30:11 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 01 19:30:57 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 01:30:11 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; PicoRV                                      ;
 ; Top-level Entity Name              ; toplevel                                    ;
@@ -175,50 +175,50 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processor 8            ;   0.1%      ;
-;     Processors 9-10        ;   0.1%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; SAM_Con.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/SAM_Con.sv                                              ;         ;
-; picorv32.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/picorv32.sv                                             ;         ;
-; SAM_Con_Wrapper.sv               ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv                                      ;         ;
-; toplevel.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_5/PicoRV/toplevel.sv                                             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_j6d1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/altsyncram_j6d1.tdf                                  ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_hkl.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/lpm_divide_hkl.tdf                                   ;         ;
-; db/sign_div_unsign_gkh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/sign_div_unsign_gkh.tdf                              ;         ;
-; db/alt_u_div_afe.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/alt_u_div_afe.tdf                                    ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/add_sub_t3c.tdf                                      ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Semester_5/PicoRV/db/add_sub_u3c.tdf                                      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; SAM_Con.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv                 ;         ;
+; picorv32.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv                ;         ;
+; SAM_Con_Wrapper.sv               ; yes             ; User SystemVerilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv         ;         ;
+; toplevel.sv                      ; yes             ; User SystemVerilog HDL File  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv                ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; db/altsyncram_j6d1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/altsyncram_j6d1.tdf     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                       ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                      ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                  ;         ;
+; db/lpm_divide_hkl.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/lpm_divide_hkl.tdf      ;         ;
+; db/sign_div_unsign_gkh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/sign_div_unsign_gkh.tdf ;         ;
+; db/alt_u_div_afe.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/alt_u_div_afe.tdf       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/add_sub_u3c.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -230,8 +230,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Total combinational functions               ; 4508      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1488      ;
-;     -- 3 input functions                    ; 2482      ;
+;     -- 4 input functions                    ; 1490      ;
+;     -- 3 input functions                    ; 2480      ;
 ;     -- <=2 input functions                  ; 538       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
@@ -249,7 +249,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1643      ;
-; Total fan-out                               ; 20990     ;
+; Total fan-out                               ; 20993     ;
 ; Average fan-out                             ; 3.20      ;
 +---------------------------------------------+-----------+
 
@@ -551,7 +551,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_addr[8]                                          ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_wstrb[0]                                         ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|Data_In[26]                              ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |toplevel|picorv32:uut|instr_slt                                            ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |toplevel|picorv32:uut|instr_sub                                            ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|picorv32:uut|pcpi_timeout_counter[2]                              ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |toplevel|SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Cache[15][20] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |toplevel|picorv32:uut|mem_wdata[24]                                        ;
@@ -883,7 +883,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                                                                                      ;
 +--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; trap         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
 ; mem_la_read  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; mem_la_write ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
 ; mem_la_addr  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
@@ -922,12 +921,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 156                         ;
-;         3 data inputs ; 1779                        ;
-;         4 data inputs ; 1488                        ;
+;         3 data inputs ; 1777                        ;
+;         4 data inputs ; 1490                        ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 37.90                       ;
-; Average LUT depth     ; 15.46                       ;
+; Max LUT depth         ; 37.70                       ;
+; Average LUT depth     ; 15.37                       ;
 +-----------------------+-----------------------------+
 
 
@@ -936,7 +935,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -946,150 +945,150 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 01 19:30:38 2025
+    Info: Processing started: Mon Nov 24 01:29:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PicoRV -c PicoRV
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sam_con.sv
-    Info (12023): Found entity 1: SAM_Con File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 1
+    Info (12023): Found entity 1: SAM_Con File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file convolution.sv
-    Info (12023): Found entity 1: Convolution File: E:/Semester_5/PicoRV/Convolution.sv Line: 1
+    Info (12023): Found entity 1: Convolution File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/Convolution.sv Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file adder_32.v
-    Info (12023): Found entity 1: Full_Adder File: E:/Semester_5/PicoRV/Adder_32.v Line: 1
-    Info (12023): Found entity 2: Adder_32 File: E:/Semester_5/PicoRV/Adder_32.v Line: 9
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(331) File: E:/Semester_5/PicoRV/picorv32.sv Line: 331
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(402) File: E:/Semester_5/PicoRV/picorv32.sv Line: 402
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1119) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1119
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1251) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1251
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1251) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1251
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1268) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1268
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1268) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1268
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1314) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1314
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1485) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1485
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1485) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1485
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1497) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1497
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1583) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1583
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1627) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1627
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1627) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1627
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1735) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1735
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1766) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1766
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1836) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1836
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1836) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1836
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1844) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1844
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1844) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1844
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1859) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1859
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1859) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1859
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1884) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1884
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1884) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1884
-Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1901) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1901
-Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1901) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1901
+    Info (12023): Found entity 1: Full_Adder File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/Adder_32.v Line: 1
+    Info (12023): Found entity 2: Adder_32 File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/Adder_32.v Line: 9
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(331) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 331
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(402) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 402
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1119) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1119
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1251) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1251
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1251) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1251
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1268) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1268
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1268) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1268
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1314) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1314
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1485) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1485
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1485) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1485
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1497) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1497
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1583) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1583
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1627) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1627
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1627) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1627
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1735) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1735
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1766) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1766
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1836) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1836
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1836) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1836
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1844) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1844
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1844) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1844
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1859) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1859
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1859) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1859
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1884) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1884
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1884) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1884
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at picorv32.sv(1901) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1901
+Warning (10335): Unrecognized synthesis attribute "full_case" at picorv32.sv(1901) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1901
 Info (12021): Found 8 design units, including 8 entities, in source file picorv32.sv
-    Info (12023): Found entity 1: picorv32 File: E:/Semester_5/PicoRV/picorv32.sv Line: 62
-    Info (12023): Found entity 2: picorv32_regs File: E:/Semester_5/PicoRV/picorv32.sv Line: 2174
-    Info (12023): Found entity 3: picorv32_pcpi_mul File: E:/Semester_5/PicoRV/picorv32.sv Line: 2197
-    Info (12023): Found entity 4: picorv32_pcpi_fast_mul File: E:/Semester_5/PicoRV/picorv32.sv Line: 2318
-    Info (12023): Found entity 5: picorv32_pcpi_div File: E:/Semester_5/PicoRV/picorv32.sv Line: 2420
-    Info (12023): Found entity 6: picorv32_axi File: E:/Semester_5/PicoRV/picorv32.sv Line: 2517
-    Info (12023): Found entity 7: picorv32_axi_adapter File: E:/Semester_5/PicoRV/picorv32.sv Line: 2731
-    Info (12023): Found entity 8: picorv32_wb File: E:/Semester_5/PicoRV/picorv32.sv Line: 2815
+    Info (12023): Found entity 1: picorv32 File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 62
+    Info (12023): Found entity 2: picorv32_regs File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2174
+    Info (12023): Found entity 3: picorv32_pcpi_mul File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2197
+    Info (12023): Found entity 4: picorv32_pcpi_fast_mul File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2318
+    Info (12023): Found entity 5: picorv32_pcpi_div File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2420
+    Info (12023): Found entity 6: picorv32_axi File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2517
+    Info (12023): Found entity 7: picorv32_axi_adapter File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2731
+    Info (12023): Found entity 8: picorv32_wb File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 2815
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_ez.v
-    Info (12023): Found entity 1: testbench_ez File: E:/Semester_5/PicoRV/testbench_ez.v Line: 10
+    Info (12023): Found entity 1: testbench_ez File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/testbench_ez.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file sam_con_wrapper.sv
-    Info (12023): Found entity 1: SAM_Con_Wrapper File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 1
+    Info (12023): Found entity 1: SAM_Con_Wrapper File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.sv
-    Info (12023): Found entity 1: toplevel File: E:/Semester_5/PicoRV/toplevel.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at SAM_Con_Wrapper.sv(148): created implicit net for "SAM_Con_Rst" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 148
-Warning (10222): Verilog HDL Parameter Declaration warning at SAM_Con.sv(15): Parameter Declaration in module "SAM_Con" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 15
+    Info (12023): Found entity 1: toplevel File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at SAM_Con_Wrapper.sv(149): created implicit net for "SAM_Con_Rst" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 149
+Warning (10222): Verilog HDL Parameter Declaration warning at SAM_Con.sv(15): Parameter Declaration in module "SAM_Con" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 15
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "picorv32" for hierarchy "picorv32:uut" File: E:/Semester_5/PicoRV/toplevel.sv Line: 26
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(181): object "dbg_insn_addr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 181
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(183): object "dbg_mem_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 183
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(184): object "dbg_mem_instr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 184
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(185): object "dbg_mem_ready" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 185
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(186): object "dbg_mem_addr" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 186
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(187): object "dbg_mem_wdata" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 187
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(188): object "dbg_mem_wstrb" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 188
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(189): object "dbg_mem_rdata" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 189
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(375): object "mem_busy" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 375
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(696): object "dbg_rs1val" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 696
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(697): object "dbg_rs2val" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 697
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(698): object "dbg_rs1val_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 698
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(699): object "dbg_rs2val_valid" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 699
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(769): object "dbg_valid_insn" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 769
-Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(1184): object "dbg_ascii_state" assigned a value but never read File: E:/Semester_5/PicoRV/picorv32.sv Line: 1184
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(334): truncated value with size 32 to match size of target (1) File: E:/Semester_5/PicoRV/picorv32.sv Line: 334
-Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(332): incomplete case statement has no default case item File: E:/Semester_5/PicoRV/picorv32.sv Line: 332
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(617): truncated value with size 32 to match size of target (2) File: E:/Semester_5/PicoRV/picorv32.sv Line: 617
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1245): truncated value with size 33 to match size of target (32) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1245
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1250): truncated value with size 32 to match size of target (1) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1250
-Warning (10763): Verilog HDL warning at picorv32.sv(1252): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1252
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1252): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1252
-Warning (10763): Verilog HDL warning at picorv32.sv(1269): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1269
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1269): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1269
-Warning (10763): Verilog HDL warning at picorv32.sv(1315): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1315
-Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(1315): incomplete case statement has no default case item File: E:/Semester_5/PicoRV/picorv32.sv Line: 1315
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1349): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1349
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1404): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1404
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1426): truncated value with size 32 to match size of target (4) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1426
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1428): truncated value with size 32 to match size of target (4) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1428
-Warning (10763): Verilog HDL warning at picorv32.sv(1498): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1498
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1594): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1594
-Warning (10763): Verilog HDL warning at picorv32.sv(1628): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1628
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1628): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1628
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1731): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1731
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1761): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1761
-Warning (10763): Verilog HDL warning at picorv32.sv(1837): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1837
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1837): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1837
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1842): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1842
-Warning (10763): Verilog HDL warning at picorv32.sv(1845): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1845
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1845): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1845
-Warning (10230): Verilog HDL assignment warning at picorv32.sv(1850): truncated value with size 32 to match size of target (5) File: E:/Semester_5/PicoRV/picorv32.sv Line: 1850
-Warning (10763): Verilog HDL warning at picorv32.sv(1860): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1860
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1860): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1860
-Warning (10763): Verilog HDL warning at picorv32.sv(1885): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1885
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1885): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1885
-Warning (10763): Verilog HDL warning at picorv32.sv(1902): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_5/PicoRV/picorv32.sv Line: 1902
-Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1902): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_5/PicoRV/picorv32.sv Line: 1902
-Info (12128): Elaborating entity "SAM_Con_Wrapper" for hierarchy "SAM_Con_Wrapper:SAM_PCPI" File: E:/Semester_5/PicoRV/toplevel.sv Line: 30
-Warning (10036): Verilog HDL or VHDL warning at SAM_Con_Wrapper.sv(24): object "SAM_Con_rst" assigned a value but never read File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at SAM_Con_Wrapper.sv(130): truncated value with size 32 to match size of target (8) File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 130
-Warning (10030): Net "SAM_Con_Rst" at SAM_Con_Wrapper.sv(148) has no driver or initial value, using a default initial value '0' File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 148
-Info (12128): Elaborating entity "SAM_Con" for hierarchy "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 148
-Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(51): truncated value with size 32 to match size of target (8) File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 51
-Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(99): truncated value with size 32 to match size of target (8) File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 99
+Info (12128): Elaborating entity "picorv32" for hierarchy "picorv32:uut" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 26
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(181): object "dbg_insn_addr" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 181
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(183): object "dbg_mem_valid" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 183
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(184): object "dbg_mem_instr" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 184
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(185): object "dbg_mem_ready" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 185
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(186): object "dbg_mem_addr" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 186
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(187): object "dbg_mem_wdata" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 187
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(188): object "dbg_mem_wstrb" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 188
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(189): object "dbg_mem_rdata" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 189
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(375): object "mem_busy" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 375
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(696): object "dbg_rs1val" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 696
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(697): object "dbg_rs2val" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 697
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(698): object "dbg_rs1val_valid" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 698
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(699): object "dbg_rs2val_valid" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 699
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(769): object "dbg_valid_insn" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 769
+Warning (10036): Verilog HDL or VHDL warning at picorv32.sv(1184): object "dbg_ascii_state" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1184
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(334): truncated value with size 32 to match size of target (1) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 334
+Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(332): incomplete case statement has no default case item File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 332
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(617): truncated value with size 32 to match size of target (2) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 617
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1245): truncated value with size 33 to match size of target (32) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1245
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1250): truncated value with size 32 to match size of target (1) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1250
+Warning (10763): Verilog HDL warning at picorv32.sv(1252): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1252
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1252): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1252
+Warning (10763): Verilog HDL warning at picorv32.sv(1269): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1269
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1269): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1269
+Warning (10763): Verilog HDL warning at picorv32.sv(1315): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1315
+Warning (10270): Verilog HDL Case Statement warning at picorv32.sv(1315): incomplete case statement has no default case item File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1315
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1349): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1349
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1404): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1404
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1426): truncated value with size 32 to match size of target (4) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1426
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1428): truncated value with size 32 to match size of target (4) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1428
+Warning (10763): Verilog HDL warning at picorv32.sv(1498): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1498
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1594): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1594
+Warning (10763): Verilog HDL warning at picorv32.sv(1628): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1628
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1628): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1628
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1731): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1731
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1761): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1761
+Warning (10763): Verilog HDL warning at picorv32.sv(1837): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1837
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1837): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1837
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1842): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1842
+Warning (10763): Verilog HDL warning at picorv32.sv(1845): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1845
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1845): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1845
+Warning (10230): Verilog HDL assignment warning at picorv32.sv(1850): truncated value with size 32 to match size of target (5) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1850
+Warning (10763): Verilog HDL warning at picorv32.sv(1860): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1860
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1860): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1860
+Warning (10763): Verilog HDL warning at picorv32.sv(1885): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1885
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1885): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1885
+Warning (10763): Verilog HDL warning at picorv32.sv(1902): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1902
+Warning (10208): Verilog HDL Case Statement warning at picorv32.sv(1902): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/picorv32.sv Line: 1902
+Info (12128): Elaborating entity "SAM_Con_Wrapper" for hierarchy "SAM_Con_Wrapper:SAM_PCPI" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 30
+Warning (10036): Verilog HDL or VHDL warning at SAM_Con_Wrapper.sv(24): object "SAM_Con_rst" assigned a value but never read File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at SAM_Con_Wrapper.sv(131): truncated value with size 32 to match size of target (8) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 131
+Warning (10030): Net "SAM_Con_Rst" at SAM_Con_Wrapper.sv(149) has no driver or initial value, using a default initial value '0' File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 149
+Info (12128): Elaborating entity "SAM_Con" for hierarchy "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 149
+Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(51): truncated value with size 32 to match size of target (8) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at SAM_Con.sv(99): truncated value with size 32 to match size of target (8) File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 99
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[0]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[1]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[2]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[3]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[4]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[5]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[6]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[7]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[8]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[9]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[10]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[11]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[12]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[13]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[14]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[15]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[16]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[17]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[18]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[19]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[20]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[21]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[22]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[23]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[24]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[25]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[26]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[27]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[28]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[29]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[30]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
-    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[31]" feeding internal logic into a wire File: E:/Semester_5/PicoRV/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[0]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[1]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[2]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[3]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[4]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[5]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[6]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[7]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[8]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[9]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[10]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[11]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[12]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[13]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[14]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[15]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[16]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[17]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[18]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[19]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[20]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[21]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[22]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[23]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[24]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[25]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[26]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[27]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[28]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[29]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[30]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
+    Warning (13049): Converted tri-state buffer "SAM_Con_Wrapper:SAM_PCPI|SAM_Con:Convolutioner|Data_Out[31]" feeding internal logic into a wire File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con.sv Line: 20
 Warning (276020): Inferred RAM node "picorv32:uut|cpuregs_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "picorv32:uut|cpuregs_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
@@ -1124,7 +1123,7 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SAM_Con_Wrapper:SAM_PCPI|Mod0" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 130
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SAM_Con_Wrapper:SAM_PCPI|Mod0" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 131
 Info (12130): Elaborated megafunction instantiation "picorv32:uut|altsyncram:cpuregs_rtl_0"
 Info (12133): Instantiated megafunction "picorv32:uut|altsyncram:cpuregs_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1142,51 +1141,49 @@ Info (12133): Instantiated megafunction "picorv32:uut|altsyncram:cpuregs_rtl_0" 
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_j6d1.tdf
-    Info (12023): Found entity 1: altsyncram_j6d1 File: E:/Semester_5/PicoRV/db/altsyncram_j6d1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "SAM_Con_Wrapper:SAM_PCPI|lpm_divide:Mod0" File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 130
-Info (12133): Instantiated megafunction "SAM_Con_Wrapper:SAM_PCPI|lpm_divide:Mod0" with the following parameter: File: E:/Semester_5/PicoRV/SAM_Con_Wrapper.sv Line: 130
+    Info (12023): Found entity 1: altsyncram_j6d1 File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/altsyncram_j6d1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "SAM_Con_Wrapper:SAM_PCPI|lpm_divide:Mod0" File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 131
+Info (12133): Instantiated megafunction "SAM_Con_Wrapper:SAM_PCPI|lpm_divide:Mod0" with the following parameter: File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/SAM_Con_Wrapper.sv Line: 131
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkl.tdf
-    Info (12023): Found entity 1: lpm_divide_hkl File: E:/Semester_5/PicoRV/db/lpm_divide_hkl.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_hkl File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/lpm_divide_hkl.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_gkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_gkh File: E:/Semester_5/PicoRV/db/sign_div_unsign_gkh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_gkh File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/sign_div_unsign_gkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_afe.tdf
-    Info (12023): Found entity 1: alt_u_div_afe File: E:/Semester_5/PicoRV/db/alt_u_div_afe.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_afe File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/alt_u_div_afe.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: E:/Semester_5/PicoRV/db/add_sub_t3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_t3c File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: E:/Semester_5/PicoRV/db/add_sub_u3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_u3c File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/db/add_sub_u3c.tdf Line: 22
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "mem_addr[0]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 9
-    Warning (13410): Pin "mem_addr[1]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 9
-    Warning (13410): Pin "mem_addr_SAM[0]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 20
-    Warning (13410): Pin "mem_addr_SAM[1]" is stuck at GND File: E:/Semester_5/PicoRV/toplevel.sv Line: 20
+    Warning (13410): Pin "mem_addr[0]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 9
+    Warning (13410): Pin "mem_addr[1]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 9
+    Warning (13410): Pin "mem_addr_SAM[0]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 20
+    Warning (13410): Pin "mem_addr_SAM[1]" is stuck at GND File: E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/toplevel.sv Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 41 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file E:/Semester_5/PicoRV/output_files/PicoRV.map.smsg
+Info (144001): Generated suppressed messages file E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/output_files/PicoRV.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "trap" File: E:/Semester_5/PicoRV/toplevel.sv Line: 5
 Info (21057): Implemented 5129 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 68 input pins
-    Info (21059): Implemented 139 output pins
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 140 output pins
     Info (21061): Implemented 4858 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 125 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Sun Jun 01 19:30:57 2025
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Mon Nov 24 01:30:11 2025
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in E:/Semester_5/PicoRV/output_files/PicoRV.map.smsg.
+The suppressed messages can be found in E:/Semester_4/Hardware_Description_Languages/PicoRV_With_SAM_Con/output_files/PicoRV.map.smsg.
 
 

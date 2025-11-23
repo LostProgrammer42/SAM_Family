@@ -1,7 +1,7 @@
 |toplevel
 clk => clk.IN2
 resetn => resetn.IN2
-trap => trap.IN1
+trap << picorv32:uut.trap
 mem_valid << picorv32:uut.mem_valid
 mem_instr << picorv32:uut.mem_instr
 mem_ready => mem_ready.IN1
